@@ -19,7 +19,7 @@ There are two websites, and they work exactly the same way:
 
 **3. Download the websites to your computer.** In GitHub Desktop: **File → Clone Repository**. You'll see a list that includes `giantseaturtle/eohouston-momentum` and `giantseaturtle/eohouston`. Pick one, click **Clone**, then repeat for the other. ("Clone" just means "download my copy.")
 
-**4. Install Claude Code**, the AI assistant, from [claude.com/claude-code](https://claude.com/claude-code). You'll need a Claude account - the paid Claude Pro plan (about $20/month) is the practical minimum for regular use. Sign in when it asks.
+**4. Install Claude Code**, the AI assistant, from [claude.com/claude-code](https://claude.com/claude-code), and sign in with your Claude account when it asks.
 
 That's it. You never have to do these steps again.
 
