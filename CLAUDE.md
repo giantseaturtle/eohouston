@@ -2,6 +2,16 @@
 
 Static multi-page site for the EO Houston chapter. No build step, no framework - plain HTML/CSS/JS served by Vercel.
 
+## Session workflow - handle git for the user
+
+Most people editing this repo are non-technical; they open Claude Code, describe a change, and expect it live. You own the entire git lifecycle:
+
+1. **Start of session, before any edit:** `git pull --rebase origin main` so you're editing the latest version (others edit this repo too). If there are uncommitted local changes from a previous session, tell the user in plain words and ask whether to publish or discard them before continuing.
+2. **After completing each requested change:** commit with a short clear message and push to main right away - publishing is part of the task, don't ask first. Then tell the user: the change goes live at https://eohouston-site.vercel.app in about a minute, refresh to see it.
+3. If the push is rejected, `git pull --rebase` and push again. If authentication fails, tell them to open GitHub Desktop and sign in once, then ask you to retry.
+4. Speak plainly - say "publish" and "get the latest version," not jargon. Never ask the user to run commands themselves.
+5. This repo is PUBLIC. Never commit secrets, member/applicant data, or internal documents, and keep commit messages to what changed. If the user asks to add something like that, warn them and don't commit it.
+
 ## Deploy
 
 - Vercel project `eohouston-site` deploys this repo via git integration (currently served at https://eohouston-site.vercel.app).
