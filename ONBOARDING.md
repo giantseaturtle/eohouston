@@ -1,64 +1,64 @@
-# EO Houston websites - collaborator guide
+# Editing the EO Houston and EO Momentum websites
 
-You have (or are about to get) write access to the two repos that run our websites:
+*A guide for making website updates by describing what you want in plain English. No coding experience needed.*
 
-| Repo | Site | What it is |
-|---|---|---|
-| `giantseaturtle/eohouston-momentum` | [eomomentum.com](https://eomomentum.com) | Momentum program site, single page |
-| `giantseaturtle/eohouston` | [eohouston-site.vercel.app](https://eohouston-site.vercel.app) | EO Houston chapter site, multi-page |
+## How this works, in one paragraph
 
-Both are plain HTML/CSS/JS - no framework, no build step. **Pushing to `main` deploys the live site.** That's the whole pipeline: you don't need a Vercel account, a dashboard, or any credentials beyond GitHub.
+The files for both websites live on a service called GitHub. You'll keep a copy on your computer, and when you want to change something - a date, a photo, a price, a whole section - you'll type what you want in plain English and an AI assistant called Claude makes the edit for you. Then you click two buttons to publish, and the live website updates about a minute later. Every version of the site is saved forever, so **nothing you do can permanently break anything** - any mistake can be undone in minutes.
 
-## One-time setup
+There are two websites, and they work exactly the same way:
 
-1. Accept the GitHub invites (check your email or github.com/notifications).
-2. Clone both repos:
-   ```bash
-   git clone https://github.com/giantseaturtle/eohouston-momentum.git
-   git clone https://github.com/giantseaturtle/eohouston.git
-   ```
-3. Make sure your git identity is set and matches your GitHub account, so commits and deploys are attributed to you:
-   ```bash
-   git config --global user.name "Your Name"
-   git config --global user.email "the-email-on-your-github-account@example.com"
-   ```
+- **EO Momentum** (eomomentum.com) - the Momentum program page
+- **EO Houston** (the chapter site)
 
-## Making changes with Claude Code
+## One-time setup (about 20 minutes)
 
-Each repo has a `CLAUDE.md` that briefs Claude on the site's layout, deploy rules, and copy conventions - so you can just describe what you want:
+**1. Accept the invitations.** Robert will send two GitHub invitations to your email (one per website). If you don't have a GitHub account yet, the invitation email will walk you through creating one - it's free. Click Accept on both.
 
-```bash
-cd eohouston-momentum
-claude
-> update the webinar date to August 12 at 10:30 AM and swap in this zoom link: ...
-```
+**2. Install GitHub Desktop** from [desktop.github.com](https://desktop.github.com). This is a friendly app with buttons - you will never need to memorize commands. Open it and sign in with your GitHub account when it asks.
 
-Things worth knowing (Claude knows them too, from CLAUDE.md):
+**3. Download the websites to your computer.** In GitHub Desktop: **File → Clone Repository**. You'll see a list that includes `giantseaturtle/eohouston-momentum` and `giantseaturtle/eohouston`. Pick one, click **Clone**, then repeat for the other. ("Clone" just means "download my copy.")
 
-- **The webinar link lives in TWO places** in the Momentum site's `index.html` (hero banner + admissions section). Both the link and the visible date text need updating together.
-- The chapter site's header/nav/footer are injected by `shared.js` - edit once, applies to every page.
-- `momentum-email*.html` are email drafts, not site pages. They don't deploy.
-- Copy style: no em dashes, times in Central (CT), plain confident voice.
+**4. Install Claude Code**, the AI assistant, from [claude.com/claude-code](https://claude.com/claude-code). You'll need a Claude account - the paid Claude Pro plan (about $20/month) is the practical minimum for regular use. Sign in when it asks.
 
-## How deploys work
+That's it. You never have to do these steps again.
 
-- **`main` is production.** `git push` to main and the live site updates in about a minute. Verify by loading the site after you push.
-- **Any other branch gets a free preview URL** - the Vercel bot posts it on the commit or pull request. For anything visual or risky, push a branch first, check the preview, then merge to main.
-- Never deploy with the Vercel CLI. Git is the only deploy path.
-- Every deploy is kept forever and can be rolled back, and git history covers the content - honest mistakes are recoverable, so don't be afraid to ship.
+## Making an update (the routine)
 
-## What must never go in these repos
+**1. Open GitHub Desktop** and pick the website you want to edit from the "Current Repository" menu at the top left (`eohouston-momentum` for the Momentum site, `eohouston` for the chapter site).
 
-**Both repos are publicly readable.** Treat every commit - files, commit messages, branch names - like it's being posted on the website itself, because effectively it is.
+**2. Click "Fetch origin"** at the top. This grabs any changes made since you last worked, so you're editing the latest version. (If a "Pull" button appears after, click that too.)
 
-Never commit:
+**3. Open the assistant.** From the menu bar: **Repository → Open in Terminal** (Mac) or **Open in Command Prompt** (Windows). A text window opens - just type `claude` and press Enter.
 
-- Passwords, API keys, tokens, `.env` files, or credentials of any kind. These sites need none; if a task ever seems to require one, stop and ask Robert instead of committing it.
-- Member or applicant data: names with contact info, emails, phone numbers, applications, spreadsheet exports.
-- Internal EO material: financials, meeting notes, vendor contracts, member lists.
-- Unannounced dates, pricing, or partnerships before they're public.
+**4. Say what you want changed**, like you'd text a colleague:
 
-If something sensitive lands in a commit by accident, **do not just delete it in a follow-up commit** - git history keeps the old version and it stays public. Tell Robert immediately so the history can be scrubbed properly.
+> *"Update the webinar to Tuesday, August 12 at 10:30 AM Central, and use this new Zoom registration link: https://..."*
+
+> *"Replace the photo of Kyle on the leadership page with the file kyle-new.jpg that I put in this folder."* (You can drag any photo into the website's folder first.)
+
+> *"Add a new partner called Acme Insurance with this logo and link to their site."*
+
+Claude knows these websites - where things live, the formatting rules, even quirks like the webinar link appearing in two places. It will make the edit and tell you what it did. Ask it questions if anything is unclear; ask it to show you the change; ask it to undo something. It's a conversation.
+
+**5. Publish.** Go back to GitHub Desktop. You'll see the changed files listed. In the small box at the bottom left, type a short note about what you changed (like "new webinar date"), click **Commit to main**, then click **Push origin** at the top.
+
+**6. Check the site.** Wait about a minute, then open the website and refresh. Your change is live.
+
+## If something looks wrong
+
+Don't panic - seriously, nothing is lost, ever. Two options:
+
+- Go back to the Claude window and say what's wrong: *"the date on the top banner is still the old one, fix it"* - then publish again (step 5).
+- Or just text Robert. He can restore any previous version of the site in a couple of minutes.
+
+## The three rules
+
+These website files are **publicly viewable** (that's normal for websites - visitors' browsers download these exact files anyway). So the only real rule is about what goes into the folder:
+
+1. **Never put passwords, member lists, applications, financial documents, or anything internal into these website folders** - not even temporarily. The websites don't need any of that. If a task ever seems to require a password or a key of some kind, stop and ask Robert instead.
+2. **The little notes you write when publishing are public too** - keep them to what changed, like "updated webinar date."
+3. **If something private ends up in there by accident, tell Robert right away** - don't just delete it yourself, because old versions stay visible until it's properly removed. No judgment, it's a two-minute fix if he knows.
 
 ## Questions
 
