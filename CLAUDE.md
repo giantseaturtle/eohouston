@@ -8,6 +8,7 @@ Static multi-page site for the EO Houston chapter. No build step, no framework -
 - Push to `main` = LIVE production deploy. Treat main as production.
 - Push any other branch = preview deployment (URL posted on the commit/PR by the Vercel bot).
 - Do not deploy with the Vercel CLI; git push is the deploy.
+- Vercel BLOCKS deploys whose commit author can't be matched to a GitHub account. Before your first push, make sure `git config user.email` is an email verified on your GitHub profile, or the deploy silently stalls as BLOCKED.
 
 ## Layout
 
