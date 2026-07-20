@@ -27,6 +27,7 @@ Most people editing this repo are non-technical; they open Claude Code, describe
 - `styles.css` - shared styles for all pages.
 - `assets/` - logos, swoosh/wave decorations, icons, card and team images.
 - `vercel.json` - `cleanUrls: true`, so internal links are extensionless (`/join`, not `/join.html`). Keep new links extensionless.
+- Every page's `<head>` carries the Google Analytics gtag snippet (G-9M5D1F3XQ4), inserted just before `</head>`. When creating a new page, copy an existing page so it comes along; don't remove it.
 
 ## Related site
 
