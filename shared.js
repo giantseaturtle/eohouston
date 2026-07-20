@@ -41,6 +41,8 @@
         '<a class="btn btn-pink" href="/refer">Refer a Member</a>' +
         '<a class="btn btn-accent" href="/join">Join EO Houston</a>' +
       '</div>' +
+      '<a class="header-login-mobile" href="' + MEMBER_LOGIN + '" target="_blank" rel="noopener">' +
+        '<span class="lm-full">Member Login</span><span class="lm-short">Sign In</span></a>' +
       '<button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>' +
     '</div>' +
     '<div class="mobile-nav" id="mnav">' + navLinks(true) +

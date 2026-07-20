@@ -88,6 +88,10 @@ button.btn::after{display:none}
 .header-actions{display:flex;align-items:center;gap:.6rem}
 .header-login{font-family:'Sora',sans-serif;font-weight:600;font-size:.82rem;color:var(--muted);padding:.4rem 0 .4rem .9rem;border-left:1px solid var(--line);white-space:nowrap}
 .header-login:hover{color:var(--accent)}
+/* Compact login pill shown only at hamburger widths, next to the toggle */
+.header-login-mobile{display:none;font-family:'Sora',sans-serif;font-weight:600;font-size:.78rem;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:.42rem .8rem;white-space:nowrap;margin-left:auto}
+.header-login-mobile:hover{color:var(--accent);border-color:var(--accent)}
+.header-login-mobile .lm-short{display:none}
 .header-refer{font-family:'Sora',sans-serif;font-weight:600;font-size:.85rem;color:var(--muted);white-space:nowrap}
 .header-refer:hover{color:var(--accent)}
 .email-frame{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:34px}
@@ -370,9 +374,14 @@ body.lb-locked{overflow:hidden}
 }
 @media(max-width:1140px){
   .nav,.header-login,.header-actions{display:none}
-  .nav-toggle{display:flex}
+  .nav-toggle{display:flex;margin-left:0}
+  .header-login-mobile{display:inline-flex;align-items:center}
   .header-inner{gap:.6rem}
   .brand small{font-size:.62rem}
+}
+@media(max-width:360px){
+  .header-login-mobile .lm-full{display:none}
+  .header-login-mobile .lm-short{display:inline}
 }
 @media(max-width:680px){
   .cols-3,.cols-4,.cols-2,.quotes,.form-row{grid-template-columns:1fr}
