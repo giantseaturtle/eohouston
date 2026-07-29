@@ -29,6 +29,10 @@ Most people editing this repo are non-technical; they open Claude Code, describe
 - `vercel.json` - `cleanUrls: true`, so internal links are extensionless (`/join`, not `/join.html`). Keep new links extensionless.
 - Every page's `<head>` carries the Google Analytics gtag snippet (G-9M5D1F3XQ4), inserted just before `</head>`. When creating a new page, copy an existing page so it comes along; don't remove it.
 
+## 404 page
+
+`404.html` at the repo root is Vercel's automatic fallback for any unmatched path on a static (no-framework) deployment - no routing config needed, and the real 404 status code is preserved. It's branded (shared header/footer, links back to Home/Events/Join) instead of Vercel's bare "NOT_FOUND" page, and fires a `page_not_found` GA4 event with `path` and `referrer` params so ongoing dead-link traffic shows up in GA4 going forward (there's no other way to see this - the site is fully static with no functions, so `vercel logs` has nothing to show, at any time window). A one-time historical audit of dead links (from Wayback Machine history, ~130 of them, mostly the old WordPress blog and events-calendar plugin) was done separately and isn't tracked in this repo.
+
 ## Analytics
 
 `shared.js` has one delegated click listener (added after the header/footer are injected, so it covers header/footer/mobile-nav buttons automatically) that fires a `cta_click` GA4 event for every click on a `.btn`-styled element or the Member Login link, with `link_text`, `link_url`, and `page` (from `data-page`, or the pathname on pages that don't set it) as params. New buttons on any page are tracked automatically just by using the `.btn` class - no per-button wiring needed.
