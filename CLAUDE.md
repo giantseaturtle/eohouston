@@ -29,6 +29,20 @@ Most people editing this repo are non-technical; they open Claude Code, describe
 - `vercel.json` - `cleanUrls: true`, so internal links are extensionless (`/join`, not `/join.html`). Keep new links extensionless.
 - Every page's `<head>` carries the Google Analytics gtag snippet (G-9M5D1F3XQ4), inserted just before `</head>`. When creating a new page, copy an existing page so it comes along; don't remove it.
 
+## Analytics
+
+`shared.js` has one delegated click listener (added after the header/footer are injected, so it covers header/footer/mobile-nav buttons automatically) that fires a `cta_click` GA4 event for every click on a `.btn`-styled element or the Member Login link, with `link_text`, `link_url`, and `page` (from `data-page`, or the pathname on pages that don't set it) as params. New buttons on any page are tracked automatically just by using the `.btn` class - no per-button wiring needed.
+
+On top of that generic event, a few of the highest-value destinations also fire their own named event so Robert can build a funnel/report without filtering by link text:
+- `join_click` - any link to `/join` or to `member.eonetwork.org/why-join` (EO's own membership application)
+- `refer_click` - the `/refer` link
+- `momentum_click` - any link to eomomentum.com
+- `member_login_click` - the chapterpro Member Login link
+- `join_form_submit` - fires on `thanks.html` load. That page is only reachable via the join.html contact form's `formsubmit.co` `_next` redirect, so a pageview there means that form was submitted successfully (there's no reliable client-side "submit succeeded" hook for a plain HTML POST to a third party, so the destination page is the signal).
+- `refer_copy_email_click` - fires from `refer.html`'s own inline script, inside `flash()`, so it only counts an actual successful copy (clipboard API or the execCommand fallback), not a copy attempt that errored.
+
+If a new CTA rule is needed, add a `[regex, 'event_name']` pair to `CTA_EVENT_RULES` in `shared.js`.
+
 ## Related site
 
 The Momentum program site (eomomentum.com) is a SEPARATE repo/Vercel project. This site links out to it from index/join/about and from the nav in `shared.js`.

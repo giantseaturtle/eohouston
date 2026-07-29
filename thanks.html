@@ -37,5 +37,10 @@
 </section>
 <div id="site-footer"></div>
 <script src="shared.js"></script>
+<script>
+  // Only reached via the join.html contact form's formsubmit.co _next redirect,
+  // so a page view here means that form was submitted successfully.
+  if (typeof gtag === 'function') gtag('event', 'join_form_submit');
+</script>
 </body>
 </html>

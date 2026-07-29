@@ -90,7 +90,10 @@
 <script>
 (function(){
   var btn=document.getElementById('copyBtn'), msg=document.getElementById('copyMsg'), node=document.getElementById('email-body');
-  function flash(){ msg.style.display='block'; setTimeout(function(){msg.style.display='none';},4000); }
+  function flash(){
+    msg.style.display='block'; setTimeout(function(){msg.style.display='none';},4000);
+    if (typeof gtag === 'function') gtag('event', 'refer_copy_email_click');
+  }
   btn.addEventListener('click', async function(){
     var html=node.innerHTML, text=node.innerText;
     try{

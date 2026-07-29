@@ -78,6 +78,35 @@
       '<div class="footer-bottom"><span>© ' + '2026 EO Houston, a chapter of the Entrepreneurs’ Organization. · Houston, Texas</span></div>' +
     '</div></footer>';
 
+  /* GA4: track every CTA-style button/link click sitewide (text + destination + page) as
+     cta_click, and promote the highest-value conversions to their own named event so Robert
+     can build funnels/reports off them directly instead of filtering by link text every time. */
+  var CTA_EVENT_RULES = [
+    [/^\/join(#.*)?$/, 'join_click'],
+    [/^https:\/\/member\.eonetwork\.org\/why-join/, 'join_click'],
+    [/^\/refer$/, 'refer_click'],
+    [/^https:\/\/eomomentum\.com/, 'momentum_click']
+  ];
+  document.addEventListener('click', function (e) {
+    if (typeof window.gtag !== 'function') return;
+    var el = e.target.closest('.btn, .header-login, .header-login-mobile');
+    if (!el) return;
+    var href = el.getAttribute('href') || '';
+    var text = (el.textContent || '').trim().replace(/\s+/g, ' ');
+    var pageLabel = page || location.pathname;
+    window.gtag('event', 'cta_click', { link_text: text, link_url: href, page: pageLabel });
+    if (href === MEMBER_LOGIN) {
+      window.gtag('event', 'member_login_click', { page: pageLabel });
+      return;
+    }
+    for (var i = 0; i < CTA_EVENT_RULES.length; i++) {
+      if (CTA_EVENT_RULES[i][0].test(href)) {
+        window.gtag('event', CTA_EVENT_RULES[i][1], { page: pageLabel });
+        break;
+      }
+    }
+  });
+
   /* lightbox for any .masonry img or [data-lightbox], with gallery next/prev */
   var lb = document.createElement('div');
   lb.className = 'lb';
