@@ -29,6 +29,14 @@ Most people editing this repo are non-technical; they open Claude Code, describe
 - `vercel.json` - `cleanUrls: true`, so internal links are extensionless (`/join`, not `/join.html`). Keep new links extensionless.
 - Every page's `<head>` carries the Google Analytics gtag snippet (G-9M5D1F3XQ4), inserted just before `</head>`. When creating a new page, copy an existing page so it comes along; don't remove it.
 
+## Legacy redirects
+
+`vercel.json` carries 107 permanent (301/308) redirect rules mapping ~133 dead URLs from the site's pre-2026 history (old WordPress blog posts, an events-calendar plugin, old nav pages) to their closest current equivalent, so old backlinks/bookmarks pass their SEO value through instead of 404ing. Two wildcard rules (`/event/:slug+` and `/events/:slug+`, both -> `/events`) catch the old per-event pages; everything else is an exact-match rule, mostly landing on `/`, `/join`, `/about`, or `/partners` depending on the old page's topic. `/eo-accelerator` -> `https://eomomentum.com` since that's the old name for what's now the separate Momentum program site.
+
+Gotcha that cost real debugging time: `trailingSlash: false` strips a trailing slash BEFORE any custom redirect rule gets a chance to match, so every `source` here has to be written without one (a source ending in `/` never fires - Vercel's own normalization always wins that race). Also, a wildcard segment written as `:slug*` (zero-or-more) matches the bare parent path too - `/events/:slug*` -> `/events` self-redirect-looped the real `/events` page in testing. Use `:slug+` (one-or-more) for any wildcard whose destination is the parent page itself.
+
+New dead link discovered later? Add one more exact-match entry to the `redirects` array, destination = whatever current page covers that topic closest.
+
 ## 404 page
 
 `404.html` at the repo root is Vercel's automatic fallback for any unmatched path on a static (no-framework) deployment - no routing config needed, and the real 404 status code is preserved. It's branded (shared header/footer, links back to Home/Events/Join) instead of Vercel's bare "NOT_FOUND" page, and fires a `page_not_found` GA4 event with `path` and `referrer` params so ongoing dead-link traffic shows up in GA4 going forward (there's no other way to see this - the site is fully static with no functions, so `vercel logs` has nothing to show, at any time window). A one-time historical audit of dead links (from Wayback Machine history, ~130 of them, mostly the old WordPress blog and events-calendar plugin) was done separately and isn't tracked in this repo.

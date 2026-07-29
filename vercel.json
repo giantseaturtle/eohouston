@@ -1,4 +1,541 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/event/:slug+",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/events/:slug+",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/3-tips-for-getting-investors-on-board-with-your-csr-mission",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/3-ways-to-apply-an-agile-mindset",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/5-critical-steps-to-solving-your-business-problems-for-good",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/5-self-employed-tax-rules-you-want-to-know-now",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/7-tips-for-incorporating-new-business-development-into-your-busy-schedule",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/a",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about-eo-houston",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/about_us",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/additional-resources",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/answers-to-5-common-return-to-work-questions",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/b2b-game-changers-how-to-discover-a-distinct-advantage-and-become-a-market-leader",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/behavioral-questions-to-ask-in-an-interview-and-what-to-look-for",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/benefits",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
+      "source": "/boyarmiller",
+      "destination": "/partners",
+      "permanent": true
+    },
+    {
+      "source": "/buying-a-business-start-here",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/chapterinfo",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/communique/02092006.htm",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/community",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/community-bank",
+      "destination": "/partners",
+      "permanent": true
+    },
+    {
+      "source": "/communitybackup",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/considering-expanding-your-business-3-tips-on-how-to-approach-it",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
+      "source": "/contact/&",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
+      "source": "/copy-of-benefits-1",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
+      "source": "/copy-of-join",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
+      "source": "/core-values",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/covid-19-resources",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/cybersecurity-for-startups-how-to-protect-your-business",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/eo-accelerator",
+      "destination": "https://eomomentum.com",
+      "permanent": true
+    },
+    {
+      "source": "/eo-forum-your-personal-board-of-directors",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/eo-global",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/eo-store",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/eo-talks",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/events-1",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/experts-share-ways-to-recession-proof-your-business",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/four-ways-to-successfully-lead-a-remote-workforce",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/fusion_tb_category/footer",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/fusion_tb_category/header",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/here-are-five-ways-to-make-your-organizational-chart-more-useful",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home-1",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/how-do-you-create-a-best-place-to-work",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/how-employers-can-support-workplace-mental-health",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/how-entrepreneurs-can-prevent-problems-in-their-work-from-home-strategy",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/how-healthy-are-your-books-here-are-six-questions-to-unlock-answers",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-build-a-team-that-can-navigate-your-business-through-difficult-times",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-get-an-sba-loan-for-your-company",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-give-back-through-your-business",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-launch-a-podcast-advice-for-entrepreneurs",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-project-cash-flow-to-forecast-the-impact-of-covid-19",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-use-a-ghostwriter-to-build-your-authority-and-generate-sales",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-write-and-deliver-a-performance-review-with-example-templates",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/hr-healthcare",
+      "destination": "/partners",
+      "permanent": true
+    },
+    {
+      "source": "/index.htm",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/innovation-through-crisis",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/join-1",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
+      "source": "/join.htm",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
+      "source": "/leadershipbackup",
+      "destination": "/leadership",
+      "permanent": true
+    },
+    {
+      "source": "/leading-change-as-a-female-ceo",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/leading-culture-during-covid-19",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/learning",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/legislation",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/map",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/meet-our-members",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/meet-our-strategic-partners",
+      "destination": "/partners",
+      "permanent": true
+    },
+    {
+      "source": "/membership-requirements",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
+      "source": "/membership",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
+      "source": "/morgan-stanley-",
+      "destination": "/partners",
+      "permanent": true
+    },
+    {
+      "source": "/news",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/not-all-seo-problems-are-easy-to-solve",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/online-application",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
+      "source": "/online-tools-for-better-business",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/pop_experts.htm",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
+      "source": "/pop_lifetime.htm",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
+      "source": "/pop_peer.htm",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
+      "source": "/ppp-forgiveness-what-you-need-to-know",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ppp-round-2-and-the-december-stimulus-bill",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/programs",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/qualifications",
+      "destination": "/join",
+      "permanent": true
+    },
+    {
+      "source": "/seven-ways-your-employees-could-unintentionally-compromise-your-businesss-cyber-security",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/should-entrepreneurs-trust-their-gut",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/should-you-fear-outsourcing-your-software-development",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sponsorship-opportunties",
+      "destination": "/partners",
+      "permanent": true
+    },
+    {
+      "source": "/tax-questions",
+      "destination": "/partners",
+      "permanent": true
+    },
+    {
+      "source": "/testimonials",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/thank-you",
+      "destination": "/thanks",
+      "permanent": true
+    },
+    {
+      "source": "/the-dos-and-donts-of-social-media-marketing",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/the-emotional-intelligence-of-effective-entrepreneurs",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/the-essential-guide-to-creating-a-post-pandemic-workplace",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/the-hire-talent",
+      "destination": "/partners",
+      "permanent": true
+    },
+    {
+      "source": "/tips-for-leading-your-best-video-conference",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/top-10-tips-for-business-instagram-accounts",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/using-digital-marketing-to-rebound-from-covid-19",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/vaco",
+      "destination": "/partners",
+      "permanent": true
+    },
+    {
+      "source": "/vcfo",
+      "destination": "/partners",
+      "permanent": true
+    },
+    {
+      "source": "/virtual-forum-resources",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/virtual-team-building-activities-for-remote-teams",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/what-to-ask-before-buying-a-franchise",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/what-to-do-when-generations-clash",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/what-we-offer",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/where-to-turn-for-financial-support-during-a-crisis",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/why-entrepreneurs-must-harness-the-power-of-sleep",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/why-every-startup-needs-to-shift-its-focus-from-the-checkbook-to-cash-flow",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/work-on-your-business-not-in-your-business",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/worried-about-regulation-how-to-prep-your-business-early-for-lifelong-compliance",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
 }
