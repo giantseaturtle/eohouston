@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EO Houston &mdash; membership marketing package</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="/assets/eo-mark.svg" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0b1a3b; --navy2: #10224d; --navy-soft: #16294f;
+      --ink: #16203a; --body: #48506a; --muted: #7c849c; --line: #e6e9f2;
+      --bg-soft: #f0f1fb;
+      --accent: #3d46f2; --accent-dark: #2a32cf; --accent-soft: #aab0ff;
+      --gold: #f4b740; --pink: #f0426b; --teal: #3f9e86; --orange: #f2733f;
+      --grad: linear-gradient(135deg, #3d46f2 0%, #3f9e86 100%);
+      --radius: 16px; --radius-sm: 10px; --ok: #147a4d;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      background: #e7e9f5; font-family: 'Inter', -apple-system, sans-serif; color: var(--body);
+      display: flex; flex-direction: column; align-items: center; padding: 40px 16px 100px; gap: 28px;
+    }
+    .page-head { max-width: 700px; text-align: center; margin-bottom: 8px; }
+    .page-head h1 { font-family: 'Sora', sans-serif; color: var(--navy); font-size: 24px; margin: 0 0 10px; }
+    .page-head p { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0 0 8px; }
+
+    .section-label {
+      font-family: 'Sora', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--accent); text-align: center;
+    }
+
+    .slide-label { font-family: 'Sora', sans-serif; font-size: 12px; font-weight: 700; color: var(--muted); }
+
+    .card {
+      width: 1080px; height: 1080px; max-width: 100%; aspect-ratio: 1/1;
+      position: relative; overflow: hidden; border-radius: 12px;
+      box-shadow: 0 20px 50px -20px rgba(11,26,59,0.35);
+      display: flex; flex-direction: column;
+    }
+    .card * { box-sizing: border-box; }
+
+    .logo-row { display: flex; align-items: center; gap: 16px; }
+    .logo-row .word strong { font-family: 'Sora', sans-serif; font-size: 26px; display: block; color: #fff; }
+    .logo-row .word span { font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 800; letter-spacing: 0.16em; color: var(--gold); }
+    .logo-row img { width: 48px; height: 48px; }
+
+    .kicker {
+      font-family: 'Sora', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--accent); margin: 0 0 16px;
+    }
+    h2.card-title {
+      font-family: 'Sora', sans-serif; font-weight: 800; font-size: 52px; line-height: 1.1;
+      color: var(--navy); margin: 0; letter-spacing: -0.01em;
+    }
+    p.card-body { font-size: 25px; line-height: 1.5; color: var(--body); margin: 0; }
+
+    .card.bleed { color: #fff; }
+    .card.bleed .bg-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+    .card.bleed .scrim {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(to top, rgba(11,26,59,0.96) 0%, rgba(11,26,59,0.86) 26%, rgba(11,26,59,0.4) 52%, rgba(11,26,59,0.08) 68%, rgba(11,26,59,0) 78%);
+    }
+    .card.bleed .content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; padding: 56px; }
+    .card.bleed .kicker { color: var(--gold); }
+    .card.bleed .logo-row {
+      background: rgba(11,26,59,0.6); padding: 10px 22px 10px 12px; border-radius: 999px;
+      align-self: flex-start; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    }
+
+    .cover-headline {
+      font-family: 'Sora', sans-serif; font-weight: 800; font-size: 80px; line-height: 1.06;
+      letter-spacing: -0.01em; margin: 0 0 24px;
+    }
+    .cover-headline .grad {
+      background: linear-gradient(135deg, #fff 0%, var(--teal) 130%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .cover-sub { font-size: 27px; line-height: 1.5; color: rgba(255,255,255,0.9); max-width: 800px; }
+    .swipe-hint {
+      display: flex; align-items: center; gap: 12px; margin-top: 28px;
+      font-family: 'Sora', sans-serif; font-weight: 700; font-size: 22px; color: rgba(255,255,255,0.75);
+    }
+
+    .card.light { background: #fff; color: var(--body); padding: 56px; }
+    .card.navy {
+      background: radial-gradient(130% 130% at 78% 0%, var(--navy-soft) 0%, var(--navy) 45%, #071227 100%);
+      color: #fff; padding: 56px;
+    }
+
+    .quote-block { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+    .quote-mark { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 130px; color: var(--teal); line-height: 1; margin: 0 0 8px; }
+    .quote-text { font-size: 46px; line-height: 1.35; font-weight: 600; color: #fff; margin: 0 0 36px; max-width: 860px; }
+    .quote-who { display: flex; align-items: center; gap: 18px; }
+    .quote-who img { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255,255,255,0.4); flex: none; }
+    .quote-who .qn { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 24px; color: #fff; text-align: left; }
+    .quote-who .qr { font-size: 18px; color: rgba(255,255,255,0.7); text-align: left; }
+
+    .feature-photo { width: 100%; border-radius: 20px; overflow: hidden; margin: 24px 0; flex: 1; min-height: 0; }
+    .feature-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+    .checklist li { font-size: 27px; color: var(--ink); font-weight: 600; display: flex; align-items: flex-start; gap: 16px; }
+    .checklist .dot {
+      flex: none; width: 32px; height: 32px; border-radius: 50%; background: var(--grad);
+      display: flex; align-items: center; justify-content: center; color: #fff; font-size: 17px; margin-top: 3px;
+    }
+
+    .card.accent { background: var(--grad); color: #fff; padding: 0; }
+    .card.accent .photo-band { width: 100%; height: 32%; overflow: hidden; }
+    .card.accent .photo-band img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .card.accent .accent-content { flex: 1; padding: 44px 56px 56px; display: flex; flex-direction: column; justify-content: center; }
+    .card.accent .kicker { color: rgba(255,255,255,0.9); }
+    .card.accent h2.card-title { color: #fff; font-size: 52px; margin-bottom: 8px; }
+    .stat-list { list-style: none; margin: 34px 0 0; padding: 0; display: grid; gap: 24px; }
+    .stat-list li { display: flex; align-items: baseline; gap: 20px; }
+    .stat-list .d { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 34px; white-space: nowrap; }
+    .stat-list .t { font-size: 24px; color: rgba(255,255,255,0.92); }
+
+    .cta-headline { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 58px; line-height: 1.1; margin: 0 0 28px; max-width: 880px; }
+    .cta-url {
+      font-family: 'Sora', sans-serif; font-weight: 800; font-size: 42px; color: #fff;
+      background: var(--grad); display: inline-block; padding: 20px 38px; border-radius: 999px; text-decoration: none;
+    }
+    .fine-print { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.62); max-width: 780px; margin-top: 24px; }
+
+    body.export-mode { padding: 0; gap: 0; background: #fff; align-items: flex-start; }
+    body.export-mode .page-head, body.export-mode .section-label, body.export-mode .slide-label,
+    body.export-mode .downloads, body.export-mode .wrap-emails, body.export-mode .page-footer { display: none !important; }
+    body.export-mode .card { display: none; border-radius: 0; box-shadow: none; }
+    body.export-mode .card.export-target { display: flex; }
+
+    .downloads { max-width: 900px; width: 100%; margin: 12px 0 0; text-align: center; }
+    .downloads h2 { font-family: 'Sora', sans-serif; color: var(--navy); font-size: 20px; margin: 0 0 14px; }
+    .downloads ol { color: var(--body); font-size: 15px; line-height: 1.7; padding-left: 20px; margin: 0 0 22px; text-align: left; max-width: 640px; margin-left: auto; margin-right: auto; }
+    .download-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+    .download-grid a {
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      background: var(--grad); color: #fff; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 14px;
+      padding: 14px 10px; border-radius: 10px; text-decoration: none;
+    }
+    .download-all {
+      display: inline-flex; align-items: center; gap: 10px; background: var(--navy); color: #fff;
+      font-family: 'Sora', sans-serif; font-weight: 700; font-size: 15px; padding: 14px 22px;
+      border-radius: 10px; text-decoration: none; margin-bottom: 16px;
+    }
+
+    .wrap-emails { max-width: 760px; width: 100%; }
+    .emails-intro { text-align: center; max-width: 620px; margin: 0 auto 20px; }
+    .emails-intro p { font-size: 14.5px; line-height: 1.65; color: var(--body); margin: 10px 0 0; }
+
+    .howto {
+      background: #fff; border: 1px solid var(--line); border-left: 3px solid var(--accent);
+      border-radius: var(--radius-sm); padding: 16px 20px; font-size: 13.5px; line-height: 1.7;
+    }
+    .howto strong { color: var(--ink); }
+    .howto ul { margin: 8px 0 0; padding-left: 18px; }
+    .howto li { margin-bottom: 4px; }
+
+    .angle {
+      background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+      margin-top: 20px; overflow: hidden;
+    }
+    .angle-head {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      padding: 16px 22px; border-bottom: 1px solid var(--line);
+    }
+    .angle-head h3 { font-family: 'Sora', sans-serif; font-size: 15px; margin: 0; color: var(--navy); }
+    .angle-head .tag {
+      font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;
+      color: var(--accent); background: rgba(61,70,242,0.08); padding: 3px 9px; border-radius: 20px;
+    }
+    .angle-when { padding: 12px 22px 0; font-size: 12.5px; color: var(--muted); }
+
+    .email-preview { padding: 18px 22px 22px; font-size: 13.5px; line-height: 1.7; color: var(--ink); }
+    .email-header-photo { display: block; width: 100%; aspect-ratio: 2 / 1; object-fit: cover; object-position: center top; border-radius: 8px; margin-bottom: 16px; }
+    .email-class-photo { display: block; width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin: 4px 0 14px; }
+    .email-caption { font-size: 11px; color: var(--muted); font-style: italic; margin: -10px 0 14px; }
+    .email-subject {
+      font-weight: 700; color: var(--navy); margin-bottom: 12px; padding-bottom: 10px;
+      border-bottom: 1px dashed var(--line);
+    }
+    .email-subject span { font-weight: 400; color: var(--muted); text-transform: uppercase; font-size: 10.5px; letter-spacing: 0.06em; display: block; margin-bottom: 3px; }
+    .email-body p { margin: 0 0 12px; }
+    .email-body ul { margin: 0 0 12px; padding-left: 20px; }
+    .email-body li { margin-bottom: 4px; }
+    .email-body a { color: var(--accent); }
+
+    .angle-actions { display: flex; gap: 8px; padding: 0 22px 20px; align-items: center; justify-content: flex-start; }
+    .copy-btn {
+      font-family: 'Sora', sans-serif; font-weight: 700; font-size: 12.5px; color: #fff; background: var(--grad);
+      border: none; border-radius: 999px; padding: 9px 16px; cursor: pointer;
+    }
+    .copy-btn:hover { filter: brightness(1.06); }
+    .copy-msg { font-size: 12px; color: var(--ok); display: none; }
+    .copy-msg.show { display: inline; }
+
+    .page-footer {
+      max-width: 760px; width: 100%; text-align: center; padding-top: 18px; border-top: 1px solid var(--line);
+      font-size: 11.5px; color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="page-head">
+    <h1>Marketing package for EO Houston membership</h1>
+    <p><strong>What this is:</strong> a social carousel and email templates for inviting qualified Houston founders to join EO Houston (not Momentum). Lead with the carousel when posting or sharing a link, the email templates further down are the backup for a personal invite.</p>
+  </div>
+
+  <p class="section-label">Social media carousel</p>
+
+  <!-- 1: COVER -->
+  <p class="slide-label">Slide 1 of 7 &mdash; Cover</p>
+  <div class="card bleed" id="slide-1">
+    <img class="bg-photo" src="assets/photos/gala-group.jpg" alt="EO Houston members at the annual gala" style="object-position: center 25%;" />
+    <div class="scrim"></div>
+    <div class="content">
+      <div class="logo-row">
+        <img src="assets/eo-mark.svg" alt="EO Houston" />
+        <span class="word"><strong>EO Houston</strong><span>ENTREPRENEURS&rsquo; ORGANIZATION</span></span>
+      </div>
+      <div style="flex:1"></div>
+      <p class="kicker">For Houston founders doing $1M+</p>
+      <h1 class="cover-headline">Find your people.<br /><span class="grad">Grow your business.</span></h1>
+      <p class="cover-sub">A community for established Houston business owners who are ready to learn, connect, and grow.</p>
+      <div class="swipe-hint">Swipe &rarr;</div>
+    </div>
+  </div>
+
+  <!-- 2: TESTIMONIAL -->
+  <p class="slide-label">Slide 2 of 7 &mdash; A member&rsquo;s story</p>
+  <div class="card navy" id="slide-2">
+    <div class="logo-row">
+      <img src="assets/eo-mark.svg" alt="EO Houston" />
+      <span class="word"><strong>EO Houston</strong><span>ENTREPRENEURS&rsquo; ORGANIZATION</span></span>
+    </div>
+    <div class="quote-block">
+      <p class="quote-mark">&ldquo;</p>
+      <p class="quote-text">EO is an excellent organization for like-minded individuals seeking to grow their businesses, start new ventures, and live fulfilling lives.</p>
+      <div class="quote-who">
+        <img src="assets/team/rebecca-loeb.jpg" alt="Rebecca Loeb" />
+        <div><div class="qn">Rebecca Loeb</div><div class="qr">EO Houston member</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3: WHY MEMBERS JOIN -->
+  <p class="slide-label">Slide 3 of 7 &mdash; Why members join</p>
+  <div class="card light" id="slide-3">
+    <p class="kicker">Why members join</p>
+    <h2 class="card-title">Not a networking group. A community.</h2>
+    <div class="feature-photo">
+      <img src="assets/photos/retreat-forum.jpg" alt="An EO Houston Forum retreat" />
+    </div>
+    <p class="card-body" style="font-size: 22px;">EO isn&rsquo;t a lead source. It&rsquo;s built to make you a better leader and your business stronger, alongside peers who&rsquo;ve been exactly where you are.</p>
+  </div>
+
+  <!-- 4: WHO IT'S FOR -->
+  <p class="slide-label">Slide 4 of 7 &mdash; Do you qualify?</p>
+  <div class="card light" id="slide-4">
+    <p class="kicker">Do you qualify?</p>
+    <h2 class="card-title">You&rsquo;re likely a fit if&hellip;</h2>
+    <div class="feature-photo">
+      <img src="assets/photos/event-3.jpg" alt="EO Houston members at a chapter event" style="object-position: center 25%;" />
+    </div>
+    <ul class="checklist">
+      <li><span class="dot">&#10003;</span> You&rsquo;re the founder, co-founder, owner, or controlling shareholder</li>
+      <li><span class="dot">&#10003;</span> Your business grosses $1M+ in annual revenue</li>
+      <li><span class="dot">&#10003;</span> You&rsquo;re ready to share openly and give back, not sell or be sold to</li>
+    </ul>
+  </div>
+
+  <!-- 5: THE REAL UNLOCK -->
+  <p class="slide-label">Slide 5 of 7 &mdash; The real unlock</p>
+  <div class="card bleed" id="slide-5">
+    <img class="bg-photo" src="assets/photos/tiger21-speaker.jpg" alt="An EO Houston speaker event" style="object-position: center 20%;" />
+    <div class="scrim"></div>
+    <div class="content" style="justify-content:flex-end;">
+      <p class="kicker">The real unlock</p>
+      <h2 class="card-title" style="color:#fff; font-size:48px; margin-bottom:18px;">Your own Forum.</h2>
+      <p class="card-body" style="color:rgba(255,255,255,0.88);">A confidential group of 6&ndash;10 fellow owners who meet monthly and become your most trusted personal board of advisors. For most members, it&rsquo;s the single most valuable part of EO.</p>
+    </div>
+  </div>
+
+  <!-- 6: NETWORK STATS -->
+  <p class="slide-label">Slide 6 of 7 &mdash; The network</p>
+  <div class="card accent" id="slide-6">
+    <div class="photo-band">
+      <img src="assets/photos/ypo-networking.jpg" alt="EO Houston members networking" style="object-position: center 30%;" />
+    </div>
+    <div class="accent-content">
+      <p class="kicker">The network</p>
+      <h2 class="card-title">A global community, one local chapter.</h2>
+      <ul class="stat-list">
+        <li><span class="d">19,000+</span><span class="t">members worldwide</span></li>
+        <li><span class="d">200+</span><span class="t">chapters, 80+ countries</span></li>
+        <li><span class="d">75+</span><span class="t">events a year in Houston</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 7: CTA -->
+  <p class="slide-label">Slide 7 of 7 &mdash; Apply</p>
+  <div class="card bleed" id="slide-7">
+    <img class="bg-photo" src="assets/photos/gala-1.jpg" alt="EO Houston members celebrating" style="object-position: center 25%;" />
+    <div class="scrim"></div>
+    <div class="content" style="justify-content:flex-end;">
+      <div class="logo-row" style="margin-bottom:32px;">
+        <img src="assets/eo-mark.svg" alt="EO Houston" />
+        <span class="word"><strong>EO Houston</strong><span>ENTREPRENEURS&rsquo; ORGANIZATION</span></span>
+      </div>
+      <h2 class="cta-headline">Apply for membership today.</h2>
+      <a class="cta-url" href="https://eohouston-site.vercel.app/join">eohouston.com/join</a>
+      <p class="fine-print">EO Houston is the Houston chapter of the Entrepreneurs&rsquo; Organization, a global peer network for founders and owners of $1M+ companies.</p>
+    </div>
+  </div>
+
+  <div class="downloads">
+    <h2>Post this as a carousel</h2>
+    <p style="font-size:14px; color:var(--muted); line-height:1.6; margin:0 0 16px;">These 7 images are meant to be posted together, as one carousel, not individually.</p>
+    <a class="download-all" href="assets/carousel-join/carousel.zip" download>Download all 7 (ZIP) &darr;</a>
+    <ol>
+      <li><strong>LinkedIn:</strong> start a post, click the image icon, and select all 7 files at once (or use "Create a carousel" if offered) &mdash; LinkedIn keeps the order you select them in, so pick slide-1 through slide-7 in order.</li>
+      <li><strong>Instagram:</strong> tap the multi-photo icon when creating a post, add all 7 in order, then post as a carousel.</li>
+      <li><strong>Facebook:</strong> start a post, click "Photo/Video," select all 7 in order &mdash; Facebook will post them as a swipeable album.</li>
+    </ol>
+    <div class="download-grid">
+      <a href="assets/carousel-join/slide-1.jpg" download>Slide 1<br />Cover</a>
+      <a href="assets/carousel-join/slide-2.jpg" download>Slide 2<br />Member story</a>
+      <a href="assets/carousel-join/slide-3.jpg" download>Slide 3<br />Why join</a>
+      <a href="assets/carousel-join/slide-4.jpg" download>Slide 4<br />Qualify</a>
+      <a href="assets/carousel-join/slide-5.jpg" download>Slide 5<br />The Forum</a>
+      <a href="assets/carousel-join/slide-6.jpg" download>Slide 6<br />The network</a>
+      <a href="assets/carousel-join/slide-7.jpg" download>Slide 7<br />Apply</a>
+    </div>
+  </div>
+
+  <p class="section-label">Email templates (backup)</p>
+
+  <div class="wrap-emails">
+    <div class="emails-intro">
+      <p>Four angles for inviting a qualified founder to join EO Houston. Each copies with formatting and images intact, ready to paste straight into Gmail.</p>
+    </div>
+
+    <div class="howto">
+      <strong>How to use these:</strong> click "Copy email" on whichever angle fits, then paste
+      (Cmd/Ctrl + V) directly into a new Gmail draft, formatting, images, and links come along.
+      Swap in the real name, tweak a line or two to sound like you, and send.
+      <ul>
+        <li><strong>Member referral angle</strong>, written peer-to-peer, for a founder you know personally who&rsquo;s never heard of EO.</li>
+        <li><strong>Not at $1M yet angle</strong>, redirects a promising founder who doesn&rsquo;t qualify yet toward EO Momentum, the on-ramp.</li>
+        <li><strong>Chapter Director angle</strong>, written in Jennifer McClanahan&rsquo;s voice, for a warm, official-feeling invite.</li>
+        <li><strong>Global network angle</strong>, leads with the scale of EO worldwide for founders who care about that kind of access.</li>
+      </ul>
+    </div>
+
+    <!-- ================= MEMBER REFERRAL ANGLE ================= -->
+    <div class="angle" id="angle-member">
+      <div class="angle-head">
+        <h3>Member referral angle</h3>
+        <span class="tag">Peer to peer</span>
+      </div>
+      <p class="angle-when">Written from one member to a founder they know, personally recommending EO.</p>
+      <div class="email-preview">
+        <div class="email-subject"><span>Subject</span>Thought of you, this has been huge for my business</div>
+        <a href="https://eohouston-site.vercel.app" target="_blank" rel="noopener"><img class="email-header-photo" src="https://eohouston-site.vercel.app/assets/photos/gala-group.jpg" alt="EO Houston members at the annual gala" /></a>
+        <div class="email-body">
+          <p>Hi [Name],</p>
+          <p>I wanted to tell you about EO Houston, a community I&rsquo;m part of for founders and owners of $1M+ companies. It&rsquo;s not a networking group or a lead source, there&rsquo;s a strict non-solicitation policy, so nobody&rsquo;s selling. It&rsquo;s a community built to make you a better leader and your business stronger.</p>
+          <p>The best part is your own Forum, a confidential group of 6&ndash;10 fellow owners who meet monthly and become your most trusted personal board of advisors. On top of that, there are 75+ events a year and access to 19,000+ members across 200+ chapters worldwide.</p>
+          <p>You&rsquo;re likely a fit if:</p>
+          <ul>
+            <li>You&rsquo;re the founder, co-founder, owner, or controlling shareholder of your company</li>
+            <li>Your business grosses at least $1 million in annual revenue</li>
+            <li>You&rsquo;re ready to share openly and give back, not sell or be sold to</li>
+          </ul>
+          <p>Take a look: <a href="https://eohouston-site.vercel.app/join">eohouston.com/join</a>, or I&rsquo;m happy to just talk you through it.</p>
+          <p>[Your name]</p>
+        </div>
+      </div>
+      <div class="angle-actions">
+        <button class="copy-btn" data-target="angle-member">Copy email</button>
+        <span class="copy-msg">Copied!</span>
+      </div>
+    </div>
+
+    <!-- ================= NOT AT $1M YET ANGLE ================= -->
+    <div class="angle" id="angle-momentum">
+      <div class="angle-head">
+        <h3>Not at $1M yet angle</h3>
+        <span class="tag">Redirect to Momentum</span>
+      </div>
+      <p class="angle-when">For a promising founder under $1M in revenue, points them to EO Momentum as the on-ramp.</p>
+      <div class="email-preview">
+        <div class="email-subject"><span>Subject</span>A two-year on-ramp into EO Houston</div>
+        <a href="https://eomomentum.com" target="_blank" rel="noopener"><img class="email-header-photo" src="https://eomomentum.com/assets/photos/classroom.jpg" alt="An EO Momentum class in session" /></a>
+        <div class="email-body">
+          <p>Hi [Name],</p>
+          <p>EO Houston membership is for founders doing $1M+ in revenue, but I wanted to flag something for where you are right now: EO Momentum.</p>
+          <p>If your business is between $250K and $1M, Momentum is a two-year accelerator built to help you scale past seven figures, build real operating systems, and grow into EO Houston membership. It&rsquo;s run by EO Houston members and taught in partnership with Rice University&rsquo;s Lilie Lab.</p>
+          <p>Take a look: <a href="https://eomomentum.com">eomomentum.com</a>, or learn more about the chapter it leads into at <a href="https://eohouston-site.vercel.app">eohouston.com</a></p>
+          <p>[Your name]</p>
+        </div>
+      </div>
+      <div class="angle-actions">
+        <button class="copy-btn" data-target="angle-momentum">Copy email</button>
+        <span class="copy-msg">Copied!</span>
+      </div>
+    </div>
+
+    <!-- ================= CHAPTER DIRECTOR ANGLE ================= -->
+    <div class="angle" id="angle-director">
+      <div class="angle-head">
+        <h3>Chapter Director angle</h3>
+        <span class="tag">Official invite</span>
+      </div>
+      <p class="angle-when">Written in Jennifer McClanahan&rsquo;s voice, for a warmer, more official-feeling invite.</p>
+      <div class="email-preview">
+        <div class="email-subject"><span>Subject</span>An invitation to EO Houston</div>
+        <a href="https://eohouston-site.vercel.app" target="_blank" rel="noopener"><img class="email-header-photo" src="https://eohouston-site.vercel.app/assets/photos/gala-1.jpg" alt="EO Houston members celebrating" /></a>
+        <div class="email-body">
+          <p>Hi [Name],</p>
+          <p>My name is Jennifer McClanahan, I&rsquo;m the Chapter Director of EO Houston, and a mutual connection thought you&rsquo;d be a great fit for our community.</p>
+          <p>EO Houston is for founders, co-founders, owners, or controlling shareholders of companies grossing $1M+ in annual revenue, who are ready to learn, connect, and grow alongside Houston&rsquo;s best entrepreneurs. Members get a confidential monthly Forum group, 75+ learning events a year, and access to a global network of 19,000+ entrepreneurs in 200+ chapters.</p>
+          <p>I&rsquo;d love to tell you more, or just have you come experience the chapter at an upcoming event before you decide anything.</p>
+          <p>Take a look: <a href="https://eohouston-site.vercel.app/join">eohouston.com/join</a></p>
+          <p>Jennifer McClanahan<br />Chapter Director, EO Houston<br />jennifer@eohouston.com</p>
+        </div>
+      </div>
+      <div class="angle-actions">
+        <button class="copy-btn" data-target="angle-director">Copy email</button>
+        <span class="copy-msg">Copied!</span>
+      </div>
+    </div>
+
+    <!-- ================= GLOBAL NETWORK ANGLE ================= -->
+    <div class="angle" id="angle-global">
+      <div class="angle-head">
+        <h3>Global network angle</h3>
+        <span class="tag">Scale &amp; access</span>
+      </div>
+      <p class="angle-when">Leads with the size and reach of EO worldwide.</p>
+      <div class="email-preview">
+        <div class="email-subject"><span>Subject</span>19,000+ entrepreneurs, one Houston chapter</div>
+        <a href="https://eohouston-site.vercel.app" target="_blank" rel="noopener"><img class="email-header-photo" src="https://eohouston-site.vercel.app/assets/photos/ypo-networking.jpg" alt="EO Houston members networking" /></a>
+        <div class="email-body">
+          <p>Hi [Name],</p>
+          <p>If you&rsquo;re running a $1M+ business in Houston, I wanted to make sure you knew about EO Houston, our local chapter of the Entrepreneurs&rsquo; Organization, a global network of 19,000+ members across 200+ chapters in 80+ countries.</p>
+          <p>Locally, that means a confidential Forum group of 6&ndash;10 fellow owners, 75+ events a year, and a community built around growing you as a leader, not just your business. Globally, it means instant access to entrepreneurs and MyEO communities wherever you travel or expand.</p>
+          <p>You&rsquo;re likely a fit if you&rsquo;re the founder, owner, or controlling shareholder of a company grossing $1M+ in annual revenue, and you&rsquo;re ready to share openly and give back, not sell or be sold to.</p>
+          <p>Take a look: <a href="https://eohouston-site.vercel.app/join">eohouston.com/join</a></p>
+          <p>[Your name]</p>
+        </div>
+      </div>
+      <div class="angle-actions">
+        <button class="copy-btn" data-target="angle-global">Copy email</button>
+        <span class="copy-msg">Copied!</span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    This page is not linked from the site and is excluded from search indexing.
+  </footer>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var exportSlide = params.get('export');
+      if (!exportSlide) return;
+      document.body.classList.add('export-mode');
+      var target = document.getElementById('slide-' + exportSlide);
+      if (target) target.classList.add('export-target');
+    })();
+
+    document.querySelectorAll('.copy-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var container = document.getElementById(btn.dataset.target).querySelector('.email-preview');
+        var html = container.innerHTML;
+        var text = container.innerText;
+        var msg = btn.nextElementSibling;
+
+        function flash() {
+          msg.classList.add('show');
+          setTimeout(function () { msg.classList.remove('show'); }, 2500);
+        }
+
+        navigator.clipboard.write([
+          new ClipboardItem({
+            'text/html': new Blob([html], { type: 'text/html' }),
+            'text/plain': new Blob([text], { type: 'text/plain' })
+          })
+        ]).then(flash).catch(function () {
+          try {
+            var range = document.createRange();
+            range.selectNodeContents(container);
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+            document.execCommand('copy');
+            sel.removeAllRanges();
+            flash();
+          } catch (e) {
+            alert('Select the email text manually and press Cmd/Ctrl+C to copy.');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
