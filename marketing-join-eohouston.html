@@ -21,11 +21,22 @@
     html, body { margin: 0; }
     body {
       background: #e7e9f5; font-family: 'Inter', -apple-system, sans-serif; color: var(--body);
-      display: flex; flex-direction: column; align-items: center; padding: 40px 16px 100px; gap: 28px;
+      display: flex; flex-direction: column; align-items: center; padding: 40px 16px 100px; gap: 20px;
     }
-    .page-head { max-width: 700px; text-align: center; margin-bottom: 8px; }
+    .page-head { max-width: 720px; text-align: center; margin-bottom: 8px; }
     .page-head h1 { font-family: 'Sora', sans-serif; color: var(--navy); font-size: 24px; margin: 0 0 10px; }
     .page-head p { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0 0 8px; }
+
+    .variant-header { max-width: 900px; width: 100%; text-align: center; margin: 24px 0 4px; }
+    .variant-header .vnum { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 12px; letter-spacing: 0.12em; color: var(--accent); }
+    .variant-header h2 { font-family: 'Sora', sans-serif; color: var(--navy); font-size: 20px; margin: 4px 0 6px; }
+    .variant-header p { color: var(--muted); font-size: 13.5px; margin: 0; }
+
+    .index-nav { max-width: 900px; width: 100%; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 20px 24px; }
+    .index-nav h2 { font-family: 'Sora', sans-serif; color: var(--navy); font-size: 16px; margin: 0 0 12px; }
+    .index-nav ol { margin: 0; padding-left: 20px; font-size: 13.5px; line-height: 1.9; color: var(--body); }
+    .index-nav a { color: var(--accent); font-weight: 600; text-decoration: none; }
+    .index-nav a:hover { text-decoration: underline; }
 
     .section-label {
       font-family: 'Sora', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 0.12em;
@@ -52,7 +63,7 @@
       text-transform: uppercase; color: var(--accent); margin: 0 0 16px;
     }
     h2.card-title {
-      font-family: 'Sora', sans-serif; font-weight: 800; font-size: 52px; line-height: 1.1;
+      font-family: 'Sora', sans-serif; font-weight: 800; font-size: 50px; line-height: 1.1;
       color: var(--navy); margin: 0; letter-spacing: -0.01em;
     }
     p.card-body { font-size: 25px; line-height: 1.5; color: var(--body); margin: 0; }
@@ -71,7 +82,7 @@
     }
 
     .cover-headline {
-      font-family: 'Sora', sans-serif; font-weight: 800; font-size: 80px; line-height: 1.06;
+      font-family: 'Sora', sans-serif; font-weight: 800; font-size: 76px; line-height: 1.08;
       letter-spacing: -0.01em; margin: 0 0 24px;
     }
     .cover-headline .grad {
@@ -113,7 +124,8 @@
     .card.accent .photo-band img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .card.accent .accent-content { flex: 1; padding: 44px 56px 56px; display: flex; flex-direction: column; justify-content: center; }
     .card.accent .kicker { color: rgba(255,255,255,0.9); }
-    .card.accent h2.card-title { color: #fff; font-size: 52px; margin-bottom: 8px; }
+    .card.accent h2.card-title { color: #fff; font-size: 50px; margin-bottom: 14px; }
+    .card.accent p.card-body { color: rgba(255,255,255,0.92); font-size: 26px; }
     .stat-list { list-style: none; margin: 34px 0 0; padding: 0; display: grid; gap: 24px; }
     .stat-list li { display: flex; align-items: baseline; gap: 20px; }
     .stat-list .d { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 34px; white-space: nowrap; }
@@ -128,11 +140,12 @@
 
     body.export-mode { padding: 0; gap: 0; background: #fff; align-items: flex-start; }
     body.export-mode .page-head, body.export-mode .section-label, body.export-mode .slide-label,
+    body.export-mode .variant-header, body.export-mode .index-nav,
     body.export-mode .downloads, body.export-mode .wrap-emails, body.export-mode .page-footer { display: none !important; }
     body.export-mode .card { display: none; border-radius: 0; box-shadow: none; }
     body.export-mode .card.export-target { display: flex; }
 
-    .downloads { max-width: 900px; width: 100%; margin: 12px 0 0; text-align: center; }
+    .downloads { max-width: 900px; width: 100%; margin: 4px 0 0; text-align: center; }
     .downloads h2 { font-family: 'Sora', sans-serif; color: var(--navy); font-size: 20px; margin: 0 0 14px; }
     .downloads ol { color: var(--body); font-size: 15px; line-height: 1.7; padding-left: 20px; margin: 0 0 22px; text-align: left; max-width: 640px; margin-left: auto; margin-right: auto; }
     .download-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
@@ -176,8 +189,6 @@
 
     .email-preview { padding: 18px 22px 22px; font-size: 13.5px; line-height: 1.7; color: var(--ink); }
     .email-header-photo { display: block; width: 100%; aspect-ratio: 2 / 1; object-fit: cover; object-position: center top; border-radius: 8px; margin-bottom: 16px; }
-    .email-class-photo { display: block; width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin: 4px 0 14px; }
-    .email-caption { font-size: 11px; color: var(--muted); font-style: italic; margin: -10px 0 14px; }
     .email-subject {
       font-weight: 700; color: var(--navy); margin-bottom: 12px; padding-bottom: 10px;
       border-bottom: 1px dashed var(--line);
@@ -206,138 +217,234 @@
 <body>
   <div class="page-head">
     <h1>Marketing package for EO Houston membership</h1>
-    <p><strong>What this is:</strong> a social carousel and email templates for inviting qualified Houston founders to join EO Houston (not Momentum). Lead with the carousel when posting or sharing a link, the email templates further down are the backup for a personal invite.</p>
+    <p><strong>What this is:</strong> social carousels and email templates for inviting qualified Houston founders to join EO Houston. Four carousels: a general "join" deck, plus three built from our real comparison pages (vs. YPO, vs. Vistage, vs. Goldman Sachs 10KSB). Email templates for a general invite are further down as backup.</p>
   </div>
 
-  <p class="section-label">Social media carousel</p>
-
-  <!-- 1: COVER -->
-  <p class="slide-label">Slide 1 of 7 &mdash; Cover</p>
-  <div class="card bleed" id="slide-1">
-    <img class="bg-photo" src="assets/photos/gala-group.jpg" alt="EO Houston members at the annual gala" style="object-position: center 25%;" />
-    <div class="scrim"></div>
-    <div class="content">
-      <div class="logo-row">
-        <img src="assets/eo-mark.svg" alt="EO Houston" />
-        <span class="word"><strong>EO Houston</strong><span>ENTREPRENEURS&rsquo; ORGANIZATION</span></span>
-      </div>
-      <div style="flex:1"></div>
-      <p class="kicker">For Houston founders doing $1M+</p>
-      <h1 class="cover-headline">Find your people.<br /><span class="grad">Grow your business.</span></h1>
-      <p class="cover-sub">A community for established Houston business owners who are ready to learn, connect, and grow.</p>
-      <div class="swipe-hint">Swipe &rarr;</div>
-    </div>
+  <div class="index-nav">
+    <h2>All 4 carousels</h2>
+    <ol id="index-list"></ol>
   </div>
 
-  <!-- 2: TESTIMONIAL -->
-  <p class="slide-label">Slide 2 of 7 &mdash; A member&rsquo;s story</p>
-  <div class="card navy" id="slide-2">
-    <div class="logo-row">
-      <img src="assets/eo-mark.svg" alt="EO Houston" />
-      <span class="word"><strong>EO Houston</strong><span>ENTREPRENEURS&rsquo; ORGANIZATION</span></span>
-    </div>
-    <div class="quote-block">
-      <p class="quote-mark">&ldquo;</p>
-      <p class="quote-text">EO is an excellent organization for like-minded individuals seeking to grow their businesses, start new ventures, and live fulfilling lives.</p>
-      <div class="quote-who">
-        <img src="assets/team/rebecca-loeb.jpg" alt="Rebecca Loeb" />
-        <div><div class="qn">Rebecca Loeb</div><div class="qr">EO Houston member</div></div>
-      </div>
-    </div>
-  </div>
+  <div id="root"></div>
 
-  <!-- 3: WHY MEMBERS JOIN -->
-  <p class="slide-label">Slide 3 of 7 &mdash; Why members join</p>
-  <div class="card light" id="slide-3">
-    <p class="kicker">Why members join</p>
-    <h2 class="card-title">Not a networking group. A community.</h2>
-    <div class="feature-photo">
-      <img src="assets/photos/retreat-forum.jpg" alt="An EO Houston Forum retreat" />
-    </div>
-    <p class="card-body" style="font-size: 22px;">EO isn&rsquo;t a lead source. It&rsquo;s built to make you a better leader and your business stronger, alongside peers who&rsquo;ve been exactly where you are.</p>
-  </div>
+  <script>
+    const P = (name) => 'assets/photos/' + name;
+    const T = (name) => 'assets/team/' + name;
+    const EMARK = 'assets/eo-mark.svg';
 
-  <!-- 4: WHO IT'S FOR -->
-  <p class="slide-label">Slide 4 of 7 &mdash; Do you qualify?</p>
-  <div class="card light" id="slide-4">
-    <p class="kicker">Do you qualify?</p>
-    <h2 class="card-title">You&rsquo;re likely a fit if&hellip;</h2>
-    <div class="feature-photo">
-      <img src="assets/photos/event-3.jpg" alt="EO Houston members at a chapter event" style="object-position: center 25%;" />
-    </div>
-    <ul class="checklist">
-      <li><span class="dot">&#10003;</span> You&rsquo;re the founder, co-founder, owner, or controlling shareholder</li>
-      <li><span class="dot">&#10003;</span> Your business grosses $1M+ in annual revenue</li>
-      <li><span class="dot">&#10003;</span> You&rsquo;re ready to share openly and give back, not sell or be sold to</li>
-    </ul>
-  </div>
+    const STD_CHECKLIST = [
+      "You&rsquo;re the founder, co-founder, owner, or controlling shareholder",
+      "Your business grosses $1M+ in annual revenue",
+      "You&rsquo;re ready to share openly and give back, not sell or be sold to"
+    ];
 
-  <!-- 5: THE REAL UNLOCK -->
-  <p class="slide-label">Slide 5 of 7 &mdash; The real unlock</p>
-  <div class="card bleed" id="slide-5">
-    <img class="bg-photo" src="assets/photos/tiger21-speaker.jpg" alt="An EO Houston speaker event" style="object-position: center 20%;" />
-    <div class="scrim"></div>
-    <div class="content" style="justify-content:flex-end;">
-      <p class="kicker">The real unlock</p>
-      <h2 class="card-title" style="color:#fff; font-size:48px; margin-bottom:18px;">Your own Forum.</h2>
-      <p class="card-body" style="color:rgba(255,255,255,0.88);">A confidential group of 6&ndash;10 fellow owners who meet monthly and become your most trusted personal board of advisors. For most members, it&rsquo;s the single most valuable part of EO.</p>
-    </div>
-  </div>
+    const VARIANTS = [
+      {
+        slug: "join", label: "Join EO Houston (general)",
+        note: "The general membership deck. A member story, why members join, and the network.",
+        slide1: { kind: "cover", eyebrow: "FOR HOUSTON FOUNDERS DOING $1M+", headline: "Find your people.<br /><span class=\"grad\">Grow your business.</span>", sub: "A community for established Houston business owners who are ready to learn, connect, and grow.", photo: P("gala-group.jpg"), pos: "center 25%" },
+        slide2: { kind: "testimonial", quote: "EO is an excellent organization for like-minded individuals seeking to grow their businesses, start new ventures, and live fulfilling lives.", person: { name: "Rebecca Loeb", role: "EO Houston member", photo: T("rebecca-loeb.jpg") } },
+        slide3: { kind: "feature", label: "Why members join", kicker: "Why members join", headline: "Not a networking group. A community.", body: "EO isn&rsquo;t a lead source. It&rsquo;s built to make you a better leader and your business stronger, alongside peers who&rsquo;ve been exactly where you are.", photo: P("retreat-forum.jpg"), pos: "center" },
+        slide4: { kind: "checklist", label: "Do you qualify?", kicker: "Do you qualify?", headline: "You&rsquo;re likely a fit if&hellip;", items: STD_CHECKLIST, photo: P("event-3.jpg"), pos: "center 25%" },
+        slide5: { kind: "bleed-body", label: "The real unlock", kicker: "The real unlock", headline: "Your own Forum.", body: "A confidential group of 6&ndash;10 fellow owners who meet monthly and become your most trusted personal board of advisors. For most members, it&rsquo;s the single most valuable part of EO.", photo: P("tiger21-speaker.jpg"), pos: "center 20%" },
+        slide6: { kind: "stats", label: "The network", kicker: "The network", headline: "A global community, one local chapter.", stats: [["19,000+", "members worldwide"], ["200+", "chapters, 80+ countries"], ["75+", "events a year in Houston"]], photo: P("learning-luncheon.jpg"), pos: "center 40%" },
+        slide7: { kind: "cta", label: "Apply", headline: "Apply for membership today.", url: "eohouston.com/join", link: "https://eohouston-site.vercel.app/join", fine: "EO Houston is the Houston chapter of the Entrepreneurs&rsquo; Organization, a global peer network for founders and owners of $1M+ companies.", photo: P("gala-1.jpg"), pos: "center 25%" },
+      },
+      {
+        slug: "vs-ypo", label: "EO Houston vs. YPO",
+        note: "From our real /eo-vs-ypo page. Many members belong to both, this isn&rsquo;t a knock on YPO.",
+        slide1: { kind: "cover", eyebrow: "EO HOUSTON VS. YPO", headline: "Two great rooms.<br /><span class=\"grad\">One is easier to get into.</span>", sub: "Many of our members belong to both.", photo: P("gala-four.jpg"), pos: "center 25%" },
+        slide3: { kind: "feature", label: "Who it's for", kicker: "Who it&rsquo;s for", headline: "Founders and owners, not hired executives.", body: "EO Houston is for founders, owners, and controlling shareholders still running the business. YPO qualifies chief executives, even a hired, fireable CEO can join.", photo: P("event-3.jpg"), pos: "center 25%" },
+        slide2: { kind: "feature", label: "Getting in", kicker: "Getting in", headline: "About half the cost. A real path in.", body: "EO Houston dues run roughly half of YPO&rsquo;s, with a $1M revenue requirement instead of double-digit millions. Houston YPO membership is strongly gated, many new joiners start in a regional forum that meets just four or five times a year.", photo: P("learning-luncheon.jpg"), pos: "center 40%" },
+        slide4: { kind: "checklist", label: "Do you qualify?", kicker: "Do you qualify?", headline: "You&rsquo;re likely a fit if&hellip;", items: STD_CHECKLIST, photo: P("gala-couple.jpg"), pos: "center 20%" },
+        slide5: { kind: "bleed-body", label: "The vibe", kicker: "The vibe", headline: "Founder to founder.", body: "No hired-gun CEOs. Everyone in the room owns what they built, and plenty of our members happily belong to both EO Houston and YPO.", photo: P("crawfish.jpg"), pos: "center 35%" },
+        slide6: { kind: "verdict", label: "Bottom line", kicker: "Bottom line", headline: "Relatable peers. Half the cost. A seat you can get.", body: "If you run a much larger company and want a room of big-company chief executives, YPO is a great fit, if you can get in. If you want relatable peers and a local seat you can actually get, EO Houston is hard to beat.", photo: P("retreat-firewalk.jpg") },
+        slide7: { kind: "cta", label: "Apply", headline: "See if EO Houston is your room.", url: "eohouston.com/eo-vs-ypo", link: "https://eohouston-site.vercel.app/eo-vs-ypo", fine: "Read the full side-by-side comparison, including how to apply to each, at eohouston.com/eo-vs-ypo.", photo: P("gala-applause.jpg"), pos: "center 30%" },
+      },
+      {
+        slug: "vs-vistage", label: "EO Houston vs. Vistage",
+        note: "From our real /eo-vs-vistage page. Vistage is excellent for your executives, this isn&rsquo;t a knock on it.",
+        slide1: { kind: "cover", eyebrow: "EO HOUSTON VS. VISTAGE", headline: "Peer-led.<br /><span class=\"grad\">Not coach-led.</span>", sub: "Two great ways to grow, built differently.", photo: P("retreat-forum.jpg"), pos: "center" },
+        slide2: { kind: "feature", label: "Who it's for", kicker: "Who it&rsquo;s for", headline: "You, the owner. Not your executives.", body: "EO Houston is for founders and owners of $1M+ businesses. Vistage is built for CEOs and senior executives, often your own leadership team.", photo: P("connect-lounge.jpg"), pos: "center 20%" },
+        slide3: { kind: "feature", label: "The format", kicker: "The format", headline: "A room of 6 to 10 peers, not 16 to 22.", body: "EO Houston runs a member-led peer Forum. Vistage groups are chair-led, usually 16&ndash;22 people, run by a paid coach.", photo: P("social-highfive.jpg"), pos: "center 30%" },
+        slide4: { kind: "checklist", label: "Do you qualify?", kicker: "Do you qualify?", headline: "You&rsquo;re likely a fit if&hellip;", items: STD_CHECKLIST, photo: P("gala-2.jpg"), pos: "center 25%" },
+        slide5: { kind: "bleed-body", label: "The experience", kicker: "The experience", headline: "Signature socials. Family days.", body: "Vistage meetings usually take your whole day and aren&rsquo;t built to be social. EO Houston wraps growth in experiences you&rsquo;ll actually remember.", photo: P("retreat-firewalk.jpg"), pos: "center 40%" },
+        slide6: { kind: "verdict", label: "Bottom line", kicker: "Bottom line", headline: "The smartest move? Use both.", body: "Vistage is excellent structured coaching, a great place for your top executives. EO Houston is the owner&rsquo;s room: peer-led, holistic, and genuinely fun.", photo: P("gala-applause.jpg") },
+        slide7: { kind: "cta", label: "Apply", headline: "See if EO Houston is your room.", url: "eohouston.com/eo-vs-vistage", link: "https://eohouston-site.vercel.app/eo-vs-vistage", fine: "Read the full side-by-side comparison at eohouston.com/eo-vs-vistage.", photo: P("social-cornhole.jpg"), pos: "center 25%" },
+      },
+      {
+        slug: "vs-goldman-sachs", label: "EO Houston vs. Goldman Sachs 10KSB",
+        note: "From our real /eo-vs-goldman-sachs page. 10KSB is a fantastic program, this isn&rsquo;t a knock on it.",
+        slide1: { kind: "cover", eyebrow: "EO HOUSTON VS. GOLDMAN SACHS 10KSB", headline: "A great program.<br /><span class=\"grad\">Then it ends.</span>", sub: "EO Houston is the community that keeps going.", photo: P("gala-group.jpg"), pos: "center 25%" },
+        slide2: { kind: "feature", label: "What it is", kicker: "What it is", headline: "A membership, not a class.", body: "Goldman Sachs 10,000 Small Businesses is a tuition-free education program: a curriculum, a cohort, a graduation. EO Houston is different, more like a gym than a class, you get out what you put in.", photo: P("learning-luncheon.jpg"), pos: "center 40%" },
+        slide3: { kind: "feature", label: "How long it lasts", kicker: "How long it lasts", headline: "11 to 14 weeks. Or for life.", body: "10KSB runs about 11&ndash;14 weeks, then the program ends. EO Houston keeps going: monthly Forum and 75+ events a year, for as long as you&rsquo;re in business, and after you sell it.", photo: P("social-cornhole.jpg"), pos: "center 25%" },
+        slide4: { kind: "checklist", label: "Do you qualify?", kicker: "Do you qualify?", headline: "You&rsquo;re likely a fit if&hellip;", items: STD_CHECKLIST, photo: P("gala-couple.jpg"), pos: "center 20%" },
+        slide5: { kind: "bleed-body", label: "The model", kicker: "The model", headline: "Graduate. Then keep growing.", body: "Many founders do 10KSB first, sharpen their fundamentals, then join EO Houston as they scale, for the community that carries on.", photo: P("gala-1.jpg"), pos: "center 25%" },
+        slide6: { kind: "verdict", label: "Bottom line", kicker: "Bottom line", headline: "A program vs. a community.", body: "Goldman Sachs 10,000 Small Businesses is an outstanding program to sharpen your fundamentals, and then it&rsquo;s done. EO Houston is the community that carries on for the rest of your entrepreneurial life.", photo: P("gala-four.jpg") },
+        slide7: { kind: "cta", label: "Apply", headline: "Keep growing with EO Houston.", url: "eohouston.com/eo-vs-goldman-sachs", link: "https://eohouston-site.vercel.app/eo-vs-goldman-sachs", fine: "Read the full comparison at eohouston.com/eo-vs-goldman-sachs.", photo: P("gala-applause.jpg"), pos: "center 30%" },
+      },
+    ];
 
-  <!-- 6: NETWORK STATS -->
-  <p class="slide-label">Slide 6 of 7 &mdash; The network</p>
-  <div class="card accent" id="slide-6">
-    <div class="photo-band">
-      <img src="assets/photos/learning-luncheon.jpg" alt="EO Houston members at a learning luncheon" style="object-position: center 40%;" />
-    </div>
-    <div class="accent-content">
-      <p class="kicker">The network</p>
-      <h2 class="card-title">A global community, one local chapter.</h2>
-      <ul class="stat-list">
-        <li><span class="d">19,000+</span><span class="t">members worldwide</span></li>
-        <li><span class="d">200+</span><span class="t">chapters, 80+ countries</span></li>
-        <li><span class="d">75+</span><span class="t">events a year in Houston</span></li>
-      </ul>
-    </div>
-  </div>
+    function logoRow() {
+      return `<div class="logo-row"><img src="${EMARK}" alt="EO Houston" /><span class="word"><strong>EO Houston</strong><span>ENTREPRENEURS&rsquo; ORGANIZATION</span></span></div>`;
+    }
 
-  <!-- 7: CTA -->
-  <p class="slide-label">Slide 7 of 7 &mdash; Apply</p>
-  <div class="card bleed" id="slide-7">
-    <img class="bg-photo" src="assets/photos/gala-1.jpg" alt="EO Houston members celebrating" style="object-position: center 25%;" />
-    <div class="scrim"></div>
-    <div class="content" style="justify-content:flex-end;">
-      <div class="logo-row" style="margin-bottom:32px;">
-        <img src="assets/eo-mark.svg" alt="EO Houston" />
-        <span class="word"><strong>EO Houston</strong><span>ENTREPRENEURS&rsquo; ORGANIZATION</span></span>
-      </div>
-      <h2 class="cta-headline">Apply for membership today.</h2>
-      <a class="cta-url" href="https://eohouston-site.vercel.app/join">eohouston.com/join</a>
-      <p class="fine-print">EO Houston is the Houston chapter of the Entrepreneurs&rsquo; Organization, a global peer network for founders and owners of $1M+ companies.</p>
-    </div>
-  </div>
+    function renderSlide1(s) {
+      return `<div class="card bleed" data-slot="1">
+        <img class="bg-photo" src="${s.photo}" alt="EO Houston" style="object-position:${s.pos || 'center'};" />
+        <div class="scrim"></div>
+        <div class="content">
+          ${logoRow()}
+          <div style="flex:1"></div>
+          <p class="kicker">${s.eyebrow}</p>
+          <h1 class="cover-headline">${s.headline}</h1>
+          <p class="cover-sub">${s.sub}</p>
+          <div class="swipe-hint">Swipe &rarr;</div>
+        </div>
+      </div>`;
+    }
 
-  <div class="downloads">
-    <h2>Post this as a carousel</h2>
-    <p style="font-size:14px; color:var(--muted); line-height:1.6; margin:0 0 16px;">These 7 images are meant to be posted together, as one carousel, not individually.</p>
-    <a class="download-all" href="assets/carousel-join/carousel.zip" download>Download all 7 (ZIP) &darr;</a>
-    <ol>
-      <li><strong>LinkedIn:</strong> start a post, click the image icon, and select all 7 files at once (or use "Create a carousel" if offered) &mdash; LinkedIn keeps the order you select them in, so pick slide-1 through slide-7 in order.</li>
-      <li><strong>Instagram:</strong> tap the multi-photo icon when creating a post, add all 7 in order, then post as a carousel.</li>
-      <li><strong>Facebook:</strong> start a post, click "Photo/Video," select all 7 in order &mdash; Facebook will post them as a swipeable album.</li>
-    </ol>
-    <div class="download-grid">
-      <a href="assets/carousel-join/slide-1.jpg" download>Slide 1<br />Cover</a>
-      <a href="assets/carousel-join/slide-2.jpg" download>Slide 2<br />Member story</a>
-      <a href="assets/carousel-join/slide-3.jpg" download>Slide 3<br />Why join</a>
-      <a href="assets/carousel-join/slide-4.jpg" download>Slide 4<br />Qualify</a>
-      <a href="assets/carousel-join/slide-5.jpg" download>Slide 5<br />The Forum</a>
-      <a href="assets/carousel-join/slide-6.jpg" download>Slide 6<br />The network</a>
-      <a href="assets/carousel-join/slide-7.jpg" download>Slide 7<br />Apply</a>
-    </div>
-  </div>
+    function renderSlide2(s) {
+      if (s.kind === 'testimonial') {
+        return `<div class="card navy" data-slot="2">
+          ${logoRow()}
+          <div class="quote-block">
+            <p class="quote-mark">&ldquo;</p>
+            <p class="quote-text">${s.quote}</p>
+            <div class="quote-who"><img src="${s.person.photo}" alt="${s.person.name}" /><div><div class="qn">${s.person.name}</div><div class="qr">${s.person.role}</div></div></div>
+          </div>
+        </div>`;
+      }
+      return renderFeature(s, 2);
+    }
 
-  <p class="section-label">Email templates (backup)</p>
+    function renderFeature(s, slot) {
+      return `<div class="card light" data-slot="${slot}">
+        <p class="kicker">${s.kicker}</p>
+        <h2 class="card-title">${s.headline}</h2>
+        <div class="feature-photo"><img src="${s.photo}" alt="EO Houston" style="object-position:${s.pos || 'center'};" /></div>
+        <p class="card-body" style="font-size: 22px;">${s.body}</p>
+      </div>`;
+    }
+
+    function renderChecklist(s, slot) {
+      return `<div class="card light" data-slot="${slot}">
+        <p class="kicker">${s.kicker}</p>
+        <h2 class="card-title">${s.headline}</h2>
+        <div class="feature-photo"><img src="${s.photo}" alt="EO Houston" style="object-position:${s.pos || 'center'};" /></div>
+        <ul class="checklist">${s.items.map(t => `<li><span class="dot">&#10003;</span> ${t}</li>`).join('')}</ul>
+      </div>`;
+    }
+
+    function renderBleedBody(s, slot) {
+      return `<div class="card bleed" data-slot="${slot}">
+        <img class="bg-photo" src="${s.photo}" alt="EO Houston" style="object-position:${s.pos || 'center'};" />
+        <div class="scrim"></div>
+        <div class="content" style="justify-content:flex-end;">
+          <p class="kicker">${s.kicker}</p>
+          <h2 class="card-title" style="color:#fff; font-size:48px; margin-bottom:18px;">${s.headline}</h2>
+          <p class="card-body" style="color:rgba(255,255,255,0.88);">${s.body}</p>
+        </div>
+      </div>`;
+    }
+
+    function renderStats(s) {
+      return `<div class="card accent" data-slot="6">
+        <div class="photo-band"><img src="${s.photo}" alt="EO Houston" style="object-position:${s.pos || 'center'};" /></div>
+        <div class="accent-content">
+          <p class="kicker">${s.kicker}</p>
+          <h2 class="card-title">${s.headline}</h2>
+          <ul class="stat-list">${s.stats.map(([d, t]) => `<li><span class="d">${d}</span><span class="t">${t}</span></li>`).join('')}</ul>
+        </div>
+      </div>`;
+    }
+
+    function renderVerdict(s) {
+      return `<div class="card accent" data-slot="6">
+        <div class="photo-band"><img src="${s.photo}" alt="EO Houston" style="object-position:${s.pos || 'center'};" /></div>
+        <div class="accent-content">
+          <p class="kicker">${s.kicker}</p>
+          <h2 class="card-title">${s.headline}</h2>
+          <p class="card-body">${s.body}</p>
+        </div>
+      </div>`;
+    }
+
+    function renderCta(s) {
+      return `<div class="card bleed" data-slot="7">
+        <img class="bg-photo" src="${s.photo}" alt="EO Houston" style="object-position:${s.pos || 'center'};" />
+        <div class="scrim"></div>
+        <div class="content" style="justify-content:flex-end;">
+          <div style="margin-bottom:32px;">${logoRow()}</div>
+          <h2 class="cta-headline">${s.headline}</h2>
+          <a class="cta-url" href="${s.link}">${s.url}</a>
+          <p class="fine-print">${s.fine}</p>
+        </div>
+      </div>`;
+    }
+
+    const SLIDE_LABELS = ["Cover", "Slide 2", "Slide 3", "Do you qualify?", "The vibe", "Bottom line / stats", "Apply"];
+
+    function renderVariant(v, idx) {
+      const n = idx + 1;
+      const slides = [v.slide1, v.slide2, v.slide3, v.slide4, v.slide5, v.slide6, v.slide7];
+      let html = '';
+      slides.forEach((s, i) => {
+        const slot = i + 1;
+        let cardHtml = '';
+        if (slot === 1) cardHtml = renderSlide1(s);
+        else if (slot === 2) cardHtml = renderSlide2(s);
+        else if (slot === 6 && s.kind === 'stats') cardHtml = renderStats(s);
+        else if (slot === 6 && s.kind === 'verdict') cardHtml = renderVerdict(s);
+        else if (slot === 7) cardHtml = renderCta(s);
+        else if (s.kind === 'checklist') cardHtml = renderChecklist(s, slot);
+        else if (s.kind === 'bleed-body') cardHtml = renderBleedBody(s, slot);
+        else cardHtml = renderFeature(s, slot);
+        cardHtml = cardHtml.replace('data-slot="' + slot + '"', `id="v${n}-slide-${slot}" data-slot="${slot}"`);
+        html += `<p class="slide-label">Slide ${slot} of 7 &mdash; ${s.label || SLIDE_LABELS[slot - 1]}</p>\n${cardHtml}\n`;
+      });
+      html += `<div class="downloads">
+        <a class="download-all" href="assets/carousel-${v.slug}/carousel.zip" download>Download all 7 (ZIP) &darr;</a>
+        <ol>
+          <li><strong>LinkedIn:</strong> select all 7 files at once when posting, in order.</li>
+          <li><strong>Instagram:</strong> use the multi-photo option, add all 7 in order.</li>
+          <li><strong>Facebook:</strong> select all 7 in order, it posts as a swipeable album.</li>
+        </ol>
+        <div class="download-grid">
+          ${[1,2,3,4,5,6,7].map(i => `<a href="assets/carousel-${v.slug}/slide-${i}.jpg" download>Slide ${i}</a>`).join('')}
+        </div>
+      </div>`;
+      return html;
+    }
+
+    const root = document.getElementById('root');
+    const params = new URLSearchParams(window.location.search);
+    const onlyVariant = params.get('variant');
+    const exportSlide = params.get('export');
+
+    let html = '';
+    VARIANTS.forEach((v, i) => {
+      if (onlyVariant && String(i + 1) !== onlyVariant) return;
+      html += `<div class="variant-group">
+        <p class="section-label">Social media carousel</p>
+        <div class="variant-header"><p class="vnum">CAROUSEL ${i + 1} OF ${VARIANTS.length}</p><h2>${v.label}</h2><p>${v.note}</p></div>
+        ${renderVariant(v, i)}
+      </div>`;
+    });
+    root.innerHTML = html;
+
+    document.getElementById('index-list').innerHTML = VARIANTS.map((v, i) =>
+      `<li><a href="?variant=${i + 1}">${v.label}</a> &mdash; ${v.note}</li>`
+    ).join('');
+
+    if (exportSlide && onlyVariant) {
+      document.body.classList.add('export-mode');
+      const target = document.getElementById('v' + onlyVariant + '-slide-' + exportSlide);
+      if (target) target.classList.add('export-target');
+    }
+  </script>
+
+  <p class="section-label">Email templates (backup, general invite)</p>
 
   <div class="wrap-emails">
     <div class="emails-intro">
@@ -466,15 +573,6 @@
   </footer>
 
   <script>
-    (function () {
-      var params = new URLSearchParams(window.location.search);
-      var exportSlide = params.get('export');
-      if (!exportSlide) return;
-      document.body.classList.add('export-mode');
-      var target = document.getElementById('slide-' + exportSlide);
-      if (target) target.classList.add('export-target');
-    })();
-
     document.querySelectorAll('.copy-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var container = document.getElementById(btn.dataset.target).querySelector('.email-preview');
