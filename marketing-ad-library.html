@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex"/>
+<title>EO Houston &mdash; ad creative library</title>
+<link rel="icon" href="/assets/eo-mark.svg" type="image/svg+xml"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --navy:#0b1a3b; --ink:#16203a; --body:#48506a; --muted:#7c849c; --line:#e6e9f2;
+    --bg:#f6f7fb; --surface:#fff; --accent:#3d46f2; --momentum:#6d45d0;
+    --shot:#eef0f7;
+    --shadow:0 1px 2px rgba(16,22,60,.05), 0 16px 38px -26px rgba(11,26,59,.35);
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--body);
+          font-family:'Inter',system-ui,sans-serif; line-height:1.6;
+          -webkit-font-smoothing:antialiased; }
+  h1,h2,h3 { font-family:'Sora',sans-serif; color:var(--ink); margin:0; line-height:1.12; }
+  .wrap { max-width:1220px; margin:0 auto; padding:clamp(2rem,5vw,3.5rem) clamp(1rem,4vw,2rem) 5rem; }
+
+  header.top { display:flex; flex-direction:column; gap:1rem; margin-bottom:2rem; }
+  .eyebrow { font-family:'Sora',sans-serif; font-weight:700; font-size:.72rem;
+              letter-spacing:.16em; text-transform:uppercase; color:var(--accent); }
+  h1 { font-size:clamp(1.9rem,4.2vw,2.8rem); font-weight:800; letter-spacing:-.02em; }
+  .lede { max-width:66ch; font-size:1.03rem; margin:0; }
+  .stats { display:flex; flex-wrap:wrap; gap:.5rem; }
+  .stats b { font-size:.78rem; font-weight:600; background:var(--surface);
+              border:1px solid var(--line); border-radius:999px; padding:.35rem .8rem;
+              color:var(--ink); font-variant-numeric:tabular-nums; }
+  .private { display:inline-flex; align-items:center; gap:.5rem; align-self:flex-start;
+              background:#fff5d6; border:1px solid #f0d488; color:#6b4e00;
+              border-radius:9px; padding:.5rem .85rem; font-size:.85rem; font-weight:500; }
+
+  .notes { background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--accent);
+            border-radius:12px; padding:1.2rem 1.4rem; margin-bottom:2rem; }
+  .notes h2 { font-size:.75rem; letter-spacing:.14em; text-transform:uppercase;
+               color:var(--accent); margin-bottom:.6rem; }
+  .notes ul { margin:0; padding-left:1.1rem; }
+  .notes li { margin-bottom:.4rem; font-size:.95rem; }
+  .notes li:last-child { margin-bottom:0; }
+  .notes strong { color:var(--ink); }
+  .notes a { color:var(--accent); }
+
+  .filters { display:flex; flex-wrap:wrap; gap:.45rem; margin-bottom:1.6rem;
+              position:sticky; top:0; background:var(--bg); padding:.9rem 0; z-index:5;
+              border-bottom:1px solid var(--line); }
+  .filters .grp { display:flex; flex-wrap:wrap; gap:.45rem; }
+  .filters .sep { width:1px; background:var(--line); margin:0 .4rem; }
+  .fbtn { font-family:'Sora',sans-serif; font-weight:600; font-size:.79rem;
+           background:var(--surface); border:1px solid var(--line); color:var(--ink);
+           border-radius:8px; padding:.42rem .8rem; cursor:pointer; }
+  .fbtn:hover { border-color:var(--accent); }
+  .fbtn[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:#fff; }
+  .fbtn:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
+           gap:1.3rem; align-items:start; }
+  .card { margin:0; background:var(--surface); border:1px solid var(--line);
+           border-radius:13px; overflow:hidden; box-shadow:var(--shadow);
+           display:flex; flex-direction:column; }
+  .card.hide { display:none; }
+  .shot { background:var(--shot); }
+  .shot img { width:100%; height:100%; object-fit:contain; display:block; }
+  figcaption { padding:.8rem .95rem 1rem; border-top:1px solid var(--line);
+                display:flex; flex-direction:column; gap:.45rem; }
+  .row { display:flex; flex-wrap:wrap; align-items:baseline; gap:.4rem;
+          justify-content:space-between; }
+  .name { font-family:'Sora',sans-serif; font-weight:700; color:var(--ink); font-size:.95rem; }
+  .dim { font-size:.74rem; color:var(--muted); font-variant-numeric:tabular-nums;
+          white-space:nowrap; }
+  .tag { font-size:.7rem; font-weight:600; border-radius:999px; padding:.2rem .55rem;
+          border:1px solid var(--line); color:var(--muted); }
+  .tag.eo { background:rgba(61,70,242,.09); border-color:rgba(61,70,242,.28); color:var(--accent); }
+  .tag.mo { background:rgba(109,69,208,.09); border-color:rgba(109,69,208,.28); color:var(--momentum); }
+  .tag.logo { background:#eef0f7; color:var(--ink); }
+  .use { margin:0; font-size:.79rem; color:var(--muted); }
+  .dl { align-self:flex-start; font-family:'Sora',sans-serif; font-weight:700; font-size:.78rem;
+         color:#fff; background:var(--ink); border-radius:8px; padding:.42rem .85rem;
+         text-decoration:none; }
+  .dl:hover { background:var(--accent); }
+  .dl:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+
+  .empty { display:none; padding:3rem 0; text-align:center; color:var(--muted); }
+  footer.end { margin-top:3rem; padding-top:1.4rem; border-top:1px solid var(--line);
+                font-size:.87rem; color:var(--muted); }
+  footer.end a { color:var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <p class="eyebrow">Google Ad Grants &middot; Performance Max</p>
+    <h1>Ad creative library</h1>
+    <p class="lede">Every image here is wordless and carries no domain or logo type, so Google can
+      crop it into any placement without clipping text. All built from the chapter's own event
+      photography with the EO rings mark, in the site's navy, white, and blue, and the Momentum
+      purple for program ads.</p>
+    <div class="stats">
+      <b>44 ad images</b>
+      <b>4 logo assets</b>
+      <b>4 ratios</b>
+      <b>5 layouts</b>
+      <b>No text on any image</b>
+    </div>
+    <span class="private">Unlisted page. Not linked from the site and set to noindex, so it will
+      not appear in search.</span>
+  </header>
+
+  <div class="notes">
+    <h2>Before you upload</h2>
+    <ul>
+      <li>Send traffic to <a href="/momentum">eohouston.com/momentum</a> or
+        <a href="/join">eohouston.com/join</a>. The grant is tied to the eohouston.com domain,
+        which is why the Momentum program has its own page here.</li>
+      <li>Grant-funded Performance Max serves on <strong>Search and Maps only</strong>, not Display
+        or YouTube, so these run in fewer placements than a paid campaign would use.</li>
+      <li>Performance Max is <strong>exempt from the Ad Grants 5% click-through minimum</strong>.</li>
+      <li>Every asset group needs at least one <strong>logo</strong> asset or it will not publish.
+        Use the white-ground logo unless the placement sits on a light background.</li>
+      <li>The extra-wide 3.2:1 files are not a Performance Max slot. They are for email headers,
+        site banners, and social covers.</li>
+    </ul>
+  </div>
+
+  <div class="filters">
+    <div class="grp" id="f-brand">
+      <button class="fbtn" data-k="brand" data-v="all" aria-pressed="true">All brands</button>
+      <button class="fbtn" data-k="brand" data-v="eo" aria-pressed="false">EO Houston</button>
+      <button class="fbtn" data-k="brand" data-v="mo" aria-pressed="false">Momentum</button>
+      <button class="fbtn" data-k="brand" data-v="logo" aria-pressed="false">Logos</button>
+    </div>
+    <div class="sep" aria-hidden="true"></div>
+    <div class="grp" id="f-ratio">
+      <button class="fbtn" data-k="ratio" data-v="all" aria-pressed="true">All sizes</button>
+      <button class="fbtn" data-k="ratio" data-v="ultrawide" aria-pressed="false">Extra wide (11)</button>
+      <button class="fbtn" data-k="ratio" data-v="landscape" aria-pressed="false">Landscape (13)</button>
+      <button class="fbtn" data-k="ratio" data-v="square" aria-pressed="false">Square (13)</button>
+      <button class="fbtn" data-k="ratio" data-v="portrait" aria-pressed="false">Portrait (11)</button>
+    </div>
+  </div>
+
+  <div class="grid" id="grid">
+      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+        <div class="shot" style="aspect-ratio:1600/500">
+          <img src="/assets/ads/eo-band-crawfish-ultrawide-1600x500.jpg" alt="Crawfish boil, Extra wide" loading="lazy" width="1600" height="500"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Crawfish boil</span>
+            <span class="dim">1600 &times; 500</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Colour band</span>
+            <span class="tag ghost">Extra wide 3.2:1</span>
+          </div>
+          <p class="use">Banners, email headers, site heroes</p>
+          <a class="dl" href="/assets/ads/eo-band-crawfish-ultrawide-1600x500.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="landscape">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/eo-band-crawfish-landscape-1200x628.jpg" alt="Crawfish boil, Landscape" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Crawfish boil</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Colour band</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+          </div>
+          <p class="use">Desktop and Search partner slots</p>
+          <a class="dl" href="/assets/ads/eo-band-crawfish-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="square">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/eo-band-crawfish-square-1200x1200.jpg" alt="Crawfish boil, Square" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Crawfish boil</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Colour band</span>
+            <span class="tag ghost">Square 1:1</span>
+          </div>
+          <p class="use">Mobile feed slots</p>
+          <a class="dl" href="/assets/ads/eo-band-crawfish-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="portrait">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/eo-band-crawfish-portrait-960x1200.jpg" alt="Crawfish boil, Portrait" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Crawfish boil</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Colour band</span>
+            <span class="tag ghost">Portrait 4:5</span>
+          </div>
+          <p class="use">Tighter mobile slots</p>
+          <a class="dl" href="/assets/ads/eo-band-crawfish-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+        <div class="shot" style="aspect-ratio:1600/500">
+          <img src="/assets/ads/eo-corner-selfie-ultrawide-1600x500.jpg" alt="Group selfie, Extra wide" loading="lazy" width="1600" height="500"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Group selfie</span>
+            <span class="dim">1600 &times; 500</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Corner wedge</span>
+            <span class="tag ghost">Extra wide 3.2:1</span>
+          </div>
+          <p class="use">Banners, email headers, site heroes</p>
+          <a class="dl" href="/assets/ads/eo-corner-selfie-ultrawide-1600x500.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="landscape">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/eo-corner-selfie-landscape-1200x628.jpg" alt="Group selfie, Landscape" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Group selfie</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Corner wedge</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+          </div>
+          <p class="use">Desktop and Search partner slots</p>
+          <a class="dl" href="/assets/ads/eo-corner-selfie-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="square">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/eo-corner-selfie-square-1200x1200.jpg" alt="Group selfie, Square" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Group selfie</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Corner wedge</span>
+            <span class="tag ghost">Square 1:1</span>
+          </div>
+          <p class="use">Mobile feed slots</p>
+          <a class="dl" href="/assets/ads/eo-corner-selfie-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="portrait">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/eo-corner-selfie-portrait-960x1200.jpg" alt="Group selfie, Portrait" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Group selfie</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Corner wedge</span>
+            <span class="tag ghost">Portrait 4:5</span>
+          </div>
+          <p class="use">Tighter mobile slots</p>
+          <a class="dl" href="/assets/ads/eo-corner-selfie-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+        <div class="shot" style="aspect-ratio:1600/500">
+          <img src="/assets/ads/eo-frame-firewalk-ultrawide-1600x500.jpg" alt="Retreat firewalk, Extra wide" loading="lazy" width="1600" height="500"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat firewalk</span>
+            <span class="dim">1600 &times; 500</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Framed badge</span>
+            <span class="tag ghost">Extra wide 3.2:1</span>
+          </div>
+          <p class="use">Banners, email headers, site heroes</p>
+          <a class="dl" href="/assets/ads/eo-frame-firewalk-ultrawide-1600x500.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+        <div class="shot" style="aspect-ratio:1600/500">
+          <img src="/assets/ads/eo-frame-highfive-ultrawide-1600x500.jpg" alt="Chapter social, Extra wide" loading="lazy" width="1600" height="500"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter social</span>
+            <span class="dim">1600 &times; 500</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Framed badge</span>
+            <span class="tag ghost">Extra wide 3.2:1</span>
+          </div>
+          <p class="use">Banners, email headers, site heroes</p>
+          <a class="dl" href="/assets/ads/eo-frame-highfive-ultrawide-1600x500.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="landscape">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/eo-frame-firewalk-landscape-1200x628.jpg" alt="Retreat firewalk, Landscape" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat firewalk</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Framed badge</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+          </div>
+          <p class="use">Desktop and Search partner slots</p>
+          <a class="dl" href="/assets/ads/eo-frame-firewalk-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="landscape">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/eo-frame-highfive-landscape-1200x628.jpg" alt="Chapter social, Landscape" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter social</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Framed badge</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+          </div>
+          <p class="use">Desktop and Search partner slots</p>
+          <a class="dl" href="/assets/ads/eo-frame-highfive-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="square">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/eo-frame-firewalk-square-1200x1200.jpg" alt="Retreat firewalk, Square" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat firewalk</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Framed badge</span>
+            <span class="tag ghost">Square 1:1</span>
+          </div>
+          <p class="use">Mobile feed slots</p>
+          <a class="dl" href="/assets/ads/eo-frame-firewalk-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="square">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/eo-frame-highfive-square-1200x1200.jpg" alt="Chapter social, Square" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter social</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Framed badge</span>
+            <span class="tag ghost">Square 1:1</span>
+          </div>
+          <p class="use">Mobile feed slots</p>
+          <a class="dl" href="/assets/ads/eo-frame-highfive-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="portrait">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/eo-frame-firewalk-portrait-960x1200.jpg" alt="Retreat firewalk, Portrait" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat firewalk</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Framed badge</span>
+            <span class="tag ghost">Portrait 4:5</span>
+          </div>
+          <p class="use">Tighter mobile slots</p>
+          <a class="dl" href="/assets/ads/eo-frame-firewalk-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="portrait">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/eo-frame-highfive-portrait-960x1200.jpg" alt="Chapter social, Portrait" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter social</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Framed badge</span>
+            <span class="tag ghost">Portrait 4:5</span>
+          </div>
+          <p class="use">Tighter mobile slots</p>
+          <a class="dl" href="/assets/ads/eo-frame-highfive-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+        <div class="shot" style="aspect-ratio:1600/500">
+          <img src="/assets/ads/eo-arc-lunarnewyear-ultrawide-1600x500.jpg" alt="Lunar New Year, Extra wide" loading="lazy" width="1600" height="500"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Lunar New Year</span>
+            <span class="dim">1600 &times; 500</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Ring arc</span>
+            <span class="tag ghost">Extra wide 3.2:1</span>
+          </div>
+          <p class="use">Banners, email headers, site heroes</p>
+          <a class="dl" href="/assets/ads/eo-arc-lunarnewyear-ultrawide-1600x500.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="landscape">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/eo-arc-lunarnewyear-landscape-1200x628.jpg" alt="Lunar New Year, Landscape" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Lunar New Year</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Ring arc</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+          </div>
+          <p class="use">Desktop and Search partner slots</p>
+          <a class="dl" href="/assets/ads/eo-arc-lunarnewyear-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="square">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/eo-arc-lunarnewyear-square-1200x1200.jpg" alt="Lunar New Year, Square" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Lunar New Year</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Ring arc</span>
+            <span class="tag ghost">Square 1:1</span>
+          </div>
+          <p class="use">Mobile feed slots</p>
+          <a class="dl" href="/assets/ads/eo-arc-lunarnewyear-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="portrait">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/eo-arc-lunarnewyear-portrait-960x1200.jpg" alt="Lunar New Year, Portrait" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Lunar New Year</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Ring arc</span>
+            <span class="tag ghost">Portrait 4:5</span>
+          </div>
+          <p class="use">Tighter mobile slots</p>
+          <a class="dl" href="/assets/ads/eo-arc-lunarnewyear-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+        <div class="shot" style="aspect-ratio:1600/500">
+          <img src="/assets/ads/eo-panel-gala-ultrawide-1600x500.jpg" alt="Annual gala, Extra wide" loading="lazy" width="1600" height="500"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Annual gala</span>
+            <span class="dim">1600 &times; 500</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Split panel</span>
+            <span class="tag ghost">Extra wide 3.2:1</span>
+          </div>
+          <p class="use">Banners, email headers, site heroes</p>
+          <a class="dl" href="/assets/ads/eo-panel-gala-ultrawide-1600x500.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="landscape">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/eo-panel-gala-landscape-1200x628.jpg" alt="Annual gala, Landscape" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Annual gala</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Split panel</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+          </div>
+          <p class="use">Desktop and Search partner slots</p>
+          <a class="dl" href="/assets/ads/eo-panel-gala-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="square">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/eo-panel-gala-square-1200x1200.jpg" alt="Annual gala, Square" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Annual gala</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Split panel</span>
+            <span class="tag ghost">Square 1:1</span>
+          </div>
+          <p class="use">Mobile feed slots</p>
+          <a class="dl" href="/assets/ads/eo-panel-gala-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="portrait">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/eo-panel-gala-portrait-960x1200.jpg" alt="Annual gala, Portrait" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Annual gala</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Split panel</span>
+            <span class="tag ghost">Portrait 4:5</span>
+          </div>
+          <p class="use">Tighter mobile slots</p>
+          <a class="dl" href="/assets/ads/eo-panel-gala-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="ultrawide">
+        <div class="shot" style="aspect-ratio:1600/500">
+          <img src="/assets/ads/mo-band-forum-ultrawide-1600x500.jpg" alt="Retreat forum, Extra wide" loading="lazy" width="1600" height="500"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat forum</span>
+            <span class="dim">1600 &times; 500</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Colour band</span>
+            <span class="tag ghost">Extra wide 3.2:1</span>
+          </div>
+          <p class="use">Banners, email headers, site heroes</p>
+          <a class="dl" href="/assets/ads/mo-band-forum-ultrawide-1600x500.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="landscape">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/mo-band-forum-landscape-1200x628.jpg" alt="Retreat forum, Landscape" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat forum</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Colour band</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+          </div>
+          <p class="use">Desktop and Search partner slots</p>
+          <a class="dl" href="/assets/ads/mo-band-forum-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="square">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/mo-band-forum-square-1200x1200.jpg" alt="Retreat forum, Square" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat forum</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Colour band</span>
+            <span class="tag ghost">Square 1:1</span>
+          </div>
+          <p class="use">Mobile feed slots</p>
+          <a class="dl" href="/assets/ads/mo-band-forum-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="portrait">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/mo-band-forum-portrait-960x1200.jpg" alt="Retreat forum, Portrait" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat forum</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Colour band</span>
+            <span class="tag ghost">Portrait 4:5</span>
+          </div>
+          <p class="use">Tighter mobile slots</p>
+          <a class="dl" href="/assets/ads/mo-band-forum-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="ultrawide">
+        <div class="shot" style="aspect-ratio:1600/500">
+          <img src="/assets/ads/mo-corner-luncheon-ultrawide-1600x500.jpg" alt="Learning luncheon, Extra wide" loading="lazy" width="1600" height="500"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Learning luncheon</span>
+            <span class="dim">1600 &times; 500</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Corner wedge</span>
+            <span class="tag ghost">Extra wide 3.2:1</span>
+          </div>
+          <p class="use">Banners, email headers, site heroes</p>
+          <a class="dl" href="/assets/ads/mo-corner-luncheon-ultrawide-1600x500.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="landscape">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/mo-corner-luncheon-landscape-1200x628.jpg" alt="Learning luncheon, Landscape" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Learning luncheon</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Corner wedge</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+          </div>
+          <p class="use">Desktop and Search partner slots</p>
+          <a class="dl" href="/assets/ads/mo-corner-luncheon-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="square">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/mo-corner-luncheon-square-1200x1200.jpg" alt="Learning luncheon, Square" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Learning luncheon</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Corner wedge</span>
+            <span class="tag ghost">Square 1:1</span>
+          </div>
+          <p class="use">Mobile feed slots</p>
+          <a class="dl" href="/assets/ads/mo-corner-luncheon-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="portrait">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/mo-corner-luncheon-portrait-960x1200.jpg" alt="Learning luncheon, Portrait" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Learning luncheon</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Corner wedge</span>
+            <span class="tag ghost">Portrait 4:5</span>
+          </div>
+          <p class="use">Tighter mobile slots</p>
+          <a class="dl" href="/assets/ads/mo-corner-luncheon-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="ultrawide">
+        <div class="shot" style="aspect-ratio:1600/500">
+          <img src="/assets/ads/mo-frame-lounge-ultrawide-1600x500.jpg" alt="Member lounge, Extra wide" loading="lazy" width="1600" height="500"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Member lounge</span>
+            <span class="dim">1600 &times; 500</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Framed badge</span>
+            <span class="tag ghost">Extra wide 3.2:1</span>
+          </div>
+          <p class="use">Banners, email headers, site heroes</p>
+          <a class="dl" href="/assets/ads/mo-frame-lounge-ultrawide-1600x500.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="landscape">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/mo-frame-lounge-landscape-1200x628.jpg" alt="Member lounge, Landscape" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Member lounge</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Framed badge</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+          </div>
+          <p class="use">Desktop and Search partner slots</p>
+          <a class="dl" href="/assets/ads/mo-frame-lounge-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="square">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/mo-frame-lounge-square-1200x1200.jpg" alt="Member lounge, Square" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Member lounge</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Framed badge</span>
+            <span class="tag ghost">Square 1:1</span>
+          </div>
+          <p class="use">Mobile feed slots</p>
+          <a class="dl" href="/assets/ads/mo-frame-lounge-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="portrait">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/mo-frame-lounge-portrait-960x1200.jpg" alt="Member lounge, Portrait" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Member lounge</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Framed badge</span>
+            <span class="tag ghost">Portrait 4:5</span>
+          </div>
+          <p class="use">Tighter mobile slots</p>
+          <a class="dl" href="/assets/ads/mo-frame-lounge-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="ultrawide">
+        <div class="shot" style="aspect-ratio:1600/500">
+          <img src="/assets/ads/mo-arc-stage-ultrawide-1600x500.jpg" alt="Chapter event, Extra wide" loading="lazy" width="1600" height="500"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter event</span>
+            <span class="dim">1600 &times; 500</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Ring arc</span>
+            <span class="tag ghost">Extra wide 3.2:1</span>
+          </div>
+          <p class="use">Banners, email headers, site heroes</p>
+          <a class="dl" href="/assets/ads/mo-arc-stage-ultrawide-1600x500.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="landscape">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/mo-arc-stage-landscape-1200x628.jpg" alt="Chapter event, Landscape" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter event</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Ring arc</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+          </div>
+          <p class="use">Desktop and Search partner slots</p>
+          <a class="dl" href="/assets/ads/mo-arc-stage-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="square">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/mo-arc-stage-square-1200x1200.jpg" alt="Chapter event, Square" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter event</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Ring arc</span>
+            <span class="tag ghost">Square 1:1</span>
+          </div>
+          <p class="use">Mobile feed slots</p>
+          <a class="dl" href="/assets/ads/mo-arc-stage-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="portrait">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/mo-arc-stage-portrait-960x1200.jpg" alt="Chapter event, Portrait" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter event</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Ring arc</span>
+            <span class="tag ghost">Portrait 4:5</span>
+          </div>
+          <p class="use">Tighter mobile slots</p>
+          <a class="dl" href="/assets/ads/mo-arc-stage-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="ultrawide">
+        <div class="shot" style="aspect-ratio:1600/500">
+          <img src="/assets/ads/mo-panel-classroom-ultrawide-1600x500.jpg" alt="Momentum cohort, Extra wide" loading="lazy" width="1600" height="500"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Momentum cohort</span>
+            <span class="dim">1600 &times; 500</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Split panel</span>
+            <span class="tag ghost">Extra wide 3.2:1</span>
+          </div>
+          <p class="use">Banners, email headers, site heroes</p>
+          <a class="dl" href="/assets/ads/mo-panel-classroom-ultrawide-1600x500.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="landscape">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/mo-panel-classroom-landscape-1200x628.jpg" alt="Momentum cohort, Landscape" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Momentum cohort</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Split panel</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+          </div>
+          <p class="use">Desktop and Search partner slots</p>
+          <a class="dl" href="/assets/ads/mo-panel-classroom-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="square">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/mo-panel-classroom-square-1200x1200.jpg" alt="Momentum cohort, Square" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Momentum cohort</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Split panel</span>
+            <span class="tag ghost">Square 1:1</span>
+          </div>
+          <p class="use">Mobile feed slots</p>
+          <a class="dl" href="/assets/ads/mo-panel-classroom-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="portrait">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/mo-panel-classroom-portrait-960x1200.jpg" alt="Momentum cohort, Portrait" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Momentum cohort</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Split panel</span>
+            <span class="tag ghost">Portrait 4:5</span>
+          </div>
+          <p class="use">Tighter mobile slots</p>
+          <a class="dl" href="/assets/ads/mo-panel-classroom-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="logo" data-ratio="landscape">
+        <div class="shot" style="aspect-ratio:1200/300">
+          <img src="/assets/ads/logo-landscape-1200x300.png" alt="White ground, Landscape" loading="lazy" width="1200" height="300"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">White ground</span>
+            <span class="dim">1200 &times; 300</span>
+          </div>
+          <div class="row">
+            <span class="tag logo">Logo</span>
+            <span class="tag ghost">Rings mark</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+          </div>
+          <p class="use">Desktop and Search partner slots</p>
+          <a class="dl" href="/assets/ads/logo-landscape-1200x300.png" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="logo" data-ratio="landscape">
+        <div class="shot" style="aspect-ratio:1200/300">
+          <img src="/assets/ads/logo-navy-landscape-1200x300.png" alt="Navy ground, Landscape" loading="lazy" width="1200" height="300"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Navy ground</span>
+            <span class="dim">1200 &times; 300</span>
+          </div>
+          <div class="row">
+            <span class="tag logo">Logo</span>
+            <span class="tag ghost">Rings mark</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+          </div>
+          <p class="use">Desktop and Search partner slots</p>
+          <a class="dl" href="/assets/ads/logo-navy-landscape-1200x300.png" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="logo" data-ratio="square">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/logo-navy-square-1200x1200.png" alt="Navy ground, Square" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Navy ground</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag logo">Logo</span>
+            <span class="tag ghost">Rings mark</span>
+            <span class="tag ghost">Square 1:1</span>
+          </div>
+          <p class="use">Mobile feed slots</p>
+          <a class="dl" href="/assets/ads/logo-navy-square-1200x1200.png" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="logo" data-ratio="square">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/logo-square-1200x1200.png" alt="White ground, Square" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">White ground</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag logo">Logo</span>
+            <span class="tag ghost">Rings mark</span>
+            <span class="tag ghost">Square 1:1</span>
+          </div>
+          <p class="use">Mobile feed slots</p>
+          <a class="dl" href="/assets/ads/logo-square-1200x1200.png" download>Download</a>
+        </figcaption>
+      </figure>
+  </div>
+  <p class="empty" id="empty">Nothing matches those two filters.</p>
+
+  <footer class="end">
+    Source files also live on the Mac at <code>~/Desktop/eohouston-pmax-ads/</code> and in this
+    repo under <code>assets/ads/</code>. Landing page:
+    <a href="/momentum">eohouston.com/momentum</a>.
+  </footer>
+</div>
+
+<script>
+(function () {
+  var state = { brand: 'all', ratio: 'all' };
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var empty = document.getElementById('empty');
+
+  function apply() {
+    var shown = 0;
+    cards.forEach(function (c) {
+      var ok = (state.brand === 'all' || c.dataset.brand === state.brand) &&
+               (state.ratio === 'all' || c.dataset.ratio === state.ratio);
+      c.classList.toggle('hide', !ok);
+      if (ok) shown++;
+    });
+    empty.style.display = shown ? 'none' : 'block';
+  }
+
+  document.querySelectorAll('.fbtn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var k = b.dataset.k;
+      state[k] = b.dataset.v;
+      document.querySelectorAll('.fbtn[data-k="' + k + '"]').forEach(function (o) {
+        o.setAttribute('aria-pressed', String(o === b));
+      });
+      apply();
+    });
+  });
+})();
+</script>
+</body>
+</html>
