@@ -18,7 +18,7 @@
     ['/events', 'Events', 'events'],
     ['/join', 'Join', 'join'],
     ['/partners', 'Partners', 'partners'],
-    ['https://eomomentum.com', 'Momentum', 'momentum', true]
+    ['/momentum', 'Momentum', 'momentum']
   ];
   var MEMBER_LOGIN = 'https://eohouston.chapterpro.com/index.php?frontend=1';
   var IG = 'https://www.instagram.com/eohouston/';
@@ -85,6 +85,7 @@
     [/^\/join(#.*)?$/, 'join_click'],
     [/^https:\/\/member\.eonetwork\.org\/why-join/, 'join_click'],
     [/^\/refer$/, 'refer_click'],
+    [/^\/momentum$/, 'momentum_click'],
     [/^https:\/\/eomomentum\.com/, 'momentum_click'],
     [/^https:\/\/docs\.google\.com\/forms\//, 'momentum_apply_click']
   ];
