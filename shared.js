@@ -85,7 +85,8 @@
     [/^\/join(#.*)?$/, 'join_click'],
     [/^https:\/\/member\.eonetwork\.org\/why-join/, 'join_click'],
     [/^\/refer$/, 'refer_click'],
-    [/^https:\/\/eomomentum\.com/, 'momentum_click']
+    [/^https:\/\/eomomentum\.com/, 'momentum_click'],
+    [/^https:\/\/docs\.google\.com\/forms\//, 'momentum_apply_click']
   ];
   document.addEventListener('click', function (e) {
     if (typeof window.gtag !== 'function') return;

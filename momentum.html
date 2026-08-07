@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="icon" href="/assets/eo-mark.svg" type="image/svg+xml"/>
 <title>EO Momentum | The EO Houston Accelerator for $250K-$1M Businesses</title>
-<meta name="description" content="EO Momentum is EO Houston's two-year accelerator for founders between $250K and $1M in revenue. Build systems, join a Forum, and scale past seven figures."/>
+<meta name="description" content="EO Momentum is EO Houston's two-year accelerator for founders between $250K and $1M in revenue. Curriculum, dues, admissions dates, FAQ, and how to apply."/>
 <link rel="canonical" href="https://eohouston-site.vercel.app/momentum"/>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="EO Houston"/>
@@ -21,6 +21,32 @@
 <meta name="twitter:description" content="EO Houston's two-year accelerator for founders between $250K and $1M in revenue."/>
 <meta name="twitter:image" content="https://eohouston-site.vercel.app/assets/og-image.png"/>
 <link rel="stylesheet" href="styles.css"/>
+<style>
+/* momentum page only */
+.month-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.month{border:1px solid var(--line);border-radius:12px;background:#fff;padding:1.1rem 1.3rem;box-shadow:0 1px 2px rgba(16,22,60,.04)}
+.month .mnum{font-family:'Sora',sans-serif;font-weight:800;color:var(--accent);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase}
+.month h3{font-size:1.04rem;margin:.25rem 0 .3rem}
+.month p{margin:0;font-size:.95rem}
+.avatar-card{text-align:center}
+.avatar-card img{width:132px;height:132px;border-radius:50%;object-fit:cover;margin:0 auto .8rem;box-shadow:var(--shadow)}
+.avatar-card h3{margin-bottom:.1rem}
+.avatar-card .role{font-family:'Sora',sans-serif;font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 .5rem}
+.avatar-card p{font-size:.93rem}
+.admit-dates{list-style:none;padding:0;margin:1.6rem 0;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.admit-dates li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem;text-align:center}
+.admit-dates .d-label{display:block;font-family:'Sora',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.admit-dates .d-val{display:block;font-family:'Sora',sans-serif;font-weight:700;color:var(--ink);margin-top:.25rem}
+.faq details{border:1px solid var(--line);border-radius:12px;background:#fff;margin-bottom:.8rem;box-shadow:0 1px 2px rgba(16,22,60,.04)}
+.faq summary{cursor:pointer;font-family:'Sora',sans-serif;font-weight:700;color:var(--ink);padding:1rem 2.6rem 1rem 1.25rem;list-style:none;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:1.1rem;top:50%;transform:translateY(-50%);color:var(--accent);font-weight:700;font-size:1.25rem}
+.faq details[open] summary::after{content:"\2212"}
+.faq .faq-a{padding:0 1.25rem 1.1rem;color:var(--body)}
+.faq .faq-a ul{padding-left:1.2rem;margin:.6rem 0 0}
+.faq .faq-a li{margin-bottom:.45rem}
+@media(max-width:760px){.month-grid{grid-template-columns:1fr}.admit-dates{grid-template-columns:repeat(2,1fr)}}
+</style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9M5D1F3XQ4"></script>
   <script>
@@ -38,10 +64,10 @@
   <div class="container">
     <p class="kicker">EO Momentum · Presented by EO Houston</p>
     <h1>Stop grinding. Start growing.</h1>
-    <p>EO Momentum is a two-year accelerator built by entrepreneurs, for entrepreneurs. Trade hustle for structure, build a business that runs without you, and scale past $1 million in revenue in under two years.</p>
+    <p>EO Momentum is a two-year accelerator built by entrepreneurs, for entrepreneurs, in collaboration with faculty from Rice University's Lilie Lab. Trade hustle for structure, build a business that runs without you, and scale past $1 million in revenue in under two years.</p>
     <div class="mo-tags"><span>$250K-$1M revenue</span><span>Two-year program</span><span>Monthly Forum</span><span>On-ramp to EO</span></div>
     <div class="hero-actions">
-      <a class="btn btn-accent btn-lg btn-raised" href="https://eomomentum.com/#admissions" target="_blank" rel="noopener">Apply for Momentum</a>
+      <a class="btn btn-accent btn-lg btn-raised" href="https://docs.google.com/forms/d/e/1FAIpQLSeicrKfptvb-ctvSiq_5z97gZiCk55enUbDkQiiE6VKNJATjg/viewform" target="_blank" rel="noopener">Apply for Momentum</a>
       <a class="btn btn-ghost btn-lg" href="#contact">Ask a question</a>
     </div>
   </div>
@@ -78,16 +104,39 @@
     </div>
     <div class="grid cols-3">
       <div class="feature"><div class="ico accent tl s2-gold">1</div><h3>Education</h3>
-        <p>An 8-month course each year where you work <em>on</em> your business, not just in it. Sessions led by seasoned coaches and faculty alongside accomplished EO Houston entrepreneurs. Year 1 ends with a custom Operating Manual for your business; Year 2 turns plans into execution.</p></div>
+        <p>An 8-month course each year where you work <em>on</em> your business, not just in it. Sessions led by seasoned coaches and faculty alongside accomplished EO Houston entrepreneurs, structured like a collaborative MBA-style class: you prepare ahead of each session, then apply the tools directly to your real business between sessions.</p></div>
       <div class="feature"><div class="ico teal tr round s2-pink">2</div><h3>Forum</h3>
-        <p>A confidential, peer-led group of 6-8 entrepreneurs from non-competing businesses, guided by trained EO Houston member coaches. Your personal advisory board, meeting monthly to tackle your hardest business and personal challenges.</p></div>
+        <p>A confidential, peer-led group of 6-8 entrepreneurs from non-competing businesses, guided by trained EO Houston member coaches. Your personal advisory board, meeting monthly for four-hour sessions to tackle your hardest business and personal challenges.</p></div>
       <div class="feature"><div class="ico pink tl s2-teal">3</div><h3>Events</h3>
         <p>Regular EO Houston chapter learning and social events that expand your network and sharpen your business knowledge, so you grow as a business, family, and community leader.</p></div>
     </div>
   </div>
 </section>
 
+<!-- CURRICULUM -->
 <section class="section">
+  <div class="container">
+    <div class="center" style="max-width:760px;margin:0 auto 2.4rem">
+      <p class="kicker">The Year One curriculum</p>
+      <h2>Eight months that build on each other</h2>
+      <p class="lede">Drawn from the EO Momentum Year One Field Guide. By the end of Year 1 you'll have a fully customized Operating Manual for your company: core processes, values, financial dashboards, and accountability structures. Year 2 shifts to hands-on, collaborative execution.</p>
+    </div>
+    <div class="month-grid">
+      <div class="month"><span class="mnum">Month 1</span><h3>Kick-Off &amp; Foundations</h3><p>Prioritize your workload and spot a revenue stream you could turn recurring.</p></div>
+      <div class="month"><span class="mnum">Month 2</span><h3>Unlocking Your Entrepreneurial DNA</h3><p>Use your leadership profile to make a real delegation decision.</p></div>
+      <div class="month"><span class="mnum">Month 3</span><h3>Introduction to EOS: The Vision Component</h3><p>Draft the Vision side of your V/TO, Core Values, Core Focus, 10-Year Target, and 3-Year Picture.</p></div>
+      <div class="month"><span class="mnum">Month 4</span><h3>Planning: From Vision to Traction</h3><p>Turn your annual vision into 90-day Rocks with clear owners.</p></div>
+      <div class="month"><span class="mnum">Month 5</span><h3>Marketing: Position, Story, Amplify</h3><p>Write a real positioning statement and find your differentiators.</p></div>
+      <div class="month"><span class="mnum">Month 6</span><h3>Right People, Right Seats</h3><p>Architect a role the right way before you ever review a resume.</p></div>
+      <div class="month"><span class="mnum">Month 7</span><h3>Finance Day: The Founder's Financial Playbook</h3><p>Calculate your Cash Conversion Cycle and pick the KPIs that actually matter.</p></div>
+      <div class="month"><span class="mnum">Month 8</span><h3>Financing Your Growth: Debt vs. Equity</h3><p>Figure out what fits your business and draft a fundable capital ask.</p></div>
+    </div>
+    <p class="center" style="color:var(--muted);margin-top:1.6rem">Classes meet in person once a month, typically the second Tuesday, 10:00 AM to 2:00 PM CT, at The Ion and local corporate offices across Houston.</p>
+  </div>
+</section>
+
+<!-- QUALIFY + DUES -->
+<section class="section section-soft">
   <div class="container split">
     <div>
       <p class="kicker">Qualifications &amp; investment</p>
@@ -100,6 +149,7 @@
         <li>Growing, but unsure how to level up your leadership.</li>
         <li>Craving a tribe of smart, driven peers who get it.</li>
       </ul>
+      <p style="margin-top:1.2rem">Admission is selective and the cohort is limited. Every applicant completes an application and a personal interview, so we can make sure Momentum is the right fit for you and for the group.</p>
     </div>
     <div>
       <div class="banner" style="border-left:none;border-top:4px solid var(--accent)">
@@ -109,16 +159,17 @@
           <li style="display:flex;justify-content:space-between;padding:.55rem 0;border-bottom:1px solid var(--line)"><span>Year 2</span><strong>$3,000</strong></li>
           <li style="display:flex;justify-content:space-between;padding:.55rem 0"><span>One-time initiation fee</span><strong>$500</strong></li>
         </ul>
-        <p style="color:var(--muted);font-size:.92rem;margin-top:.8rem">Year 1 is prorated to the month you join, plus the one-time initiation fee, both due when you join. Classes meet in person once a month, typically the second Tuesday, 10:00 AM to 2:00 PM CT.</p>
+        <p style="color:var(--muted);font-size:.92rem;margin-top:.8rem">Year 1 is prorated to the month you join, plus the one-time initiation fee, both due when you join.</p>
       </div>
       <div class="hero-actions" style="margin-top:1.4rem">
-        <a class="btn btn-accent btn-lg" href="https://eomomentum.com/#admissions" target="_blank" rel="noopener">Start your application</a>
+        <a class="btn btn-accent btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSeicrKfptvb-ctvSiq_5z97gZiCk55enUbDkQiiE6VKNJATjg/viewform" target="_blank" rel="noopener">Start your application</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section-soft">
+<!-- MEMBER STORY -->
+<section class="section">
   <div class="container narrow center">
     <p class="kicker">Member story</p>
     <img src="assets/team/rosalee.jpg" alt="Rosalee Murugan" width="112" height="112" style="border-radius:50%;object-fit:cover;margin:0 auto 1.2rem"/>
@@ -127,6 +178,145 @@
   </div>
 </section>
 
+<!-- LEADERSHIP + MEMBERS -->
+<section class="section section-soft">
+  <div class="container">
+    <div class="center" style="max-width:760px;margin:0 auto 2.6rem">
+      <p class="kicker">About EO Houston Momentum</p>
+      <h2>Real Houston entrepreneurs, growing together</h2>
+      <p class="lede">Momentum is led by EO Houston members who've built real companies, and made up of founders putting in the work right now.</p>
+    </div>
+    <div class="grid cols-3">
+      <div class="avatar-card"><img src="assets/team/al-danto.png" alt="Al Danto"/><h3>Al Danto</h3><p class="role">Program Director</p>
+        <p>Partner at Exit Advisors and Senior Lecturer in Entrepreneurship at Rice University. Al built the Momentum curriculum alongside Jackie Fisher.</p></div>
+      <div class="avatar-card"><img src="assets/team/jackie.jpg" alt="Jackie Fisher"/><h3>Jackie Fisher</h3><p class="role">Owner, 3 Men Movers</p>
+        <p>Helped build the Momentum curriculum alongside Al Danto. A Rice alum, she brought a real operator's eye, not just an academic one, to how the program is structured.</p></div>
+      <div class="avatar-card"><img src="assets/team/brian.jpg" alt="Brian Gendron"/><h3>Brian Gendron</h3><p class="role">Founder &amp; CEO, Riot Comedy Entertainment</p>
+        <p>Runs Riot Comedy's clubs in Houston, San Antonio, and Conroe, plus the annual Riot Comedy Festival &amp; BBQ Cookoff. An award-winning community leader and proud EO Houston member.</p></div>
+      <div class="avatar-card"><img src="assets/team/sarah.jpg" alt="Sarah Seitz"/><h3>Sarah Seitz</h3><p class="role">Founder &amp; CEO, The Enrichery</p>
+        <p>Focused on scaling with intention, building sustainable growth without sacrificing culture or client experience. EO Houston member and past Momentum coach.</p></div>
+      <div class="avatar-card"><img src="assets/team/robert.jpg" alt="Robert De Los Santos"/><h3>Robert De Los Santos</h3><p class="role">CEO, Sky High Party Rentals</p>
+        <p>Built a three-time Inc. 5000 company delivering safe, high-quality event experiences across Houston, Austin, and Dallas. Focused on durable, systems-driven operations that scale.</p></div>
+      <div class="avatar-card"><img src="assets/team/avneesh.jpg" alt="Avneesh Oberoi"/><h3>Avneesh Oberoi</h3><p class="role">Momentum Member</p>
+        <p>Founder of Oberoi Investments and The DoughCone. Investor and hospitality consultant focused on growth in the food world, blending culinary passion with sharp business strategy.</p></div>
+      <div class="avatar-card"><img src="assets/team/steffie.jpg" alt="Dr. Steffie Tomson"/><h3>Dr. Steffie Tomson</h3><p class="role">Momentum Member</p>
+        <p>Neuroscientist turned entrepreneur and founder of Steffie's, a footwear brand built on the science of movement, designing shoes that help women move, think, and feel better.</p></div>
+      <div class="avatar-card"><img src="assets/team/kyle.jpg" alt="Kyle Griffin"/><h3>Kyle Griffin</h3><p class="role">Momentum Member</p>
+        <p>Leads Creative Heights Agency, a full-service marketing agency specializing in web design, branding, digital advertising, and photography and videography.</p></div>
+    </div>
+    <p class="center" style="color:var(--muted);margin-top:2rem">Just a few of the founders in Momentum, part of a growing community of Houston entrepreneurs scaling their businesses together.</p>
+  </div>
+</section>
+
+<!-- RICE COLLAB -->
+<section class="section">
+  <div class="container narrow center">
+    <p class="kicker">In collaboration with Rice faculty</p>
+    <h2>World-class minds, real-world results</h2>
+    <p class="lede">Momentum is powered by accomplished EO Houston entrepreneurs and a network of coaches, faculty, and alumni connected to Rice University's Lilie Lab for Innovation and Entrepreneurship.</p>
+    <p style="color:var(--muted);font-size:.92rem;margin-top:1.2rem">Momentum is an independent program of EO Houston. Rice University faculty and alumni participate as instructors and coaches in their individual capacities.</p>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="section section-soft">
+  <div class="container">
+    <div class="center" style="max-width:720px;margin:0 auto 2.2rem">
+      <p class="kicker">Strategic Alliance Partners</p>
+      <h2>Backed by Houston's best</h2>
+      <p class="lede">Momentum members plug into a network of trusted partners who support EO Houston's entrepreneurial community.</p>
+    </div>
+    <ul class="partner-grid">
+      <li><a href="https://www.boyarmiller.com/" target="_blank" rel="noopener"><img src="assets/partners/boyarmiller.jpg" alt="BoyarMiller" loading="lazy"/></a></li>
+      <li><a href="https://www.susserbank.com/" target="_blank" rel="noopener"><img src="assets/partners/susser.jpg" alt="Susser Bank" loading="lazy"/></a></li>
+      <li><a href="https://www.bloomgrowthcoach.com/coaches/isaiah-nolte/" target="_blank" rel="noopener"><img src="assets/partners/bloom.jpg" alt="Bloom Growth" loading="lazy"/></a></li>
+      <li><a href="https://www.weinsteinspira.com/" target="_blank" rel="noopener"><img src="assets/partners/weinstein.jpg" alt="Weinstein Spira" loading="lazy"/></a></li>
+      <li><a href="https://www.claconnect.com/en" target="_blank" rel="noopener"><img src="assets/partners/cla.jpg" alt="CLA (CliftonLarsonAllen)" loading="lazy"/></a></li>
+      <li><a href="https://www.higginbotham.com/" target="_blank" rel="noopener"><img src="assets/partners/higginbotham.jpg" alt="Higginbotham" loading="lazy"/></a></li>
+      <li><a href="https://www.nrg.com/" target="_blank" rel="noopener"><img src="assets/partners/nrg.jpg" alt="NRG" loading="lazy"/></a></li>
+      <li><a href="https://www.wealthdesigngroup.net/" target="_blank" rel="noopener"><img src="assets/partners/wdg.jpg" alt="Wealth Design Group" loading="lazy"/></a></li>
+      <li><a href="https://www.cultureindex.com/" target="_blank" rel="noopener"><img src="assets/partners/culture.jpg" alt="Culture Index" loading="lazy"/></a></li>
+      <li><a href="http://vikingmergers.com/" target="_blank" rel="noopener"><img src="assets/partners/viking.jpg" alt="Viking Mergers &amp; Acquisitions" loading="lazy"/></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ADMISSIONS -->
+<section class="section">
+  <div class="container narrow">
+    <p class="kicker">Admissions</p>
+    <div class="eo-rule"></div>
+    <h2>A selective cohort, by application and interview</h2>
+    <p class="lede">EO Houston Momentum is accepting applications for the cohort beginning October 2026. Classes are held in person in Houston, a two-year program with 8 months of classes a year.</p>
+    <p>EO looks for owners with businesses that can scale, a diversity of industries and perspectives, and the capacity to think big. If that sounds like you, we'd love to meet you.</p>
+    <ul class="admit-dates">
+      <li><span class="d-label">Apply by</span><span class="d-val">Sept 15, 2026</span></li>
+      <li><span class="d-label">Interviews</span><span class="d-val">Aug - Sept 2026</span></li>
+      <li><span class="d-label">Decisions</span><span class="d-val">Early Oct 2026</span></li>
+      <li><span class="d-label">Cohort begins</span><span class="d-val">October 2026</span></li>
+    </ul>
+    <p style="color:var(--muted)">Admitted members are notified before the October start. The next cohort begins in October 2027.</p>
+    <div class="hero-actions" style="margin-top:1.4rem">
+      <a class="btn btn-accent btn-lg btn-raised" href="https://docs.google.com/forms/d/e/1FAIpQLSeicrKfptvb-ctvSiq_5z97gZiCk55enUbDkQiiE6VKNJATjg/viewform" target="_blank" rel="noopener">Apply for the October 2026 cohort</a>
+    </div>
+    <p style="margin-top:1.2rem">Have questions first? <a href="#contact">Send us a message below</a>, or see the full program site at <a href="https://eomomentum.com" target="_blank" rel="noopener">eomomentum.com</a>.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-soft">
+  <div class="container narrow faq">
+    <p class="kicker">Questions</p>
+    <div class="eo-rule"></div>
+    <h2>Frequently asked questions</h2>
+    <details>
+      <summary>What is Momentum, and who is it for?</summary>
+      <div class="faq-a"><p>Momentum is a two-year business accelerator for growth-minded Houston founders. It is built for owners generating roughly $250,000 to $1,000,000 in gross revenue who are ready to push past the $1M mark and are done trying to figure everything out alone. If you are ready to commit to the deep work, and you are based in or able to travel to Houston, this is for you.</p></div>
+    </details>
+    <details>
+      <summary>What is the goal of the program?</summary>
+      <div class="faq-a"><p>To help you break through the operational ceilings that keep owners stuck in day-to-day firefighting, and to build the team, systems, and confidence to scale past seven figures. A core goal is to graduate you to $1M+ in revenue and into EO Houston, the EO chapter for business owners running companies above $1M. Fewer than 5% of businesses ever reach that level, and Momentum is built to get you there with a business that can sustain long-term growth.</p></div>
+    </details>
+    <details>
+      <summary>How is the program structured?</summary>
+      <div class="faq-a"><p>It runs like a structured, collaborative accelerator, closer to an MBA-style class than a seminar. You prepare ahead of each session with assigned readings and reviews, then apply the tools directly to your real business between sessions. Year 1 focuses on foundational structures, processes, and leadership. Year 2 shifts to a hands-on, peer-collaborative format focused on execution that drives measurable outcomes.</p></div>
+    </details>
+    <details>
+      <summary>When and how often do classes meet?</summary>
+      <div class="faq-a"><p>Classes meet in person once a month over an 8-month curriculum, typically on the second Tuesday of the month from 10:00 AM to 2:00 PM, culminating in a graduation celebration. Your Forum group continues meeting monthly year-round, independent of the class calendar.</p></div>
+    </details>
+    <details>
+      <summary>Where are the sessions held?</summary>
+      <div class="faq-a"><p>Sessions are hosted across Houston. Core meetings use dedicated spaces at The Ion, and select sessions take place at local corporate offices to give you direct exposure to a range of businesses and operating environments.</p></div>
+    </details>
+    <details>
+      <summary>What are the revenue requirements to join?</summary>
+      <div class="faq-a"><p>Your business should have gross revenue between $250,000 and $1,000,000 for the most recent fiscal year. Revenue is documented through a program verification form as part of the application.</p></div>
+    </details>
+    <details>
+      <summary>What will I walk away with?</summary>
+      <div class="faq-a"><p>By the end of Year 1 you will have built a fully customized Operating Manual for your company. It maps your core processes, organizational values, financial dashboards, and accountability structures, so you leave with a real system to run and scale the business, not just notes.</p></div>
+    </details>
+    <details>
+      <summary>Is this just material I could get from a few business books?</summary>
+      <div class="faq-a"><p>No. Momentum draws on the best proven entrepreneurial operating and financial frameworks, but it is not a reading list. The value is in facilitated application, expert instruction, peer accountability, and a manual built specifically for your company. You are not reading about other people's businesses, you are building the systems for yours alongside a committed cohort of Houston founders.</p></div>
+    </details>
+    <details>
+      <summary>Is Momentum a place to sell my services to other members?</summary>
+      <div class="faq-a"><p>No. Momentum and EO Houston operate under a strict non-solicitation policy. This is not a networking or lead-generation group, and members do not pitch, sell, or market services to one another or to the chapter. The group runs on EO's Gestalt experience-sharing protocol, where members speak only from their own personal experience rather than giving advice. That keeps the room a safe, honest place to work through real challenges.</p></div>
+    </details>
+    <details>
+      <summary>How selective is admission?</summary>
+      <div class="faq-a"><p>Admission is selective and the cohort is limited. Every applicant completes an application and a personal interview, so we can make sure Momentum is the right fit for you and for the group. It is a two-way decision, not just yours.</p></div>
+    </details>
+    <details>
+      <summary>How do I apply?</summary>
+      <div class="faq-a"><p>Applications for the cohort beginning October 2026 are open now. Apply by September 15, 2026, interviews take place August through September, decisions go out in early October, and the cohort begins in October. Use any Apply button on this page to get started, or <a href="#contact">contact us</a> if you want to talk it through first.</p></div>
+    </details>
+  </div>
+</section>
+
+<!-- EO GATEWAY -->
 <section class="section">
   <div class="container">
     <div class="mo-block">
@@ -136,7 +326,7 @@
         <h2>Your gateway into the Entrepreneurs' Organization</h2>
         <p>Momentum is EO Houston's on-ramp: complete the program and step into EO Forum and the full EO network of 20,000+ members across 224 chapters in 62 countries. Fewer than 5% of businesses ever cross $1M in revenue. Momentum is built to get you there.</p>
         <div class="mo-tags"><span>20,000+ members</span><span>224 chapters</span><span>62 countries</span></div>
-        <div class="hero-actions"><a class="btn btn-accent btn-lg" href="https://eomomentum.com" target="_blank" rel="noopener">Explore the full program</a></div>
+        <div class="hero-actions"><a class="btn btn-accent btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSeicrKfptvb-ctvSiq_5z97gZiCk55enUbDkQiiE6VKNJATjg/viewform" target="_blank" rel="noopener">Start your application</a></div>
       </div>
       <div class="mo-img" style="background-image:url('assets/photos/learning-luncheon.jpg')" role="img" aria-label="EO Houston members at a learning luncheon"></div>
     </div>
@@ -147,9 +337,9 @@
 <section class="section section-soft" id="contact">
   <div class="container" style="max-width:760px">
     <div class="center" style="margin-bottom:2rem">
-      <p class="kicker">Get in touch</p>
-      <h2>Tell us a bit about you</h2>
-      <p class="lede">Questions about Momentum, or not sure it's the right fit? Send a quick note and we'll connect you with a program leader.</p>
+      <p class="kicker">Not ready to apply?</p>
+      <h2>Send us a message</h2>
+      <p class="lede">Ask what the two years actually look like month to month, the qualifications and investment, or whether to apply for this cohort or the next one. Applications close September 15, 2026.</p>
     </div>
     <div class="form-card">
       <form action="https://formsubmit.co/jennifer@eohouston.com" method="POST">
