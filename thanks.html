@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PSVBCZHV');</script>
+<!-- End Google Tag Manager -->
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="icon" href="/assets/eo-mark.svg" type="image/svg+xml"/>
 <title>Thank you | EO Houston</title>
@@ -23,6 +30,10 @@
   </script>
 </head>
 <body data-page="">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSVBCZHV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <div id="site-header"></div>
 <section class="section center" style="padding:7rem 0">
   <div class="container narrow">
@@ -38,9 +49,20 @@
 <div id="site-footer"></div>
 <script src="shared.js"></script>
 <script>
-  // Only reached via the join.html contact form's formsubmit.co _next redirect,
-  // so a page view here means that form was submitted successfully.
-  if (typeof gtag === 'function') gtag('event', 'join_form_submit');
+  // Only reachable via a contact form's formsubmit.co _next redirect, so a page view here
+  // means that form was submitted successfully. ?src= says which form it was (see the
+  // _next values in join.html / momentum.html); untagged submissions stay 'join' for
+  // continuity with the events already collected before the parameter existed.
+  (function () {
+    var src = (new URLSearchParams(location.search).get('src') || 'join').toLowerCase();
+    var map = { join: 'join_form_submit', momentum: 'momentum_form_submit' };
+    var name = map[src] || 'join_form_submit';
+    var send = window.eoTrack || function (n, p) {
+      if (typeof gtag === 'function') gtag('event', n, p || {});
+    };
+    send(name, { form_source: src });
+    send('lead_submit', { form_source: src });
+  })();
 </script>
 </body>
 </html>

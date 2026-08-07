@@ -89,24 +89,108 @@
     [/^https:\/\/eomomentum\.com/, 'momentum_click'],
     [/^https:\/\/docs\.google\.com\/forms\//, 'momentum_apply_click']
   ];
+
+  /* One send path for every event: straight to GA4 via gtag, and onto the dataLayer so the
+     GTM container can pick the same event up without the page being edited again. */
+  function pageLabel() { return page || location.pathname; }
+  function track(name, params) {
+    var p = params || {};
+    if (!p.page) p.page = pageLabel();
+    if (typeof window.gtag === 'function') window.gtag('event', name, p);
+    window.dataLayer = window.dataLayer || [];
+    var d = { event: name };
+    for (var k in p) { if (Object.prototype.hasOwnProperty.call(p, k)) d[k] = p[k]; }
+    window.dataLayer.push(d);
+  }
+  window.eoTrack = track;
+
   document.addEventListener('click', function (e) {
-    if (typeof window.gtag !== 'function') return;
     var el = e.target.closest('.btn, .header-login, .header-login-mobile');
     if (!el) return;
     var href = el.getAttribute('href') || '';
     var text = (el.textContent || '').trim().replace(/\s+/g, ' ');
-    var pageLabel = page || location.pathname;
-    window.gtag('event', 'cta_click', { link_text: text, link_url: href, page: pageLabel });
-    if (href === MEMBER_LOGIN) {
-      window.gtag('event', 'member_login_click', { page: pageLabel });
-      return;
-    }
+    track('cta_click', { link_text: text, link_url: href });
+    if (href === MEMBER_LOGIN) { track('member_login_click'); return; }
     for (var i = 0; i < CTA_EVENT_RULES.length; i++) {
       if (CTA_EVENT_RULES[i][0].test(href)) {
-        window.gtag('event', CTA_EVENT_RULES[i][1], { page: pageLabel });
+        track(CTA_EVENT_RULES[i][1], { link_text: text });
         break;
       }
     }
+  });
+
+  /* Contact intent: email and phone links anywhere on the page, not just buttons. */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href]');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('mailto:') === 0) {
+      track('email_click', { email_address: href.replace('mailto:', '').split('?')[0] });
+    } else if (href.indexOf('tel:') === 0) {
+      track('phone_click', { phone_number: href.replace('tel:', '') });
+    } else if (/^https?:\/\//.test(href) && href.indexOf(location.host) === -1) {
+      track('outbound_click', {
+        link_url: href,
+        link_domain: (href.split('/')[2] || ''),
+        link_text: (a.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 90)
+      });
+    }
+  });
+
+  /* Form funnel: form_start on the first real interaction, form_submit on send.
+     Together with the *_form_submit event on /thanks these give a 3-step funnel. */
+  Array.prototype.forEach.call(document.querySelectorAll('form'), function (form) {
+    var started = false;
+    var formName = form.getAttribute('data-form') ||
+                   ((form.action || '').indexOf('formsubmit') > -1 ? 'contact' : 'form');
+    form.addEventListener('focusin', function (ev) {
+      if (started) return;
+      if (!ev.target.matches('input:not([type=hidden]), textarea, select')) return;
+      started = true;
+      track('form_start', { form_name: formName });
+    });
+    form.addEventListener('submit', function () {
+      var sel = form.querySelector('select[name="Interest"]');
+      track('form_submit', {
+        form_name: formName,
+        interest: sel ? sel.value : undefined
+      });
+    });
+  });
+
+  /* Scroll depth: one event per threshold per pageview. */
+  (function () {
+    var marks = [25, 50, 75, 90], hit = {}, ticking = false;
+    function check() {
+      ticking = false;
+      var doc = document.documentElement;
+      var scrollable = doc.scrollHeight - window.innerHeight;
+      if (scrollable < 400) return;
+      var top = window.pageYOffset || doc.scrollTop || document.body.scrollTop || 0;
+      var pct = Math.round((top / scrollable) * 100);
+      for (var i = 0; i < marks.length; i++) {
+        if (pct >= marks[i] && !hit[marks[i]]) {
+          hit[marks[i]] = true;
+          track('scroll_depth', { percent_scrolled: marks[i] });
+        }
+      }
+    }
+    /* setTimeout rather than requestAnimationFrame: rAF is throttled to zero in a
+       background tab, which would latch the throttle flag and kill tracking for good. */
+    window.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      setTimeout(check, 150);
+    }, { passive: true });
+  })();
+
+  /* Content engagement: opening an FAQ answer is a real intent signal on /momentum. */
+  Array.prototype.forEach.call(document.querySelectorAll('details'), function (d) {
+    d.addEventListener('toggle', function () {
+      if (!d.open) return;
+      var s = d.querySelector('summary');
+      track('faq_open', { question: (s ? s.textContent : '').trim().slice(0, 100) });
+    });
   });
 
   /* lightbox for any .masonry img or [data-lightbox], with gallery next/prev */

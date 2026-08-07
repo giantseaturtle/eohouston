@@ -29,7 +29,8 @@ img{max-width:100%;display:block}
 .section-navy h1,.section-navy h2,.section-navy h3{color:#fff}
 .center{text-align:center}
 .kicker{font-family:'Sora',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 .9rem}
-.section-navy .kicker,.cta-band .kicker{color:var(--accent-soft)}
+/* kickers on any navy ground need the light accent; the deep --accent is unreadable there */
+.section-navy .kicker,.cta-band .kicker,.mo-block .kicker,.page-hero .kicker{color:var(--accent-soft)}
 .lede{font-size:clamp(1.05rem,1.7vw,1.25rem);color:var(--body)}
 .section-navy .lede{color:rgba(255,255,255,.8)}
 .eo-rule{height:4px;width:64px;border-radius:4px;background:var(--accent);margin:0 0 1.4rem}
