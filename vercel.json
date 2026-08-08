@@ -32,6 +32,16 @@
   ],
   "redirects": [
     {
+      "source": "/join",
+      "destination": "/membership",
+      "permanent": true
+    },
+    {
+      "source": "/join.html",
+      "destination": "/membership",
+      "permanent": true
+    },
+    {
       "source": "/event/:slug+",
       "destination": "/events",
       "permanent": true
@@ -103,7 +113,7 @@
     },
     {
       "source": "/benefits",
-      "destination": "/join",
+      "destination": "/membership",
       "permanent": true
     },
     {
@@ -148,22 +158,22 @@
     },
     {
       "source": "/contact",
-      "destination": "/join",
+      "destination": "/membership",
       "permanent": true
     },
     {
       "source": "/contact/&",
-      "destination": "/join",
+      "destination": "/membership",
       "permanent": true
     },
     {
       "source": "/copy-of-benefits-1",
-      "destination": "/join",
+      "destination": "/membership",
       "permanent": true
     },
     {
       "source": "/copy-of-join",
-      "destination": "/join",
+      "destination": "/membership",
       "permanent": true
     },
     {
@@ -318,12 +328,12 @@
     },
     {
       "source": "/join-1",
-      "destination": "/join",
+      "destination": "/membership",
       "permanent": true
     },
     {
       "source": "/join.htm",
-      "destination": "/join",
+      "destination": "/membership",
       "permanent": true
     },
     {
@@ -368,12 +378,7 @@
     },
     {
       "source": "/membership-requirements",
-      "destination": "/join",
-      "permanent": true
-    },
-    {
-      "source": "/membership",
-      "destination": "/join",
+      "destination": "/membership",
       "permanent": true
     },
     {
@@ -393,7 +398,7 @@
     },
     {
       "source": "/online-application",
-      "destination": "/join",
+      "destination": "/membership",
       "permanent": true
     },
     {
@@ -403,17 +408,17 @@
     },
     {
       "source": "/pop_experts.htm",
-      "destination": "/join",
+      "destination": "/membership",
       "permanent": true
     },
     {
       "source": "/pop_lifetime.htm",
-      "destination": "/join",
+      "destination": "/membership",
       "permanent": true
     },
     {
       "source": "/pop_peer.htm",
-      "destination": "/join",
+      "destination": "/membership",
       "permanent": true
     },
     {
@@ -433,7 +438,7 @@
     },
     {
       "source": "/qualifications",
-      "destination": "/join",
+      "destination": "/membership",
       "permanent": true
     },
     {

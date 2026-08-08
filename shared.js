@@ -16,7 +16,7 @@
     ['/about', 'About', 'about'],
     ['/leadership', 'Leadership', 'leadership'],
     ['/events', 'Events', 'events'],
-    ['/join', 'Join', 'join'],
+    ['/membership', 'Join', 'join'],
     ['/partners', 'Partners', 'partners'],
     ['/momentum', 'Momentum', 'momentum']
   ];
@@ -39,7 +39,7 @@
       '<div class="header-actions">' +
         '<a class="header-login" href="' + MEMBER_LOGIN + '" target="_blank" rel="noopener">Member Login</a>' +
         '<a class="btn btn-pink" href="/refer">Refer a Member</a>' +
-        '<a class="btn btn-accent" href="/join">Join EO Houston</a>' +
+        '<a class="btn btn-accent" href="/membership">Join EO Houston</a>' +
       '</div>' +
       '<a class="header-login-mobile" href="' + MEMBER_LOGIN + '" target="_blank" rel="noopener">' +
         '<span class="lm-full">Member Login</span><span class="lm-short">Sign In</span></a>' +
@@ -48,7 +48,7 @@
     '<div class="mobile-nav" id="mnav">' + navLinks(true) +
       '<a href="/refer">Refer a Member</a>' +
       '<a href="' + MEMBER_LOGIN + '" target="_blank" rel="noopener">Member Login</a>' +
-      '<a class="btn btn-accent" href="/join">Join EO Houston</a></div></header>';
+      '<a class="btn btn-accent" href="/membership">Join EO Houston</a></div></header>';
 
   var tgl = document.querySelector('.nav-toggle'), mn = document.getElementById('mnav');
   if (tgl) tgl.addEventListener('click', function () { mn.style.display = (mn.style.display === 'flex' ? 'none' : 'flex'); });
@@ -61,14 +61,14 @@
           '<p>A community of Houston business owners learning, growing, and connecting through the global Entrepreneurs’ Organization.</p></div>' +
         '<div><h4>Explore</h4>' +
           '<a href="/about">About EO</a><a href="/leadership">Leadership</a>' +
-          '<a href="/events">Events</a><a href="/partners">Partners</a><a href="/join">Join EO Houston</a>' +
+          '<a href="/events">Events</a><a href="/partners">Partners</a><a href="/membership">Join EO Houston</a>' +
           '<a href="' + IG + '" target="_blank" rel="noopener">Instagram ↗</a></div>' +
         '<div><h4>Programs</h4>' +
           '<a href="https://eomomentum.com" target="_blank" rel="noopener">EO Momentum ↗</a>' +
           '<a href="' + MEMBER_LOGIN + '" target="_blank" rel="noopener">Member Login ↗</a>' +
           '<a href="/refer">Refer a Member</a>' +
           '<a href="https://www.eonetwork.org" target="_blank" rel="noopener">EO Global ↗</a>' +
-          '<a href="/join">Become a Member</a></div>' +
+          '<a href="/membership">Become a Member</a></div>' +
         '<div><h4>Compare</h4>' +
           '<a href="/eo-vs-ypo" style="white-space:nowrap">EO vs. YPO</a>' +
           '<a href="/eo-vs-vistage" style="white-space:nowrap">EO vs. Vistage</a>' +
@@ -82,7 +82,9 @@
      cta_click, and promote the highest-value conversions to their own named event so Robert
      can build funnels/reports off them directly instead of filtering by link text every time. */
   var CTA_EVENT_RULES = [
-    [/^\/join(#.*)?$/, 'join_click'],
+    /* /join was renamed to /membership; keep matching both so the event name stays
+       continuous in GA4 and any old link still counts. */
+    [/^\/(membership|join)(#.*)?$/, 'join_click'],
     [/^https:\/\/member\.eonetwork\.org\/why-join/, 'join_click'],
     [/^\/refer$/, 'refer_click'],
     [/^\/momentum$/, 'momentum_click'],
