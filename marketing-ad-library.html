@@ -76,6 +76,7 @@
   .tag.eo { background:rgba(61,70,242,.09); border-color:rgba(61,70,242,.28); color:var(--accent); }
   .tag.mo { background:rgba(109,69,208,.09); border-color:rgba(109,69,208,.28); color:var(--momentum); }
   .tag.logo { background:#eef0f7; color:var(--ink); }
+  .tag.safe { background:rgba(15,118,110,.10); border-color:rgba(15,118,110,.30); color:#0f766e; }
   .use { margin:0; font-size:.79rem; color:var(--muted); }
   .dl { align-self:flex-start; font-family:'Sora',sans-serif; font-weight:700; font-size:.78rem;
          color:#fff; background:var(--ink); border-radius:8px; padding:.42rem .85rem;
@@ -100,10 +101,10 @@
       purple for program ads. The <strong>logo assets</strong> are the exception and carry the
       EO Houston lockup, which is what that slot is for.</p>
     <div class="stats">
-      <b>144 ad images</b>
+      <b>240 ad images</b>
       <b>15 logo assets</b>
       <b>6 ratios</b>
-      <b>7 layouts</b>
+      <b>10 layouts</b>
       <b>24 different photos</b>
       <b>No text on any ad image</b>
     </div>
@@ -115,7 +116,7 @@
     <h2>Before you upload</h2>
     <ul>
       <li>Send traffic to <a href="/momentum">eohouston.com/momentum</a> or
-        <a href="/membership">eohouston.com/membership</a>. The grant is tied to the eohouston.com domain,
+        <a href="/join">eohouston.com/join</a>. The grant is tied to the eohouston.com domain,
         which is why the Momentum program has its own page here.</li>
       <li>Grant-funded Performance Max serves on <strong>Search and Maps only</strong>, not Display
         or YouTube, so these run in fewer placements than a paid campaign would use.</li>
@@ -143,17 +144,23 @@
       <button class="fbtn" data-k="brand" data-v="logo" aria-pressed="false">Logos</button>
     </div>
     <div class="sep" aria-hidden="true"></div>
+    <div class="grp" id="f-style">
+      <button class="fbtn" data-k="style" data-v="all" aria-pressed="true">All styles</button>
+      <button class="fbtn" data-k="style" data-v="overlay" aria-pressed="false">Overlay safe (96)</button>
+      <button class="fbtn" data-k="style" data-v="branded" aria-pressed="false">Branded (144)</button>
+    </div>
+    <div class="sep" aria-hidden="true"></div>
     <div class="grp" id="f-ratio">
       <button class="fbtn" data-k="ratio" data-v="all" aria-pressed="true">All sizes</button>
       <button class="fbtn" data-k="ratio" data-v="ultrawide" aria-pressed="false">Extra wide (24)</button>
-      <button class="fbtn" data-k="ratio" data-v="landscape" aria-pressed="false">Landscape (29)</button>
-      <button class="fbtn" data-k="ratio" data-v="square" aria-pressed="false">Square (34)</button>
-      <button class="fbtn" data-k="ratio" data-v="portrait" aria-pressed="false">Portrait (24)</button>
+      <button class="fbtn" data-k="ratio" data-v="landscape" aria-pressed="false">Landscape (53)</button>
+      <button class="fbtn" data-k="ratio" data-v="square" aria-pressed="false">Square (58)</button>
+      <button class="fbtn" data-k="ratio" data-v="portrait" aria-pressed="false">Portrait (48)</button>
     </div>
   </div>
 
   <div class="grid" id="grid">
-      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+      <figure class="card" data-brand="eo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/eo-spot-applause-ultrawide-1600x500.jpg" alt="Gala applause, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -172,7 +179,7 @@
           <a class="dl" href="/assets/ads/eo-spot-applause-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+      <figure class="card" data-brand="eo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/eo-spot-balloons-ultrawide-1600x500.jpg" alt="balloons, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -191,7 +198,7 @@
           <a class="dl" href="/assets/ads/eo-spot-balloons-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="landscape">
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/eo-spot-applause-landscape-1200x628.jpg" alt="Gala applause, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -210,7 +217,7 @@
           <a class="dl" href="/assets/ads/eo-spot-applause-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="landscape">
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/eo-spot-balloons-landscape-1200x628.jpg" alt="balloons, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -229,7 +236,7 @@
           <a class="dl" href="/assets/ads/eo-spot-balloons-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="square">
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/eo-spot-applause-square-1200x1200.jpg" alt="Gala applause, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -248,7 +255,7 @@
           <a class="dl" href="/assets/ads/eo-spot-applause-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="square">
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/eo-spot-balloons-square-1200x1200.jpg" alt="balloons, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -267,7 +274,7 @@
           <a class="dl" href="/assets/ads/eo-spot-balloons-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="portrait">
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/eo-spot-applause-portrait-960x1200.jpg" alt="Gala applause, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -286,7 +293,7 @@
           <a class="dl" href="/assets/ads/eo-spot-applause-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="portrait">
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/eo-spot-balloons-portrait-960x1200.jpg" alt="balloons, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -305,7 +312,7 @@
           <a class="dl" href="/assets/ads/eo-spot-balloons-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="vertical">
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/eo-spot-applause-vertical-1080x1920.jpg" alt="Gala applause, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -324,7 +331,7 @@
           <a class="dl" href="/assets/ads/eo-spot-applause-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="vertical">
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/eo-spot-balloons-vertical-1080x1920.jpg" alt="balloons, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -343,7 +350,7 @@
           <a class="dl" href="/assets/ads/eo-spot-balloons-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="skinny">
+      <figure class="card" data-brand="eo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/eo-spot-applause-skinny-600x1200.jpg" alt="Gala applause, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -362,7 +369,7 @@
           <a class="dl" href="/assets/ads/eo-spot-applause-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="skinny">
+      <figure class="card" data-brand="eo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/eo-spot-balloons-skinny-600x1200.jpg" alt="balloons, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -381,7 +388,7 @@
           <a class="dl" href="/assets/ads/eo-spot-balloons-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+      <figure class="card" data-brand="eo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/eo-band-anniversary-ultrawide-1600x500.jpg" alt="anniversary, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -400,7 +407,7 @@
           <a class="dl" href="/assets/ads/eo-band-anniversary-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+      <figure class="card" data-brand="eo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/eo-band-cheers-ultrawide-1600x500.jpg" alt="cheers, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -419,7 +426,7 @@
           <a class="dl" href="/assets/ads/eo-band-cheers-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="landscape">
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/eo-band-anniversary-landscape-1200x628.jpg" alt="anniversary, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -438,7 +445,7 @@
           <a class="dl" href="/assets/ads/eo-band-anniversary-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="landscape">
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/eo-band-cheers-landscape-1200x628.jpg" alt="cheers, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -457,7 +464,7 @@
           <a class="dl" href="/assets/ads/eo-band-cheers-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="square">
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/eo-band-anniversary-square-1200x1200.jpg" alt="anniversary, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -476,7 +483,7 @@
           <a class="dl" href="/assets/ads/eo-band-anniversary-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="square">
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/eo-band-cheers-square-1200x1200.jpg" alt="cheers, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -495,7 +502,7 @@
           <a class="dl" href="/assets/ads/eo-band-cheers-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="portrait">
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/eo-band-anniversary-portrait-960x1200.jpg" alt="anniversary, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -514,7 +521,7 @@
           <a class="dl" href="/assets/ads/eo-band-anniversary-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="portrait">
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/eo-band-cheers-portrait-960x1200.jpg" alt="cheers, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -533,7 +540,7 @@
           <a class="dl" href="/assets/ads/eo-band-cheers-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="vertical">
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/eo-band-anniversary-vertical-1080x1920.jpg" alt="anniversary, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -552,7 +559,7 @@
           <a class="dl" href="/assets/ads/eo-band-anniversary-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="vertical">
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/eo-band-cheers-vertical-1080x1920.jpg" alt="cheers, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -571,7 +578,7 @@
           <a class="dl" href="/assets/ads/eo-band-cheers-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="skinny">
+      <figure class="card" data-brand="eo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/eo-band-anniversary-skinny-600x1200.jpg" alt="anniversary, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -590,7 +597,7 @@
           <a class="dl" href="/assets/ads/eo-band-anniversary-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="skinny">
+      <figure class="card" data-brand="eo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/eo-band-cheers-skinny-600x1200.jpg" alt="cheers, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -609,7 +616,7 @@
           <a class="dl" href="/assets/ads/eo-band-cheers-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+      <figure class="card" data-brand="eo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/eo-corner-lions-ultrawide-1600x500.jpg" alt="Lion dancers, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -628,7 +635,7 @@
           <a class="dl" href="/assets/ads/eo-corner-lions-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+      <figure class="card" data-brand="eo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/eo-corner-selfie-ultrawide-1600x500.jpg" alt="Group selfie, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -647,7 +654,7 @@
           <a class="dl" href="/assets/ads/eo-corner-selfie-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="landscape">
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/eo-corner-lions-landscape-1200x628.jpg" alt="Lion dancers, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -666,7 +673,7 @@
           <a class="dl" href="/assets/ads/eo-corner-lions-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="landscape">
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/eo-corner-selfie-landscape-1200x628.jpg" alt="Group selfie, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -685,7 +692,7 @@
           <a class="dl" href="/assets/ads/eo-corner-selfie-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="square">
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/eo-corner-lions-square-1200x1200.jpg" alt="Lion dancers, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -704,7 +711,7 @@
           <a class="dl" href="/assets/ads/eo-corner-lions-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="square">
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/eo-corner-selfie-square-1200x1200.jpg" alt="Group selfie, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -723,7 +730,7 @@
           <a class="dl" href="/assets/ads/eo-corner-selfie-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="portrait">
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/eo-corner-lions-portrait-960x1200.jpg" alt="Lion dancers, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -742,7 +749,7 @@
           <a class="dl" href="/assets/ads/eo-corner-lions-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="portrait">
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/eo-corner-selfie-portrait-960x1200.jpg" alt="Group selfie, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -761,7 +768,7 @@
           <a class="dl" href="/assets/ads/eo-corner-selfie-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="vertical">
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/eo-corner-lions-vertical-1080x1920.jpg" alt="Lion dancers, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -780,7 +787,7 @@
           <a class="dl" href="/assets/ads/eo-corner-lions-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="vertical">
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/eo-corner-selfie-vertical-1080x1920.jpg" alt="Group selfie, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -799,7 +806,7 @@
           <a class="dl" href="/assets/ads/eo-corner-selfie-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="skinny">
+      <figure class="card" data-brand="eo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/eo-corner-lions-skinny-600x1200.jpg" alt="Lion dancers, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -818,7 +825,7 @@
           <a class="dl" href="/assets/ads/eo-corner-lions-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="skinny">
+      <figure class="card" data-brand="eo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/eo-corner-selfie-skinny-600x1200.jpg" alt="Group selfie, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -837,7 +844,615 @@
           <a class="dl" href="/assets/ads/eo-corner-selfie-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/eo-dim-four-landscape-1200x628.jpg" alt="four, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">four</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-dim-four-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/eo-dim-gala-landscape-1200x628.jpg" alt="Annual gala, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Annual gala</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-dim-gala-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/eo-dim-highfive-landscape-1200x628.jpg" alt="Chapter social, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter social</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-dim-highfive-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/eo-dim-selfie-landscape-1200x628.jpg" alt="Group selfie, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Group selfie</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-dim-selfie-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/eo-dim-four-square-1200x1200.jpg" alt="four, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">four</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-dim-four-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/eo-dim-gala-square-1200x1200.jpg" alt="Annual gala, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Annual gala</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-dim-gala-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/eo-dim-highfive-square-1200x1200.jpg" alt="Chapter social, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter social</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-dim-highfive-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/eo-dim-selfie-square-1200x1200.jpg" alt="Group selfie, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Group selfie</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-dim-selfie-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/eo-dim-four-portrait-960x1200.jpg" alt="four, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">four</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/eo-dim-four-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/eo-dim-gala-portrait-960x1200.jpg" alt="Annual gala, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Annual gala</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/eo-dim-gala-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/eo-dim-highfive-portrait-960x1200.jpg" alt="Chapter social, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter social</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/eo-dim-highfive-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/eo-dim-selfie-portrait-960x1200.jpg" alt="Group selfie, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Group selfie</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/eo-dim-selfie-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/eo-dim-four-vertical-1080x1920.jpg" alt="four, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">four</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/eo-dim-four-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/eo-dim-gala-vertical-1080x1920.jpg" alt="Annual gala, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Annual gala</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/eo-dim-gala-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/eo-dim-highfive-vertical-1080x1920.jpg" alt="Chapter social, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter social</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/eo-dim-highfive-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/eo-dim-selfie-vertical-1080x1920.jpg" alt="Group selfie, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Group selfie</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/eo-dim-selfie-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/eo-edge-four-landscape-1200x628.jpg" alt="four, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">four</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-edge-four-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/eo-edge-gala-landscape-1200x628.jpg" alt="Annual gala, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Annual gala</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-edge-gala-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/eo-edge-highfive-landscape-1200x628.jpg" alt="Chapter social, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter social</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-edge-highfive-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/eo-edge-selfie-landscape-1200x628.jpg" alt="Group selfie, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Group selfie</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-edge-selfie-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/eo-edge-four-square-1200x1200.jpg" alt="four, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">four</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-edge-four-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/eo-edge-gala-square-1200x1200.jpg" alt="Annual gala, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Annual gala</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-edge-gala-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/eo-edge-highfive-square-1200x1200.jpg" alt="Chapter social, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter social</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-edge-highfive-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/eo-edge-selfie-square-1200x1200.jpg" alt="Group selfie, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Group selfie</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-edge-selfie-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/eo-edge-four-portrait-960x1200.jpg" alt="four, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">four</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/eo-edge-four-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/eo-edge-gala-portrait-960x1200.jpg" alt="Annual gala, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Annual gala</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/eo-edge-gala-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/eo-edge-highfive-portrait-960x1200.jpg" alt="Chapter social, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter social</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/eo-edge-highfive-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/eo-edge-selfie-portrait-960x1200.jpg" alt="Group selfie, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Group selfie</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/eo-edge-selfie-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/eo-edge-four-vertical-1080x1920.jpg" alt="four, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">four</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/eo-edge-four-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/eo-edge-gala-vertical-1080x1920.jpg" alt="Annual gala, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Annual gala</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/eo-edge-gala-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/eo-edge-highfive-vertical-1080x1920.jpg" alt="Chapter social, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter social</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/eo-edge-highfive-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/eo-edge-selfie-vertical-1080x1920.jpg" alt="Group selfie, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Group selfie</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/eo-edge-selfie-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/eo-frame-awards-ultrawide-1600x500.jpg" alt="awards, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -856,7 +1471,7 @@
           <a class="dl" href="/assets/ads/eo-frame-awards-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+      <figure class="card" data-brand="eo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/eo-frame-firewalk-ultrawide-1600x500.jpg" alt="Retreat firewalk, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -875,7 +1490,7 @@
           <a class="dl" href="/assets/ads/eo-frame-firewalk-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+      <figure class="card" data-brand="eo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/eo-frame-highfive-ultrawide-1600x500.jpg" alt="Chapter social, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -894,7 +1509,7 @@
           <a class="dl" href="/assets/ads/eo-frame-highfive-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="landscape">
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/eo-frame-awards-landscape-1200x628.jpg" alt="awards, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -913,7 +1528,7 @@
           <a class="dl" href="/assets/ads/eo-frame-awards-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="landscape">
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/eo-frame-firewalk-landscape-1200x628.jpg" alt="Retreat firewalk, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -932,7 +1547,7 @@
           <a class="dl" href="/assets/ads/eo-frame-firewalk-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="landscape">
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/eo-frame-highfive-landscape-1200x628.jpg" alt="Chapter social, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -951,7 +1566,7 @@
           <a class="dl" href="/assets/ads/eo-frame-highfive-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="square">
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/eo-frame-awards-square-1200x1200.jpg" alt="awards, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -970,7 +1585,7 @@
           <a class="dl" href="/assets/ads/eo-frame-awards-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="square">
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/eo-frame-firewalk-square-1200x1200.jpg" alt="Retreat firewalk, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -989,7 +1604,7 @@
           <a class="dl" href="/assets/ads/eo-frame-firewalk-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="square">
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/eo-frame-highfive-square-1200x1200.jpg" alt="Chapter social, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -1008,7 +1623,7 @@
           <a class="dl" href="/assets/ads/eo-frame-highfive-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="portrait">
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/eo-frame-awards-portrait-960x1200.jpg" alt="awards, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -1027,7 +1642,7 @@
           <a class="dl" href="/assets/ads/eo-frame-awards-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="portrait">
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/eo-frame-firewalk-portrait-960x1200.jpg" alt="Retreat firewalk, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -1046,7 +1661,7 @@
           <a class="dl" href="/assets/ads/eo-frame-firewalk-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="portrait">
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/eo-frame-highfive-portrait-960x1200.jpg" alt="Chapter social, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -1065,7 +1680,7 @@
           <a class="dl" href="/assets/ads/eo-frame-highfive-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="vertical">
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/eo-frame-awards-vertical-1080x1920.jpg" alt="awards, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -1084,7 +1699,7 @@
           <a class="dl" href="/assets/ads/eo-frame-awards-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="vertical">
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/eo-frame-firewalk-vertical-1080x1920.jpg" alt="Retreat firewalk, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -1103,7 +1718,7 @@
           <a class="dl" href="/assets/ads/eo-frame-firewalk-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="vertical">
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/eo-frame-highfive-vertical-1080x1920.jpg" alt="Chapter social, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -1122,7 +1737,7 @@
           <a class="dl" href="/assets/ads/eo-frame-highfive-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="skinny">
+      <figure class="card" data-brand="eo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/eo-frame-awards-skinny-600x1200.jpg" alt="awards, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -1141,7 +1756,7 @@
           <a class="dl" href="/assets/ads/eo-frame-awards-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="skinny">
+      <figure class="card" data-brand="eo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/eo-frame-firewalk-skinny-600x1200.jpg" alt="Retreat firewalk, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -1160,7 +1775,7 @@
           <a class="dl" href="/assets/ads/eo-frame-firewalk-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="skinny">
+      <figure class="card" data-brand="eo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/eo-frame-highfive-skinny-600x1200.jpg" alt="Chapter social, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -1179,7 +1794,7 @@
           <a class="dl" href="/assets/ads/eo-frame-highfive-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+      <figure class="card" data-brand="eo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/eo-stack-cornhole-ultrawide-1600x500.jpg" alt="Cornhole social, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -1198,7 +1813,7 @@
           <a class="dl" href="/assets/ads/eo-stack-cornhole-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+      <figure class="card" data-brand="eo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/eo-stack-sumo-ultrawide-1600x500.jpg" alt="sumo, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -1217,7 +1832,7 @@
           <a class="dl" href="/assets/ads/eo-stack-sumo-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="landscape">
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/eo-stack-cornhole-landscape-1200x628.jpg" alt="Cornhole social, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -1236,7 +1851,7 @@
           <a class="dl" href="/assets/ads/eo-stack-cornhole-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="landscape">
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/eo-stack-sumo-landscape-1200x628.jpg" alt="sumo, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -1255,7 +1870,7 @@
           <a class="dl" href="/assets/ads/eo-stack-sumo-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="square">
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/eo-stack-cornhole-square-1200x1200.jpg" alt="Cornhole social, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -1274,7 +1889,7 @@
           <a class="dl" href="/assets/ads/eo-stack-cornhole-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="square">
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/eo-stack-sumo-square-1200x1200.jpg" alt="sumo, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -1293,7 +1908,7 @@
           <a class="dl" href="/assets/ads/eo-stack-sumo-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="portrait">
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/eo-stack-cornhole-portrait-960x1200.jpg" alt="Cornhole social, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -1312,7 +1927,7 @@
           <a class="dl" href="/assets/ads/eo-stack-cornhole-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="portrait">
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/eo-stack-sumo-portrait-960x1200.jpg" alt="sumo, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -1331,7 +1946,7 @@
           <a class="dl" href="/assets/ads/eo-stack-sumo-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="vertical">
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/eo-stack-cornhole-vertical-1080x1920.jpg" alt="Cornhole social, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -1350,7 +1965,7 @@
           <a class="dl" href="/assets/ads/eo-stack-cornhole-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="vertical">
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/eo-stack-sumo-vertical-1080x1920.jpg" alt="sumo, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -1369,7 +1984,7 @@
           <a class="dl" href="/assets/ads/eo-stack-sumo-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="skinny">
+      <figure class="card" data-brand="eo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/eo-stack-cornhole-skinny-600x1200.jpg" alt="Cornhole social, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -1388,7 +2003,7 @@
           <a class="dl" href="/assets/ads/eo-stack-cornhole-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="skinny">
+      <figure class="card" data-brand="eo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/eo-stack-sumo-skinny-600x1200.jpg" alt="sumo, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -1407,7 +2022,311 @@
           <a class="dl" href="/assets/ads/eo-stack-sumo-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/eo-clean-four-landscape-1200x628.jpg" alt="four, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">four</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-clean-four-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/eo-clean-gala-landscape-1200x628.jpg" alt="Annual gala, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Annual gala</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-clean-gala-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/eo-clean-highfive-landscape-1200x628.jpg" alt="Chapter social, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter social</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-clean-highfive-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/eo-clean-selfie-landscape-1200x628.jpg" alt="Group selfie, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Group selfie</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-clean-selfie-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/eo-clean-four-square-1200x1200.jpg" alt="four, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">four</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-clean-four-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/eo-clean-gala-square-1200x1200.jpg" alt="Annual gala, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Annual gala</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-clean-gala-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/eo-clean-highfive-square-1200x1200.jpg" alt="Chapter social, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter social</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-clean-highfive-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/eo-clean-selfie-square-1200x1200.jpg" alt="Group selfie, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Group selfie</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/eo-clean-selfie-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/eo-clean-four-portrait-960x1200.jpg" alt="four, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">four</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/eo-clean-four-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/eo-clean-gala-portrait-960x1200.jpg" alt="Annual gala, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Annual gala</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/eo-clean-gala-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/eo-clean-highfive-portrait-960x1200.jpg" alt="Chapter social, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter social</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/eo-clean-highfive-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/eo-clean-selfie-portrait-960x1200.jpg" alt="Group selfie, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Group selfie</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/eo-clean-selfie-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/eo-clean-four-vertical-1080x1920.jpg" alt="four, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">four</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/eo-clean-four-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/eo-clean-gala-vertical-1080x1920.jpg" alt="Annual gala, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Annual gala</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/eo-clean-gala-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/eo-clean-highfive-vertical-1080x1920.jpg" alt="Chapter social, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Chapter social</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/eo-clean-highfive-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/eo-clean-selfie-vertical-1080x1920.jpg" alt="Group selfie, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Group selfie</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag eo">EO Houston</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/eo-clean-selfie-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="eo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/eo-arc-lunarnewyear-ultrawide-1600x500.jpg" alt="Lunar New Year, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -1426,7 +2345,7 @@
           <a class="dl" href="/assets/ads/eo-arc-lunarnewyear-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="landscape">
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/eo-arc-lunarnewyear-landscape-1200x628.jpg" alt="Lunar New Year, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -1445,7 +2364,7 @@
           <a class="dl" href="/assets/ads/eo-arc-lunarnewyear-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="square">
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/eo-arc-lunarnewyear-square-1200x1200.jpg" alt="Lunar New Year, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -1464,7 +2383,7 @@
           <a class="dl" href="/assets/ads/eo-arc-lunarnewyear-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="portrait">
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/eo-arc-lunarnewyear-portrait-960x1200.jpg" alt="Lunar New Year, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -1483,7 +2402,7 @@
           <a class="dl" href="/assets/ads/eo-arc-lunarnewyear-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="vertical">
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/eo-arc-lunarnewyear-vertical-1080x1920.jpg" alt="Lunar New Year, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -1502,7 +2421,7 @@
           <a class="dl" href="/assets/ads/eo-arc-lunarnewyear-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="skinny">
+      <figure class="card" data-brand="eo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/eo-arc-lunarnewyear-skinny-600x1200.jpg" alt="Lunar New Year, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -1521,7 +2440,7 @@
           <a class="dl" href="/assets/ads/eo-arc-lunarnewyear-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+      <figure class="card" data-brand="eo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/eo-panel-four-ultrawide-1600x500.jpg" alt="four, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -1540,7 +2459,7 @@
           <a class="dl" href="/assets/ads/eo-panel-four-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="ultrawide">
+      <figure class="card" data-brand="eo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/eo-panel-gala-ultrawide-1600x500.jpg" alt="Annual gala, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -1559,7 +2478,7 @@
           <a class="dl" href="/assets/ads/eo-panel-gala-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="landscape">
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/eo-panel-four-landscape-1200x628.jpg" alt="four, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -1578,7 +2497,7 @@
           <a class="dl" href="/assets/ads/eo-panel-four-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="landscape">
+      <figure class="card" data-brand="eo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/eo-panel-gala-landscape-1200x628.jpg" alt="Annual gala, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -1597,7 +2516,7 @@
           <a class="dl" href="/assets/ads/eo-panel-gala-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="square">
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/eo-panel-four-square-1200x1200.jpg" alt="four, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -1616,7 +2535,7 @@
           <a class="dl" href="/assets/ads/eo-panel-four-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="square">
+      <figure class="card" data-brand="eo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/eo-panel-gala-square-1200x1200.jpg" alt="Annual gala, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -1635,7 +2554,7 @@
           <a class="dl" href="/assets/ads/eo-panel-gala-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="portrait">
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/eo-panel-four-portrait-960x1200.jpg" alt="four, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -1654,7 +2573,7 @@
           <a class="dl" href="/assets/ads/eo-panel-four-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="portrait">
+      <figure class="card" data-brand="eo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/eo-panel-gala-portrait-960x1200.jpg" alt="Annual gala, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -1673,7 +2592,7 @@
           <a class="dl" href="/assets/ads/eo-panel-gala-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="vertical">
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/eo-panel-four-vertical-1080x1920.jpg" alt="four, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -1692,7 +2611,7 @@
           <a class="dl" href="/assets/ads/eo-panel-four-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="vertical">
+      <figure class="card" data-brand="eo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/eo-panel-gala-vertical-1080x1920.jpg" alt="Annual gala, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -1711,7 +2630,7 @@
           <a class="dl" href="/assets/ads/eo-panel-gala-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="skinny">
+      <figure class="card" data-brand="eo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/eo-panel-four-skinny-600x1200.jpg" alt="four, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -1730,7 +2649,7 @@
           <a class="dl" href="/assets/ads/eo-panel-four-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="eo" data-ratio="skinny">
+      <figure class="card" data-brand="eo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/eo-panel-gala-skinny-600x1200.jpg" alt="Annual gala, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -1749,7 +2668,7 @@
           <a class="dl" href="/assets/ads/eo-panel-gala-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="ultrawide">
+      <figure class="card" data-brand="mo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/mo-spot-dinner-ultrawide-1600x500.jpg" alt="dinner, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -1768,7 +2687,7 @@
           <a class="dl" href="/assets/ads/mo-spot-dinner-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="landscape">
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/mo-spot-dinner-landscape-1200x628.jpg" alt="dinner, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -1787,7 +2706,7 @@
           <a class="dl" href="/assets/ads/mo-spot-dinner-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="square">
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/mo-spot-dinner-square-1200x1200.jpg" alt="dinner, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -1806,7 +2725,7 @@
           <a class="dl" href="/assets/ads/mo-spot-dinner-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="portrait">
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/mo-spot-dinner-portrait-960x1200.jpg" alt="dinner, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -1825,7 +2744,7 @@
           <a class="dl" href="/assets/ads/mo-spot-dinner-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="vertical">
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/mo-spot-dinner-vertical-1080x1920.jpg" alt="dinner, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -1844,7 +2763,7 @@
           <a class="dl" href="/assets/ads/mo-spot-dinner-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="skinny">
+      <figure class="card" data-brand="mo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/mo-spot-dinner-skinny-600x1200.jpg" alt="dinner, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -1863,7 +2782,7 @@
           <a class="dl" href="/assets/ads/mo-spot-dinner-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="ultrawide">
+      <figure class="card" data-brand="mo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/mo-band-forum-ultrawide-1600x500.jpg" alt="Retreat forum, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -1882,7 +2801,7 @@
           <a class="dl" href="/assets/ads/mo-band-forum-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="landscape">
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/mo-band-forum-landscape-1200x628.jpg" alt="Retreat forum, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -1901,7 +2820,7 @@
           <a class="dl" href="/assets/ads/mo-band-forum-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="square">
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/mo-band-forum-square-1200x1200.jpg" alt="Retreat forum, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -1920,7 +2839,7 @@
           <a class="dl" href="/assets/ads/mo-band-forum-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="portrait">
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/mo-band-forum-portrait-960x1200.jpg" alt="Retreat forum, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -1939,7 +2858,7 @@
           <a class="dl" href="/assets/ads/mo-band-forum-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="vertical">
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/mo-band-forum-vertical-1080x1920.jpg" alt="Retreat forum, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -1958,7 +2877,7 @@
           <a class="dl" href="/assets/ads/mo-band-forum-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="skinny">
+      <figure class="card" data-brand="mo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/mo-band-forum-skinny-600x1200.jpg" alt="Retreat forum, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -1977,7 +2896,7 @@
           <a class="dl" href="/assets/ads/mo-band-forum-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="ultrawide">
+      <figure class="card" data-brand="mo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/mo-corner-backdrop-ultrawide-1600x500.jpg" alt="backdrop, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -1996,7 +2915,7 @@
           <a class="dl" href="/assets/ads/mo-corner-backdrop-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="ultrawide">
+      <figure class="card" data-brand="mo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/mo-corner-luncheon-ultrawide-1600x500.jpg" alt="Learning luncheon, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -2015,7 +2934,7 @@
           <a class="dl" href="/assets/ads/mo-corner-luncheon-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="landscape">
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/mo-corner-backdrop-landscape-1200x628.jpg" alt="backdrop, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -2034,7 +2953,7 @@
           <a class="dl" href="/assets/ads/mo-corner-backdrop-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="landscape">
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/mo-corner-luncheon-landscape-1200x628.jpg" alt="Learning luncheon, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -2053,7 +2972,7 @@
           <a class="dl" href="/assets/ads/mo-corner-luncheon-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="square">
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/mo-corner-backdrop-square-1200x1200.jpg" alt="backdrop, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -2072,7 +2991,7 @@
           <a class="dl" href="/assets/ads/mo-corner-backdrop-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="square">
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/mo-corner-luncheon-square-1200x1200.jpg" alt="Learning luncheon, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -2091,7 +3010,7 @@
           <a class="dl" href="/assets/ads/mo-corner-luncheon-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="portrait">
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/mo-corner-backdrop-portrait-960x1200.jpg" alt="backdrop, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -2110,7 +3029,7 @@
           <a class="dl" href="/assets/ads/mo-corner-backdrop-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="portrait">
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/mo-corner-luncheon-portrait-960x1200.jpg" alt="Learning luncheon, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -2129,7 +3048,7 @@
           <a class="dl" href="/assets/ads/mo-corner-luncheon-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="vertical">
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/mo-corner-backdrop-vertical-1080x1920.jpg" alt="backdrop, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -2148,7 +3067,7 @@
           <a class="dl" href="/assets/ads/mo-corner-backdrop-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="vertical">
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/mo-corner-luncheon-vertical-1080x1920.jpg" alt="Learning luncheon, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -2167,7 +3086,7 @@
           <a class="dl" href="/assets/ads/mo-corner-luncheon-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="skinny">
+      <figure class="card" data-brand="mo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/mo-corner-backdrop-skinny-600x1200.jpg" alt="backdrop, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -2186,7 +3105,7 @@
           <a class="dl" href="/assets/ads/mo-corner-backdrop-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="skinny">
+      <figure class="card" data-brand="mo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/mo-corner-luncheon-skinny-600x1200.jpg" alt="Learning luncheon, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -2205,7 +3124,615 @@
           <a class="dl" href="/assets/ads/mo-corner-luncheon-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="ultrawide">
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/mo-dim-classroom-landscape-1200x628.jpg" alt="Momentum cohort, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Momentum cohort</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-dim-classroom-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/mo-dim-forum-landscape-1200x628.jpg" alt="Retreat forum, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat forum</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-dim-forum-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/mo-dim-lounge-landscape-1200x628.jpg" alt="Member lounge, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Member lounge</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-dim-lounge-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/mo-dim-luncheon-landscape-1200x628.jpg" alt="Learning luncheon, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Learning luncheon</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-dim-luncheon-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/mo-dim-classroom-square-1200x1200.jpg" alt="Momentum cohort, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Momentum cohort</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-dim-classroom-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/mo-dim-forum-square-1200x1200.jpg" alt="Retreat forum, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat forum</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-dim-forum-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/mo-dim-lounge-square-1200x1200.jpg" alt="Member lounge, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Member lounge</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-dim-lounge-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/mo-dim-luncheon-square-1200x1200.jpg" alt="Learning luncheon, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Learning luncheon</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-dim-luncheon-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/mo-dim-classroom-portrait-960x1200.jpg" alt="Momentum cohort, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Momentum cohort</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/mo-dim-classroom-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/mo-dim-forum-portrait-960x1200.jpg" alt="Retreat forum, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat forum</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/mo-dim-forum-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/mo-dim-lounge-portrait-960x1200.jpg" alt="Member lounge, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Member lounge</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/mo-dim-lounge-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/mo-dim-luncheon-portrait-960x1200.jpg" alt="Learning luncheon, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Learning luncheon</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/mo-dim-luncheon-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/mo-dim-classroom-vertical-1080x1920.jpg" alt="Momentum cohort, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Momentum cohort</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/mo-dim-classroom-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/mo-dim-forum-vertical-1080x1920.jpg" alt="Retreat forum, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat forum</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/mo-dim-forum-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/mo-dim-lounge-vertical-1080x1920.jpg" alt="Member lounge, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Member lounge</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/mo-dim-lounge-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/mo-dim-luncheon-vertical-1080x1920.jpg" alt="Learning luncheon, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Learning luncheon</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Dimmed corner mark</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/mo-dim-luncheon-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/mo-edge-classroom-landscape-1200x628.jpg" alt="Momentum cohort, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Momentum cohort</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-edge-classroom-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/mo-edge-forum-landscape-1200x628.jpg" alt="Retreat forum, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat forum</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-edge-forum-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/mo-edge-lounge-landscape-1200x628.jpg" alt="Member lounge, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Member lounge</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-edge-lounge-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/mo-edge-luncheon-landscape-1200x628.jpg" alt="Learning luncheon, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Learning luncheon</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-edge-luncheon-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/mo-edge-classroom-square-1200x1200.jpg" alt="Momentum cohort, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Momentum cohort</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-edge-classroom-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/mo-edge-forum-square-1200x1200.jpg" alt="Retreat forum, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat forum</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-edge-forum-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/mo-edge-lounge-square-1200x1200.jpg" alt="Member lounge, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Member lounge</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-edge-lounge-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/mo-edge-luncheon-square-1200x1200.jpg" alt="Learning luncheon, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Learning luncheon</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-edge-luncheon-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/mo-edge-classroom-portrait-960x1200.jpg" alt="Momentum cohort, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Momentum cohort</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/mo-edge-classroom-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/mo-edge-forum-portrait-960x1200.jpg" alt="Retreat forum, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat forum</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/mo-edge-forum-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/mo-edge-lounge-portrait-960x1200.jpg" alt="Member lounge, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Member lounge</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/mo-edge-lounge-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/mo-edge-luncheon-portrait-960x1200.jpg" alt="Learning luncheon, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Learning luncheon</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/mo-edge-luncheon-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/mo-edge-classroom-vertical-1080x1920.jpg" alt="Momentum cohort, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Momentum cohort</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/mo-edge-classroom-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/mo-edge-forum-vertical-1080x1920.jpg" alt="Retreat forum, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat forum</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/mo-edge-forum-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/mo-edge-lounge-vertical-1080x1920.jpg" alt="Member lounge, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Member lounge</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/mo-edge-lounge-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/mo-edge-luncheon-vertical-1080x1920.jpg" alt="Learning luncheon, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Learning luncheon</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">Edge rule</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/mo-edge-luncheon-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/mo-frame-lounge-ultrawide-1600x500.jpg" alt="Member lounge, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -2224,7 +3751,7 @@
           <a class="dl" href="/assets/ads/mo-frame-lounge-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="ultrawide">
+      <figure class="card" data-brand="mo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/mo-frame-speaker-ultrawide-1600x500.jpg" alt="speaker, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -2243,7 +3770,7 @@
           <a class="dl" href="/assets/ads/mo-frame-speaker-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="landscape">
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/mo-frame-lounge-landscape-1200x628.jpg" alt="Member lounge, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -2262,7 +3789,7 @@
           <a class="dl" href="/assets/ads/mo-frame-lounge-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="landscape">
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/mo-frame-speaker-landscape-1200x628.jpg" alt="speaker, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -2281,7 +3808,7 @@
           <a class="dl" href="/assets/ads/mo-frame-speaker-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="square">
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/mo-frame-lounge-square-1200x1200.jpg" alt="Member lounge, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -2300,7 +3827,7 @@
           <a class="dl" href="/assets/ads/mo-frame-lounge-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="square">
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/mo-frame-speaker-square-1200x1200.jpg" alt="speaker, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -2319,7 +3846,7 @@
           <a class="dl" href="/assets/ads/mo-frame-speaker-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="portrait">
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/mo-frame-lounge-portrait-960x1200.jpg" alt="Member lounge, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -2338,7 +3865,7 @@
           <a class="dl" href="/assets/ads/mo-frame-lounge-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="portrait">
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/mo-frame-speaker-portrait-960x1200.jpg" alt="speaker, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -2357,7 +3884,7 @@
           <a class="dl" href="/assets/ads/mo-frame-speaker-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="vertical">
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/mo-frame-lounge-vertical-1080x1920.jpg" alt="Member lounge, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -2376,7 +3903,7 @@
           <a class="dl" href="/assets/ads/mo-frame-lounge-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="vertical">
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/mo-frame-speaker-vertical-1080x1920.jpg" alt="speaker, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -2395,7 +3922,7 @@
           <a class="dl" href="/assets/ads/mo-frame-speaker-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="skinny">
+      <figure class="card" data-brand="mo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/mo-frame-lounge-skinny-600x1200.jpg" alt="Member lounge, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -2414,7 +3941,7 @@
           <a class="dl" href="/assets/ads/mo-frame-lounge-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="skinny">
+      <figure class="card" data-brand="mo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/mo-frame-speaker-skinny-600x1200.jpg" alt="speaker, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -2433,7 +3960,7 @@
           <a class="dl" href="/assets/ads/mo-frame-speaker-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="ultrawide">
+      <figure class="card" data-brand="mo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/mo-stack-charades-ultrawide-1600x500.jpg" alt="Charades social, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -2452,7 +3979,7 @@
           <a class="dl" href="/assets/ads/mo-stack-charades-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="ultrawide">
+      <figure class="card" data-brand="mo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/mo-stack-yoga-ultrawide-1600x500.jpg" alt="yoga, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -2471,7 +3998,7 @@
           <a class="dl" href="/assets/ads/mo-stack-yoga-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="landscape">
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/mo-stack-charades-landscape-1200x628.jpg" alt="Charades social, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -2490,7 +4017,7 @@
           <a class="dl" href="/assets/ads/mo-stack-charades-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="landscape">
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/mo-stack-yoga-landscape-1200x628.jpg" alt="yoga, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -2509,7 +4036,7 @@
           <a class="dl" href="/assets/ads/mo-stack-yoga-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="square">
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/mo-stack-charades-square-1200x1200.jpg" alt="Charades social, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -2528,7 +4055,7 @@
           <a class="dl" href="/assets/ads/mo-stack-charades-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="square">
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/mo-stack-yoga-square-1200x1200.jpg" alt="yoga, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -2547,7 +4074,7 @@
           <a class="dl" href="/assets/ads/mo-stack-yoga-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="portrait">
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/mo-stack-charades-portrait-960x1200.jpg" alt="Charades social, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -2566,7 +4093,7 @@
           <a class="dl" href="/assets/ads/mo-stack-charades-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="portrait">
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/mo-stack-yoga-portrait-960x1200.jpg" alt="yoga, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -2585,7 +4112,7 @@
           <a class="dl" href="/assets/ads/mo-stack-yoga-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="vertical">
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/mo-stack-charades-vertical-1080x1920.jpg" alt="Charades social, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -2604,7 +4131,7 @@
           <a class="dl" href="/assets/ads/mo-stack-charades-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="vertical">
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/mo-stack-yoga-vertical-1080x1920.jpg" alt="yoga, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -2623,7 +4150,7 @@
           <a class="dl" href="/assets/ads/mo-stack-yoga-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="skinny">
+      <figure class="card" data-brand="mo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/mo-stack-charades-skinny-600x1200.jpg" alt="Charades social, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -2642,7 +4169,7 @@
           <a class="dl" href="/assets/ads/mo-stack-charades-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="skinny">
+      <figure class="card" data-brand="mo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/mo-stack-yoga-skinny-600x1200.jpg" alt="yoga, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -2661,7 +4188,311 @@
           <a class="dl" href="/assets/ads/mo-stack-yoga-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="ultrawide">
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/mo-clean-classroom-landscape-1200x628.jpg" alt="Momentum cohort, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Momentum cohort</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-clean-classroom-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/mo-clean-forum-landscape-1200x628.jpg" alt="Retreat forum, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat forum</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-clean-forum-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/mo-clean-lounge-landscape-1200x628.jpg" alt="Member lounge, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Member lounge</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-clean-lounge-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/628">
+          <img src="/assets/ads/mo-clean-luncheon-landscape-1200x628.jpg" alt="Learning luncheon, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Learning luncheon</span>
+            <span class="dim">1200 &times; 628</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Landscape 1.91:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-clean-luncheon-landscape-1200x628.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/mo-clean-classroom-square-1200x1200.jpg" alt="Momentum cohort, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Momentum cohort</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-clean-classroom-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/mo-clean-forum-square-1200x1200.jpg" alt="Retreat forum, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat forum</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-clean-forum-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/mo-clean-lounge-square-1200x1200.jpg" alt="Member lounge, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Member lounge</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-clean-lounge-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1200/1200">
+          <img src="/assets/ads/mo-clean-luncheon-square-1200x1200.jpg" alt="Learning luncheon, Square 1:1" loading="lazy" width="1200" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Learning luncheon</span>
+            <span class="dim">1200 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Square 1:1</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max required. Min 1, max 20</p>
+          <a class="dl" href="/assets/ads/mo-clean-luncheon-square-1200x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/mo-clean-classroom-portrait-960x1200.jpg" alt="Momentum cohort, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Momentum cohort</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/mo-clean-classroom-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/mo-clean-forum-portrait-960x1200.jpg" alt="Retreat forum, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat forum</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/mo-clean-forum-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/mo-clean-lounge-portrait-960x1200.jpg" alt="Member lounge, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Member lounge</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/mo-clean-lounge-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="overlay">
+        <div class="shot" style="aspect-ratio:960/1200">
+          <img src="/assets/ads/mo-clean-luncheon-portrait-960x1200.jpg" alt="Learning luncheon, Portrait 4:5" loading="lazy" width="960" height="1200"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Learning luncheon</span>
+            <span class="dim">960 &times; 1200</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Portrait 4:5</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Performance Max optional. Unlocks mobile-first inventory</p>
+          <a class="dl" href="/assets/ads/mo-clean-luncheon-portrait-960x1200.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/mo-clean-classroom-vertical-1080x1920.jpg" alt="Momentum cohort, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Momentum cohort</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/mo-clean-classroom-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/mo-clean-forum-vertical-1080x1920.jpg" alt="Retreat forum, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Retreat forum</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/mo-clean-forum-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/mo-clean-lounge-vertical-1080x1920.jpg" alt="Member lounge, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Member lounge</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/mo-clean-lounge-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="overlay">
+        <div class="shot" style="aspect-ratio:1080/1920">
+          <img src="/assets/ads/mo-clean-luncheon-vertical-1080x1920.jpg" alt="Learning luncheon, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
+        </div>
+        <figcaption>
+          <div class="row">
+            <span class="name">Learning luncheon</span>
+            <span class="dim">1080 &times; 1920</span>
+          </div>
+          <div class="row">
+            <span class="tag mo">EO Momentum</span>
+            <span class="tag ghost">No mark</span>
+            <span class="tag ghost">Vertical 9:16</span>
+            <span class="tag safe">Overlay safe</span>
+          </div>
+          <p class="use">Demand Gen and YouTube Shorts only</p>
+          <a class="dl" href="/assets/ads/mo-clean-luncheon-vertical-1080x1920.jpg" download>Download</a>
+        </figcaption>
+      </figure>
+      <figure class="card" data-brand="mo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/mo-arc-stage-ultrawide-1600x500.jpg" alt="Chapter event, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -2680,7 +4511,7 @@
           <a class="dl" href="/assets/ads/mo-arc-stage-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="landscape">
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/mo-arc-stage-landscape-1200x628.jpg" alt="Chapter event, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -2699,7 +4530,7 @@
           <a class="dl" href="/assets/ads/mo-arc-stage-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="square">
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/mo-arc-stage-square-1200x1200.jpg" alt="Chapter event, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -2718,7 +4549,7 @@
           <a class="dl" href="/assets/ads/mo-arc-stage-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="portrait">
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/mo-arc-stage-portrait-960x1200.jpg" alt="Chapter event, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -2737,7 +4568,7 @@
           <a class="dl" href="/assets/ads/mo-arc-stage-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="vertical">
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/mo-arc-stage-vertical-1080x1920.jpg" alt="Chapter event, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -2756,7 +4587,7 @@
           <a class="dl" href="/assets/ads/mo-arc-stage-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="skinny">
+      <figure class="card" data-brand="mo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/mo-arc-stage-skinny-600x1200.jpg" alt="Chapter event, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -2775,7 +4606,7 @@
           <a class="dl" href="/assets/ads/mo-arc-stage-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="ultrawide">
+      <figure class="card" data-brand="mo" data-ratio="ultrawide" data-style="branded">
         <div class="shot" style="aspect-ratio:1600/500">
           <img src="/assets/ads/mo-panel-classroom-ultrawide-1600x500.jpg" alt="Momentum cohort, Extra wide 3.2:1" loading="lazy" width="1600" height="500"/>
         </div>
@@ -2794,7 +4625,7 @@
           <a class="dl" href="/assets/ads/mo-panel-classroom-ultrawide-1600x500.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="landscape">
+      <figure class="card" data-brand="mo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/628">
           <img src="/assets/ads/mo-panel-classroom-landscape-1200x628.jpg" alt="Momentum cohort, Landscape 1.91:1" loading="lazy" width="1200" height="628"/>
         </div>
@@ -2813,7 +4644,7 @@
           <a class="dl" href="/assets/ads/mo-panel-classroom-landscape-1200x628.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="square">
+      <figure class="card" data-brand="mo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/mo-panel-classroom-square-1200x1200.jpg" alt="Momentum cohort, Square 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -2832,7 +4663,7 @@
           <a class="dl" href="/assets/ads/mo-panel-classroom-square-1200x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="portrait">
+      <figure class="card" data-brand="mo" data-ratio="portrait" data-style="branded">
         <div class="shot" style="aspect-ratio:960/1200">
           <img src="/assets/ads/mo-panel-classroom-portrait-960x1200.jpg" alt="Momentum cohort, Portrait 4:5" loading="lazy" width="960" height="1200"/>
         </div>
@@ -2851,7 +4682,7 @@
           <a class="dl" href="/assets/ads/mo-panel-classroom-portrait-960x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="vertical">
+      <figure class="card" data-brand="mo" data-ratio="vertical" data-style="branded">
         <div class="shot" style="aspect-ratio:1080/1920">
           <img src="/assets/ads/mo-panel-classroom-vertical-1080x1920.jpg" alt="Momentum cohort, Vertical 9:16" loading="lazy" width="1080" height="1920"/>
         </div>
@@ -2870,7 +4701,7 @@
           <a class="dl" href="/assets/ads/mo-panel-classroom-vertical-1080x1920.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="mo" data-ratio="skinny">
+      <figure class="card" data-brand="mo" data-ratio="skinny" data-style="branded">
         <div class="shot" style="aspect-ratio:600/1200">
           <img src="/assets/ads/mo-panel-classroom-skinny-600x1200.jpg" alt="Momentum cohort, Skinny 1:2" loading="lazy" width="600" height="1200"/>
         </div>
@@ -2889,7 +4720,7 @@
           <a class="dl" href="/assets/ads/mo-panel-classroom-skinny-600x1200.jpg" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="logo" data-ratio="square">
+      <figure class="card" data-brand="logo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/logo-eohouston-compact-navy-1200x1200.png" alt="EO Houston lockup, Logo 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -2908,7 +4739,7 @@
           <a class="dl" href="/assets/ads/logo-eohouston-compact-navy-1200x1200.png" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="logo" data-ratio="square">
+      <figure class="card" data-brand="logo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/logo-eohouston-compact-white-1200x1200.png" alt="EO Houston lockup, Logo 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -2927,7 +4758,7 @@
           <a class="dl" href="/assets/ads/logo-eohouston-compact-white-1200x1200.png" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="logo" data-ratio="landscape">
+      <figure class="card" data-brand="logo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/300">
           <img src="/assets/ads/logo-eohouston-row-blue-1200x300.png" alt="EO Houston lockup, Logo 4:1" loading="lazy" width="1200" height="300"/>
         </div>
@@ -2946,7 +4777,7 @@
           <a class="dl" href="/assets/ads/logo-eohouston-row-blue-1200x300.png" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="logo" data-ratio="landscape">
+      <figure class="card" data-brand="logo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/300">
           <img src="/assets/ads/logo-eohouston-row-navy-1200x300.png" alt="EO Houston lockup, Logo 4:1" loading="lazy" width="1200" height="300"/>
         </div>
@@ -2965,7 +4796,7 @@
           <a class="dl" href="/assets/ads/logo-eohouston-row-navy-1200x300.png" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="logo" data-ratio="landscape">
+      <figure class="card" data-brand="logo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/300">
           <img src="/assets/ads/logo-eohouston-row-white-1200x300.png" alt="EO Houston lockup, Logo 4:1" loading="lazy" width="1200" height="300"/>
         </div>
@@ -2984,7 +4815,7 @@
           <a class="dl" href="/assets/ads/logo-eohouston-row-white-1200x300.png" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="logo" data-ratio="landscape">
+      <figure class="card" data-brand="logo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/300">
           <img src="/assets/ads/logo-landscape-1200x300.png" alt="Rings mark, Logo 4:1" loading="lazy" width="1200" height="300"/>
         </div>
@@ -3003,7 +4834,7 @@
           <a class="dl" href="/assets/ads/logo-landscape-1200x300.png" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="logo" data-ratio="landscape">
+      <figure class="card" data-brand="logo" data-ratio="landscape" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/300">
           <img src="/assets/ads/logo-navy-landscape-1200x300.png" alt="Rings mark, Logo 4:1" loading="lazy" width="1200" height="300"/>
         </div>
@@ -3022,7 +4853,7 @@
           <a class="dl" href="/assets/ads/logo-navy-landscape-1200x300.png" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="logo" data-ratio="square">
+      <figure class="card" data-brand="logo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/logo-navy-square-1200x1200.png" alt="Rings mark, Logo 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -3041,7 +4872,7 @@
           <a class="dl" href="/assets/ads/logo-navy-square-1200x1200.png" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="logo" data-ratio="square">
+      <figure class="card" data-brand="logo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/logo-square-1200x1200.png" alt="Rings mark, Logo 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -3060,7 +4891,7 @@
           <a class="dl" href="/assets/ads/logo-square-1200x1200.png" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="logo" data-ratio="square">
+      <figure class="card" data-brand="logo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/logo-eohouston-official-navy-1200x1200.png" alt="EO Houston lockup, Logo 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -3079,7 +4910,7 @@
           <a class="dl" href="/assets/ads/logo-eohouston-official-navy-1200x1200.png" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="logo" data-ratio="square">
+      <figure class="card" data-brand="logo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/logo-eohouston-official-white-1200x1200.png" alt="EO Houston lockup, Logo 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -3098,7 +4929,7 @@
           <a class="dl" href="/assets/ads/logo-eohouston-official-white-1200x1200.png" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="logo" data-ratio="square">
+      <figure class="card" data-brand="logo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/logo-eohouston-stack-blue-1200x1200.png" alt="EO Houston lockup, Logo 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -3117,7 +4948,7 @@
           <a class="dl" href="/assets/ads/logo-eohouston-stack-blue-1200x1200.png" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="logo" data-ratio="square">
+      <figure class="card" data-brand="logo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/logo-eohouston-stack-navy-1200x1200.png" alt="EO Houston lockup, Logo 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -3136,7 +4967,7 @@
           <a class="dl" href="/assets/ads/logo-eohouston-stack-navy-1200x1200.png" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="logo" data-ratio="square">
+      <figure class="card" data-brand="logo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/logo-eohouston-stack-softgrey-1200x1200.png" alt="EO Houston lockup, Logo 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -3155,7 +4986,7 @@
           <a class="dl" href="/assets/ads/logo-eohouston-stack-softgrey-1200x1200.png" download>Download</a>
         </figcaption>
       </figure>
-      <figure class="card" data-brand="logo" data-ratio="square">
+      <figure class="card" data-brand="logo" data-ratio="square" data-style="branded">
         <div class="shot" style="aspect-ratio:1200/1200">
           <img src="/assets/ads/logo-eohouston-stack-white-1200x1200.png" alt="EO Houston lockup, Logo 1:1" loading="lazy" width="1200" height="1200"/>
         </div>
@@ -3186,7 +5017,7 @@
 
 <script>
 (function () {
-  var state = { brand: 'all', ratio: 'all' };
+  var state = { brand: 'all', ratio: 'all', style: 'all' };
   var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
   var empty = document.getElementById('empty');
 
@@ -3194,7 +5025,8 @@
     var shown = 0;
     cards.forEach(function (c) {
       var ok = (state.brand === 'all' || c.dataset.brand === state.brand) &&
-               (state.ratio === 'all' || c.dataset.ratio === state.ratio);
+               (state.ratio === 'all' || c.dataset.ratio === state.ratio) &&
+               (state.style === 'all' || (c.dataset.style || 'branded') === state.style);
       c.classList.toggle('hide', !ok);
       if (ok) shown++;
     });
