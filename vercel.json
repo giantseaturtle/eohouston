@@ -34,12 +34,7 @@
     {
       "source": "/join",
       "destination": "/membership",
-      "permanent": true
-    },
-    {
-      "source": "/join.html",
-      "destination": "/membership",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/event/:slug+",
