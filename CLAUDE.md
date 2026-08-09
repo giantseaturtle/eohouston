@@ -41,7 +41,11 @@ New dead link discovered later? Add one more exact-match entry to the `redirects
 
 ## 404 page
 
-`404.html` at the repo root is Vercel's automatic fallback for any unmatched path on a static (no-framework) deployment - no routing config needed, and the real 404 status code is preserved. It's branded (shared header/footer, links back to Home/Events/Join) instead of Vercel's bare "NOT_FOUND" page, and fires a `page_not_found` GA4 event with `path` and `referrer` params so ongoing dead-link traffic shows up in GA4 going forward (there's no other way to see this - the site is fully static with no functions, so `vercel logs` has nothing to show, at any time window). A one-time historical audit of dead links (from Wayback Machine history, ~130 of them, mostly the old WordPress blog and events-calendar plugin) was done separately and isn't tracked in this repo.
+`404.html` at the repo root is Vercel's automatic fallback for any unmatched path on a static (no-framework) deployment - no routing config needed, and the real 404 status code is preserved. It's branded (shared header/footer, links back to Home/Events/Join) instead of Vercel's bare "NOT_FOUND" page, and fires a `page_not_found` GA4 event with `path` and `referrer` params so ongoing dead-link traffic shows up in GA4 going forward.
+
+There are TWO ways to see 404s, not one. `vercel logs` is genuinely empty (no functions on a static deploy, so there is no runtime log stream) - but that is a limit of the CLI, NOT of the data. A **log drain is configured on this project** (`logtail_eohouston_site_2550542`, sources include `static`) streaming every request to Better Stack. Query it as ClickHouse table `t507467_eohouston_site` at `https://eu-nbg-2-connect.betterstackdata.com` with the creds in `~/Desktop/SHPR Cache Generator/betterstack/download_betterstack_logs.py` - use `remote(t507467_eohouston_site_logs)` for recent and `s3Cluster(primary, t507467_eohouston_site_s3)` for archive, same query shape as that script. So: GA4 for 404s that rendered the branded page, Better Stack for the raw request log including bots and non-HTML paths.
+
+Note Vercel Web Analytics is ENABLED in project settings but `@vercel/analytics` is not on the pages, so `/_vercel/insights/script.js` 404s and it collects nothing. Either install it or ignore that panel; do not read it as "no traffic". A one-time historical audit of dead links (from Wayback Machine history, ~130 of them, mostly the old WordPress blog and events-calendar plugin) was done separately and isn't tracked in this repo.
 
 ## Analytics
 
