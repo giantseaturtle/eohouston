@@ -28,6 +28,33 @@
           "value": "noindex, noimageindex"
         }
       ]
+    },
+    {
+      "source": "/marketing-material",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noimageindex"
+        }
+      ]
+    },
+    {
+      "source": "/marketing-material.html",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noimageindex"
+        }
+      ]
+    },
+    {
+      "source": "/assets/momentum-carousel/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, noimageindex"
+        }
+      ]
     }
   ],
   "redirects": [
