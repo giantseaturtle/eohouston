@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EO Houston &mdash; InnovationMap guest column</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="/assets/eo-mark.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0b1a3b; --ink: #16203a; --body: #3c445e; --muted: #7c849c; --line: #e6e9f2;
+      --bg: #eef0f7; --surface: #fff; --purple: #6d45d0; --violet: #9b6bff;
+      --grad: linear-gradient(135deg, #6d45d0 0%, #9b6bff 100%);
+      --radius: 18px;
+      --shadow: 0 1px 2px rgba(16,22,60,.05), 0 24px 50px -30px rgba(11,26,59,.4);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      background: var(--bg); color: var(--body); font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.7; -webkit-font-smoothing: antialiased; padding: clamp(1rem,4vw,3rem) 1rem 4rem;
+    }
+    h1, h2, h3 { font-family: 'Sora', sans-serif; color: var(--ink); line-height: 1.18; margin: 0; }
+    .sheet {
+      max-width: 760px; margin: 0 auto; background: var(--surface); border: 1px solid var(--line);
+      border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden;
+    }
+    .sheet-inner { padding: clamp(1.6rem,5vw,3.2rem); }
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+      padding: 1rem clamp(1.6rem,5vw,3.2rem); border-bottom: 1px solid var(--line); background: #fafbfe;
+    }
+    .topbar img { height: 34px; display: block; }
+    .draft-tag {
+      font-family: 'Sora', sans-serif; font-weight: 700; font-size: .68rem; letter-spacing: .1em;
+      text-transform: uppercase; color: #8a6d00; background: #fdf3d1; border: 1px solid #f0dfa0;
+      padding: .25rem .6rem; border-radius: 999px; white-space: nowrap;
+    }
+    .release-line {
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: .4rem 1rem;
+      font-family: 'Sora', sans-serif; font-weight: 700; font-size: .74rem; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--purple); margin-bottom: 1.4rem;
+    }
+    .release-line span:last-child { color: var(--muted); }
+    h1 { font-size: clamp(1.5rem,3.6vw,2.1rem); font-weight: 800; letter-spacing: -.015em; margin-bottom: .8rem; }
+    p.deck { font-size: 1.05rem; color: var(--muted); margin: 0 0 .6rem; line-height: 1.6; }
+    p.byline { font-family: 'Sora', sans-serif; font-weight: 700; font-size: .88rem; color: var(--ink); margin: 0 0 1.6rem; }
+    figure { margin: 1.8rem 0; }
+    figure img { display: block; width: 100%; border-radius: 12px; }
+    figcaption { font-size: .8rem; color: var(--muted); margin-top: .5rem; }
+    .portrait-row { display: flex; gap: 1rem; margin: 1.8rem 0; }
+    .portrait-row figure { flex: 1; margin: 0; }
+    .portrait-row img { aspect-ratio: 4/4.6; object-fit: cover; object-position: center 15%; }
+    article p { margin: 0 0 1.1rem; font-size: .98rem; }
+    article h2 { font-size: 1.15rem; margin: 1.8rem 0 .8rem; }
+    article a { color: var(--purple); font-weight: 600; }
+    .bio {
+      margin-top: 2rem; padding: 1.1rem 1.4rem; background: #f7f5fd; border-radius: 12px;
+      font-size: .88rem; color: var(--body);
+    }
+    .bio strong { color: var(--ink); }
+    .copy-row { display: flex; align-items: center; gap: .8rem; margin-top: 2rem; }
+    .copy-btn {
+      font-family: 'Sora', sans-serif; font-weight: 700; font-size: .88rem; color: #fff; background: var(--grad);
+      border: none; border-radius: 999px; padding: .7rem 1.4rem; cursor: pointer;
+    }
+    .copy-btn:hover { filter: brightness(1.06); }
+    .copy-msg { font-size: .84rem; color: #147a4d; display: none; }
+    .copy-msg.show { display: inline; }
+    .page-footer { max-width: 760px; margin: 1.6rem auto 0; text-align: center; font-size: .78rem; color: var(--muted); }
+    .page-footer a { color: var(--purple); }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9M5D1F3XQ4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9M5D1F3XQ4');
+  </script>
+</head>
+<body>
+  <div class="sheet">
+    <div class="topbar">
+      <img src="/assets/eo-logo-color.svg" alt="EO Houston" />
+      <span class="draft-tag">Guest column draft for InnovationMap &middot; confirm byline before submitting</span>
+    </div>
+    <div class="sheet-inner">
+      <div class="release-line"><span>Guest column</span><span>InnovationMap Houston</span></div>
+      <div id="column-body">
+      <h1>Fewer Than 5 Percent of Houston Businesses Ever Reach $1 Million. We Built an Accelerator to Change That.</h1>
+      <p class="deck">Most owners stall in the gap between $250,000 and $1 million in revenue. EO Houston's Momentum accelerator exists to move them across it.</p>
+      <p class="byline">By Al Danto, Program Director, EO Houston Momentum</p>
+      <article>
+        <p>Houston is one of the best cities in the country to start a business. It is a much harder city, like every city, to grow one in. Most companies that survive their early years still never cross $1 million in revenue. Fewer than 5 percent ever do. The rest get stuck in the messy middle, somewhere between $250,000 and $1 million, where the owner is still the salesperson, the product, and the back office all at once, and nothing runs without them.</p>
+        <p>I have lived both sides of that line. I built my own company, exited it, and now spend my time as a Partner at Exit Advisors and a Senior Lecturer in Entrepreneurship at Rice University. The owners who stall are almost never short on effort or talent. They are short on two things: systems that let the business run without them, and peers who have already made the jump and will tell them the truth about how.</p>
+        <figure><img src="/assets/photos/classroom.jpg" alt="A Momentum class in session" loading="lazy" /><figcaption>A Momentum class in session.</figcaption></figure>
+        <h2>An accelerator built by operators, not consultants</h2>
+        <p>That is why EO Houston built <a href="https://eohouston.com/momentum">Momentum</a>, a yearly accelerator for Houston owners and co-founders between $250,000 and $1 million in revenue who are ready to push past seven figures. Members go through eight months of classes a year plus a confidential monthly Forum, and we invite them to go through the program for two years: the first pass to build the systems, the second to run them at a higher level, with a new lens and alongside a new cohort.</p>
+        <p>The curriculum was not written by consultants. I refined it after exiting my own company, with input from Jackie Fisher, a Rice alum and the owner of Houston's 3 Men Movers. Everything in it got tested inside a real operating company before it made the cut: how to build systems, how to hire and lead a team, how to turn an annual vision into 90-day commitments with clear owners. Momentum is not a Rice program and does not require a Rice degree; those of us with Rice ties teach and coach in our individual capacities. But the standard we bring is the same one we hold in the classroom: real experience over theory.</p>
+        <h2>The engine underneath: 39 years of entrepreneurs teaching entrepreneurs</h2>
+        <p>Momentum works because of what sits behind it. The Entrepreneurs' Organization was founded in 1987 on a simple idea: business owners grow fastest alongside peers who have already been where they are going. Today EO is a global, peer-to-peer network spanning 200+ chapters in over 80 countries, and it runs on a practice called Forum, a small, confidential group of six to ten fellow owners who meet monthly. Forum members do not give advice. They share experience: what actually happened when they faced the same hire, the same cash crunch, the same decision you are staring at now. Ask EO members anywhere in the world and most will tell you Forum is the single most valuable thing they belong to.</p>
+        <figure><img src="/assets/photos/retreat-forum.jpg" alt="A Forum conversation at an EO Houston retreat" loading="lazy" /><figcaption>A Forum conversation at an EO Houston retreat.</figcaption></figure>
+        <p>EO Houston brings that engine to more than 200 member businesses, every one run by an owner who has already scaled past $1 million, with 75+ chapter events a year. Momentum members plug into that community from day one: the classes, their own Forum, the annual gala, the retreats, the socials. Two years around people who have already done the thing you are trying to do changes what you believe is normal.</p>
+        <h2>No equity, no catch</h2>
+        <p>Accelerators usually charge in ownership, a stake in your company in exchange for the program. Momentum takes none. EO Houston is a nonprofit, and the program runs on dues of $3,500 for the year. We do not want a piece of anyone's company. The outcome we are after is simple: more Houston businesses crossing $1 million, still fully owned by the people who built them.</p>
+        <p>And when a Momentum member crosses that line, the on-ramp becomes a doorway. Graduates who pass $1 million step into EO Houston membership itself and the full global network behind it. The program's story, curriculum, and community live at <a href="https://eomomentum.com">eomomentum.com</a> if you want to see it in detail.</p>
+        <h2>The next cohort starts in October</h2>
+        <p>Momentum's next cohort begins in October 2026, and applications close September 15. If you own or co-own a Houston business doing more than $250,000 a year and you are ready to build past $1 million, or you know a founder who is, the curriculum, dues, dates, and application are at <a href="https://eohouston.com/momentum">eohouston.com/momentum</a>.</p>
+        <p>Fewer than 5 percent of businesses make it past $1 million. There is nothing inevitable about which 5 percent. Houston has the founders; Momentum exists to give them the systems and the peers.</p>
+      </article>
+      <div class="bio"><strong>Al Danto</strong> is the Program Director of EO Houston Momentum, a Partner at Exit Advisors, and a Senior Lecturer in Entrepreneurship at Rice University. EO Houston is the Houston chapter of the Entrepreneurs' Organization, a global peer-to-peer network of business owners founded in 1987.</div>
+      </div>
+      <div class="copy-row">
+        <button class="copy-btn" id="copyColumn">Copy column text</button>
+        <span class="copy-msg" id="copyMsg">Copied, paste into your submission email or doc.</span>
+      </div>
+    </div>
+  </div>
+  <p class="page-footer">Internal draft, not linked from the site and excluded from search indexing. Back to <a href="/marketing-material">all Momentum marketing material</a>.</p>
+  <script>
+    document.getElementById('copyColumn').addEventListener('click', function () {
+      var container = document.getElementById('column-body');
+      var html = container.innerHTML;
+      var text = container.innerText;
+      var msg = document.getElementById('copyMsg');
+      function flash() { msg.classList.add('show'); setTimeout(function () { msg.classList.remove('show'); }, 3000); }
+      navigator.clipboard.write([
+        new ClipboardItem({
+          'text/html': new Blob([html], { type: 'text/html' }),
+          'text/plain': new Blob([text], { type: 'text/plain' })
+        })
+      ]).then(flash).catch(function () {
+        try {
+          var range = document.createRange();
+          range.selectNodeContents(container);
+          var sel = window.getSelection();
+          sel.removeAllRanges(); sel.addRange(range);
+          document.execCommand('copy');
+          sel.removeAllRanges(); flash();
+        } catch (e) {
+          alert('Select the column text manually and press Cmd/Ctrl+C to copy.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
