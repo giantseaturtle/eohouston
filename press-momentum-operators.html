@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EO Houston press release &mdash; Built by operators</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="/assets/eo-mark.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0b1a3b; --ink: #16203a; --body: #3c445e; --muted: #7c849c; --line: #e6e9f2;
+      --bg: #eef0f7; --surface: #fff; --purple: #6d45d0; --violet: #9b6bff;
+      --grad: linear-gradient(135deg, #6d45d0 0%, #9b6bff 100%);
+      --radius: 18px;
+      --shadow: 0 1px 2px rgba(16,22,60,.05), 0 24px 50px -30px rgba(11,26,59,.4);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      background: var(--bg); color: var(--body); font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.7; -webkit-font-smoothing: antialiased; padding: clamp(1rem,4vw,3rem) 1rem 4rem;
+    }
+    h1, h2, h3 { font-family: 'Sora', sans-serif; color: var(--ink); line-height: 1.18; margin: 0; }
+    .sheet {
+      max-width: 760px; margin: 0 auto; background: var(--surface); border: 1px solid var(--line);
+      border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden;
+    }
+    .sheet-inner { padding: clamp(1.6rem,5vw,3.2rem); }
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      padding: 1rem clamp(1.6rem,5vw,3.2rem); border-bottom: 1px solid var(--line); background: #fafbfe;
+    }
+    .topbar img { height: 34px; display: block; }
+    .draft-tag {
+      font-family: 'Sora', sans-serif; font-weight: 700; font-size: .68rem; letter-spacing: .1em;
+      text-transform: uppercase; color: #8a6d00; background: #fdf3d1; border: 1px solid #f0dfa0;
+      padding: .25rem .6rem; border-radius: 999px; white-space: nowrap;
+    }
+    .release-line {
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: .4rem 1rem;
+      font-family: 'Sora', sans-serif; font-weight: 700; font-size: .74rem; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--purple); margin-bottom: 1.4rem;
+    }
+    .release-line span:last-child { color: var(--muted); }
+    h1 { font-size: clamp(1.5rem,3.6vw,2.1rem); font-weight: 800; letter-spacing: -.015em; margin-bottom: .8rem; }
+    p.deck { font-size: 1.05rem; color: var(--muted); margin: 0 0 1.6rem; line-height: 1.6; }
+    figure { margin: 1.8rem 0; }
+    figure img { display: block; width: 100%; border-radius: 12px; }
+    figcaption { font-size: .8rem; color: var(--muted); margin-top: .5rem; }
+    .portrait-row { display: flex; gap: 1rem; margin: 1.8rem 0; }
+    .portrait-row figure { flex: 1; margin: 0; }
+    .portrait-row img { aspect-ratio: 4/4.6; object-fit: cover; object-position: center 15%; }
+    article p { margin: 0 0 1.1rem; font-size: .98rem; }
+    article a { color: var(--purple); font-weight: 600; }
+    .quote {
+      margin: 1.6rem 0; padding: 1.2rem 1.5rem; background: #f7f5fd; border-left: 3px solid var(--purple);
+      border-radius: 10px;
+    }
+    .quote p { margin: 0 0 .5rem; font-size: 1.02rem; color: var(--ink); font-weight: 500; }
+    .quote cite { font-style: normal; font-size: .84rem; color: var(--muted); }
+    .cta-band {
+      margin: 2rem 0; padding: 1.4rem 1.6rem; border-radius: 14px; background: var(--grad); color: #fff;
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .8rem;
+    }
+    .cta-band p { margin: 0; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1rem; color: #fff; }
+    .cta-band a {
+      background: #fff; color: var(--purple); font-family: 'Sora', sans-serif; font-weight: 700;
+      font-size: .9rem; padding: .6rem 1.2rem; border-radius: 999px; text-decoration: none; white-space: nowrap;
+    }
+    .boiler { border-top: 1px solid var(--line); margin-top: 2.2rem; padding-top: 1.6rem; }
+    .boiler h2 { font-size: .95rem; margin-bottom: .5rem; }
+    .boiler p { font-size: .89rem; margin: 0 0 1.4rem; }
+    .contact { background: #fafbfe; border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.3rem; font-size: .89rem; }
+    .contact strong { color: var(--ink); }
+    .page-footer { max-width: 760px; margin: 1.6rem auto 0; text-align: center; font-size: .78rem; color: var(--muted); }
+    .page-footer a { color: var(--purple); }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9M5D1F3XQ4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9M5D1F3XQ4');
+  </script>
+</head>
+<body>
+  <div class="sheet">
+    <div class="topbar">
+      <img src="/assets/eo-logo-color.svg" alt="EO Houston" />
+      <span class="draft-tag">Draft &middot; confirm quotes + contact before sending</span>
+    </div>
+    <div class="sheet-inner">
+      <div class="release-line"><span>For immediate release</span><span>Suggested date: Monday, August 24, 2026</span></div>
+      <h1>Built by Operators: An Exited Founder and the Owner of 3 Men Movers Shaped the Curriculum Behind Houston's Momentum Accelerator</h1>
+      <p class="deck">Al Danto exited his own company before refining Momentum's two-year curriculum. Jackie Fisher, Rice alum and owner of 3 Men Movers, gave input from the operator's chair.</p>
+      <article>
+<p><strong>HOUSTON</strong> - The curriculum behind Momentum, EO Houston&rsquo;s two-year accelerator for business owners heading toward $1 million in revenue, was not written by consultants. It was refined by Al Danto, an entrepreneur who built and exited his own company and is now a Partner at Exit Advisors and a Senior Lecturer in Entrepreneurship at Rice University, with input from Jackie Fisher, a Rice alum and the owner of Houston&rsquo;s 3 Men Movers.</p>
+<div class="portrait-row"><figure><img src="/assets/team/al-danto.png" alt="Al Danto, Program Director of EO Houston Momentum." loading="lazy" /><figcaption>Al Danto, Program Director of EO Houston Momentum.</figcaption></figure><figure><img src="/assets/team/jackie.jpg" alt="Jackie Fisher, Rice alum and owner of 3 Men Movers." loading="lazy" /><figcaption>Jackie Fisher, Rice alum and owner of 3 Men Movers.</figcaption></figure></div>
+<p>That distinction, real experience instead of theory, is the program&rsquo;s core claim. Classes run eight months a year for two years and are taught around what has actually worked inside operating companies: building systems, hiring and leading a team, and turning an annual vision into 90-day commitments with clear owners.</p>
+<div class="quote"><p>&ldquo;Everything in this curriculum got tested inside a real company, either mine or one run by the people who shaped it. If a tool did not survive contact with a real business, it did not make the cut.&rdquo;</p><cite>Al Danto, Program Director, EO Houston Momentum</cite></div>
+<div class="quote"><p>&ldquo;I know what it feels like to run a company at this stage because I have done it. What I wanted Momentum members to get is the honest version of how you get through it.&rdquo;</p><cite>Jackie Fisher, owner, 3 Men Movers</cite></div>
+<figure><img src="/assets/photos/classroom.jpg" alt="A Momentum class in session." loading="lazy" /><figcaption>A Momentum class in session.</figcaption></figure>
+<p>The same philosophy runs through the program&rsquo;s parent organization. The Entrepreneurs&rsquo; Organization, founded in 1987 and now spanning 200+ chapters in over 80 countries, is built on peer-to-peer experience-sharing: owners learning from owners who have already made the mistakes. Momentum members plug into EO Houston&rsquo;s community of more than 200 businesses that have scaled past $1 million.</p>
+<p>Momentum is an independent program of EO Houston. Rice University faculty and alumni participate as instructors and coaches in their individual capacities. Applications for the October 2026 cohort close September 15, 2026, at <a href="https://eohouston.com/momentum">eohouston.com/momentum</a>.</p>
+      </article>
+      <div class="cta-band">
+        <p>Curriculum, dues, dates, and the application</p>
+        <a href="https://eohouston.com/momentum">eohouston.com/momentum</a>
+      </div>
+      <div class="boiler">
+        <h2>About the Momentum program</h2>
+        <p>Momentum is a two-year growth program of EO Houston for business owners and co-founders between $250,000 and $1,000,000 in yearly revenue who are ready to push past the $1 million mark. Members get eight months of classes a year taught around real operating experience, a confidential Forum of six to ten fellow owners that meets monthly year-round, and the chapter&rsquo;s social calendar, including the annual gala and retreats. Full curriculum, dues, admissions dates, and the application are at <a href="https://eohouston.com/momentum">eohouston.com/momentum</a>.</p>
+        <h2>About EO Houston</h2>
+        <p>EO Houston is the Houston chapter of the Entrepreneurs&rsquo; Organization, a peer community of more than 200 member businesses run by owners who have scaled past $1 million in revenue, with 75+ chapter events a year. Learn more at <a href="https://eohouston.com">eohouston.com</a>.</p>
+        <h2>About the Entrepreneurs&rsquo; Organization</h2>
+        <p>Founded in 1987, the Entrepreneurs&rsquo; Organization is a global, peer-to-peer network of business owners across 200+ chapters in over 80 countries. EO exists for one reason: to help entrepreneurs learn and grow from each other, through confidential peer Forums, shared experience rather than advice, and a community that treats the whole entrepreneur, business and life, as one story. Momentum is an independent program of EO Houston. Rice University faculty and alumni participate as instructors and coaches in their individual capacities.</p>
+        <div class="contact">
+          <strong>Media contact</strong><br />
+          [Name], EO Houston<br />
+          [email] &middot; [phone]
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="page-footer">Internal draft, not linked from the site and excluded from search indexing. Back to <a href="/marketing-material">all Momentum marketing material</a>.</p>
+</body>
+</html>

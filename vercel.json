@@ -55,6 +55,15 @@
           "value": "noindex, noimageindex"
         }
       ]
+    },
+    {
+      "source": "/press-momentum-(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noimageindex"
+        }
+      ]
     }
   ],
   "redirects": [
