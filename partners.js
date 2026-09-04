@@ -17,7 +17,7 @@
     '.partner-grid li{position:relative}',
     '.pm-backdrop{position:fixed;inset:0;background:rgba(7,15,36,.62);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);z-index:9000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;transition:opacity .22s}',
     '.pm-backdrop.is-open{opacity:1}',
-    '.pm-card{position:relative;background:#fff;color:var(--body,#48506a);width:100%;max-width:620px;max-height:min(88vh,860px);overflow:auto;border-radius:22px;box-shadow:0 40px 90px -30px rgba(7,15,36,.6);transform:translateY(14px) scale(.98);transition:transform .22s;font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-overflow-scrolling:touch}',
+    '.pm-card{position:relative;background:#fff;color:var(--body,#48506a);width:100%;max-width:1040px;max-height:94vh;overflow:auto;border-radius:22px;box-shadow:0 40px 90px -30px rgba(7,15,36,.6);transform:translateY(14px) scale(.98);transition:transform .22s;font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-overflow-scrolling:touch}',
     '.pm-backdrop.is-open .pm-card{transform:none}',
     '.pm-close{position:absolute;top:12px;right:12px;width:38px;height:38px;border:0;border-radius:50%;background:rgba(11,26,59,.06);color:var(--ink,#16203a);font-size:22px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2}',
     '.pm-close:hover{background:rgba(11,26,59,.12)}',
@@ -60,6 +60,7 @@
     '.pm-nav button small{display:block;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted,#7c849c);font-weight:700}',
     '.pm-nav .pm-count{flex:none;font-size:.78rem;color:var(--muted,#7c849c);font-variant-numeric:tabular-nums}',
     '@media(max-width:640px){.pm-nav .pm-count{display:none}}',
+    '@media(min-width:900px){.pm-body{display:grid;grid-template-columns:1.25fr .95fr;column-gap:2rem;padding:1.3rem 1.8rem 1.6rem}.pm-aside{border-left:1px solid var(--line,#e6e9f2);padding-left:2rem}.pm-team{gap:.35rem}.pm-team li{flex-direction:column;gap:.05rem;padding:.4rem .65rem}.pm-team b{display:inline}.pm-team small{display:inline;margin-left:.35rem}.pm-team a{white-space:normal;font-size:.82rem}.pm-body h4{margin-top:.8rem}.pm-members{margin-bottom:0}.pm-aside h4:first-child{margin-top:0}.pm-head{padding:1.1rem 1.8rem .9rem}.pm-logo{width:140px;height:76px}.pm-head h3{font-size:1.6rem}.pm-body p{font-size:1rem}.pm-nav,.pm-foot{grid-column:1 / -1}.pm-foot{margin-top:.4rem}.pm-actions{flex-direction:column;margin-top:1.1rem}.pm-actions .pm-btn{width:100%}}',
     '.pm-foot{margin:1rem 0 0;font-size:.76rem;color:var(--muted,#7c849c)}',
     'body.pm-locked{overflow:hidden}',
     '@media(max-width:640px){.pm-backdrop{padding:0;align-items:flex-end}.pm-card{max-width:none;max-height:92vh;border-radius:22px 22px 0 0;transform:translateY(40px)}.pm-head{padding:1.3rem 1.2rem .9rem;gap:.85rem}.pm-logo{width:96px;height:60px}.pm-head h3{font-size:1.15rem}.pm-body{padding:.9rem 1.2rem calc(1.2rem + env(safe-area-inset-bottom))}.pm-actions{flex-direction:column}}',
@@ -134,12 +135,13 @@
     h += '<p class="pm-kicker">' + esc(d.tier || 'Strategic Alliance Partner') + '</p>';
     h += '<h3 id="pm-title">' + esc(d.name) + '</h3>';
     if (d.tagline) h += '<p class="pm-tag">' + esc(d.tagline) + '</p>';
-    h += '</div></div><div class="pm-body">';
+    h += '</div></div><div class="pm-body"><div class="pm-main">';
     if (d.about) h += '<h4>What they do</h4><p>' + esc(d.about) + '</p>';
     if (d.services && d.services.length) {
       h += '<h4>Services</h4><ul class="pm-chips">' + d.services.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ul>';
     }
     if (d.members) h += '<h4>For EO Houston members and forums</h4><div class="pm-members"><p>' + esc(d.members) + '</p></div>';
+    h += '</div><div class="pm-aside">';
     if (d.contact && d.contact.name) {
       var c = d.contact;
       h += '<h4>EO member point of contact</h4><div class="pm-contact"><div class="pm-avatar" aria-hidden="true">' + esc(initials(c.name)) + '</div><div>';
@@ -157,7 +159,7 @@
     h += '<div class="pm-actions">';
     h += '<a class="pm-btn pm-btn-primary" href="' + esc(url) + '" target="_blank" rel="noopener">Visit ' + esc(host || 'website') + ' &#8599;</a>';
     if (d.contact && d.contact.email) h += '<a class="pm-btn pm-btn-ghost" href="mailto:' + esc(d.contact.email) + '?subject=' + encodeURIComponent('EO Houston member inquiry') + '">Email ' + esc(d.contact.name.split(' ')[0]) + '</a>';
-    h += '</div>';
+    h += '</div></div>';
     if (ORDER.length > 1) {
       var i = ORDER.indexOf(current), prev = ORDER[(i - 1 + ORDER.length) % ORDER.length], next = ORDER[(i + 1) % ORDER.length];
       h += '<div class="pm-nav">';
