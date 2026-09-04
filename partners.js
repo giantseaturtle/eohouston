@@ -15,9 +15,6 @@
   var CSS = [
     '.pm-open-btn{cursor:pointer}',
     '.partner-grid li{position:relative}',
-    '.partner-grid .pm-hint{position:absolute;right:10px;bottom:8px;font:600 .68rem/1 Inter,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted,#7c849c);opacity:0;transition:opacity .2s;pointer-events:none}',
-    '.partner-grid li:hover .pm-hint,.partner-grid li:focus-within .pm-hint{opacity:1}',
-    '@media(hover:none){.partner-grid .pm-hint{opacity:.7;font-size:.6rem;right:7px;bottom:5px}}',
     '.pm-backdrop{position:fixed;inset:0;background:rgba(7,15,36,.62);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);z-index:9000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;transition:opacity .22s}',
     '.pm-backdrop.is-open{opacity:1}',
     '.pm-card{position:relative;background:#fff;color:var(--body,#48506a);width:100%;max-width:620px;max-height:min(88vh,860px);overflow:auto;border-radius:22px;box-shadow:0 40px 90px -30px rgba(7,15,36,.6);transform:translateY(14px) scale(.98);transition:transform .22s;font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-overflow-scrolling:touch}',
@@ -43,6 +40,12 @@
     '.pm-contact b{display:block;color:var(--ink,#16203a);font-size:.97rem}',
     '.pm-contact span{display:block;font-size:.85rem;color:var(--muted,#7c849c)}',
     '.pm-contact a{font-size:.88rem;font-weight:600;color:var(--pm-accent,var(--accent,var(--purple,#3d46f2)));word-break:break-all}',
+    '.pm-team{list-style:none;margin:.7rem 0 0;padding:0;display:grid;gap:.45rem}',
+    '.pm-team li{display:flex;justify-content:space-between;gap:.6rem;align-items:baseline;font-size:.86rem;padding:.45rem .7rem;background:var(--bg-soft,#f0f1fb);border-radius:10px}',
+    '.pm-team b{color:var(--ink,#16203a);font-weight:600}',
+    '.pm-team small{color:var(--muted,#7c849c);display:block;font-size:.78rem}',
+    '.pm-team a{font-weight:600;color:var(--pm-accent,var(--accent,var(--purple,#3d46f2)));white-space:nowrap}',
+    '@media(max-width:640px){.pm-team li{flex-direction:column;gap:.1rem}.pm-team a{white-space:normal;word-break:break-all}}',
     '.pm-actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.3rem}',
     '.pm-btn{flex:1 1 auto;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.8rem 1.1rem;border-radius:12px;font:700 .93rem Sora,Inter,sans-serif;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:.15s}',
     '.pm-btn-primary{background:var(--pm-accent,var(--accent,var(--purple,#3d46f2)));color:#fff}',
@@ -125,6 +128,11 @@
       else if (c.link) h += '<a href="' + esc(c.link) + '" target="_blank" rel="noopener">View profile</a>';
       h += '</div></div>';
     }
+    if (d.team && d.team.length) {
+      h += '<h4>Also at ' + esc(d.name) + '</h4><ul class="pm-team">' + d.team.map(function (t) {
+        return '<li><span><b>' + esc(t.name) + '</b><small>' + esc(t.title || '') + '</small></span>' + (t.email ? '<a href="mailto:' + esc(t.email) + '">' + esc(t.email) + '</a>' : '') + '</li>';
+      }).join('') + '</ul>';
+    }
     h += '<div class="pm-actions">';
     h += '<a class="pm-btn pm-btn-primary" href="' + esc(url) + '" target="_blank" rel="noopener">Visit ' + esc(host || 'website') + ' &#8599;</a>';
     if (d.contact && d.contact.email) h += '<a class="pm-btn pm-btn-ghost" href="mailto:' + esc(d.contact.email) + '?subject=' + encodeURIComponent('EO Houston member inquiry') + '">Email ' + esc(d.contact.name.split(' ')[0]) + '</a>';
@@ -161,10 +169,6 @@
       a.setAttribute('role', 'button');
       a.setAttribute('aria-haspopup', 'dialog');
       a.setAttribute('aria-label', DATA[key].name + ': see what they offer EO Houston members');
-      var hint = document.createElement('span');
-      hint.className = 'pm-hint';
-      hint.textContent = 'Preview';
-      a.parentNode.appendChild(hint);
       a.addEventListener('click', function (e) {
         if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return; // let power users open the site directly
         e.preventDefault();
