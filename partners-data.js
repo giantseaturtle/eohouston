@@ -118,10 +118,10 @@ window.EO_PARTNERS = {
   biggestgoal: {
     name: 'Biggest Goal',
     url: 'https://www.biggestgoal.ai/',
-    tagline: 'Hands-on AI training for executives and teams',
-    about: 'Biggest Goal delivers hands-on AI training for executives and teams: workshops, cohorts, mastermind groups, and strategic planning that teach leadership teams to build and deploy AI agents and automation themselves.',
-    services: ['Leadership AI workshops', 'Team upskilling cohorts', 'Peer mastermind groups', 'AI jumpstart engagements', 'AI strategic planning'],
-    members: 'Practical AI adoption for owner-led companies, from a first leadership workshop to a team-wide cohort. Forums can request a hands-on session where members leave with a working automation for their own business.',
+    tagline: 'Hands-on AI education for executives and their teams',
+    about: 'Biggest Goal works with executives and their teams to move AI beyond the conversation and into real-world implementation: identifying opportunities, building capabilities, training teams, and putting AI to work in the business.',
+    services: ['Leadership AI strategy', 'Agent and prompt engineering basics', 'Team upskilling', 'End-to-end AI adoption', 'Automated workflows and dashboards'],
+    members: 'EO Houston members get AI learning opportunities and resources at no additional cost. Whether you are just starting or already experimenting, Biggest Goal helps you align your leadership on an AI strategy, upskill operators and project managers into people who can actually implement AI, and jumpstart adoption from idea to working system. Forums can request a session on the most popular AI use cases today, what you could be automating beyond prompting, and what you can implement right now, from dashboards and design to scheduled tasks and automated workflows.',
     contact: { name: 'Alane Boyd', title: 'Co-founder, Biggest Goal', link: 'https://www.biggestgoal.ai/' }
   },
   nrg: {
