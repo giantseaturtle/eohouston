@@ -52,6 +52,14 @@
     '.pm-btn-primary:hover{filter:brightness(1.08);transform:translateY(-1px)}',
     '.pm-btn-ghost{background:#fff;color:var(--ink,#16203a);border-color:var(--line,#e6e9f2)}',
     '.pm-btn-ghost:hover{background:var(--bg-soft,#f0f1fb)}',
+    '.pm-nav{display:flex;align-items:center;justify-content:space-between;gap:.6rem;margin-top:1.1rem;padding-top:.9rem;border-top:1px solid var(--line,#e6e9f2)}',
+    '.pm-nav button{flex:1 1 0;display:flex;align-items:center;gap:.5rem;min-width:0;padding:.6rem .75rem;border:1px solid var(--line,#e6e9f2);border-radius:12px;background:#fff;color:var(--ink,#16203a);font:600 .85rem Inter,system-ui,sans-serif;cursor:pointer;text-align:left;transition:.15s}',
+    '.pm-nav button:hover{background:var(--bg-soft,#f0f1fb);border-color:var(--pm-accent,var(--accent,var(--purple,#3d46f2)))}',
+    '.pm-nav button.pm-next{text-align:right;justify-content:flex-end}',
+    '.pm-nav button span{display:block;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}',
+    '.pm-nav button small{display:block;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted,#7c849c);font-weight:700}',
+    '.pm-nav .pm-count{flex:none;font-size:.78rem;color:var(--muted,#7c849c);font-variant-numeric:tabular-nums}',
+    '@media(max-width:640px){.pm-nav .pm-count{display:none}}',
     '.pm-foot{margin:1rem 0 0;font-size:.76rem;color:var(--muted,#7c849c)}',
     'body.pm-locked{overflow:hidden}',
     '@media(max-width:640px){.pm-backdrop{padding:0;align-items:flex-end}.pm-card{max-width:none;max-height:92vh;border-radius:22px 22px 0 0;transform:translateY(40px)}.pm-head{padding:1.3rem 1.2rem .9rem;gap:.85rem}.pm-logo{width:96px;height:60px}.pm-head h3{font-size:1.15rem}.pm-body{padding:.9rem 1.2rem calc(1.2rem + env(safe-area-inset-bottom))}.pm-actions{flex-direction:column}}',
@@ -80,7 +88,14 @@
     if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
   }
 
-  var backdrop = null, lastFocus = null;
+  var backdrop = null, lastFocus = null, current = null;
+  var ORDER = [], ANCHOR = {};
+  grids.forEach(function (grid) {
+    grid.querySelectorAll('a').forEach(function (a) {
+      var k = keyFor(a);
+      if (DATA[k] && !ANCHOR[k]) { ORDER.push(k); ANCHOR[k] = a; }
+    });
+  });
 
   function close() {
     if (!backdrop) return;
@@ -94,6 +109,12 @@
   }
   function onKey(e) {
     if (e.key === 'Escape') close();
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+      var i = ORDER.indexOf(current);
+      if (i < 0 || ORDER.length < 2) return;
+      e.preventDefault();
+      show(ORDER[(i + (e.key === 'ArrowRight' ? 1 : -1) + ORDER.length) % ORDER.length]);
+    }
     if (e.key === 'Tab' && backdrop) {
       var f = backdrop.querySelectorAll('a[href],button');
       if (!f.length) return;
@@ -137,23 +158,50 @@
     h += '<a class="pm-btn pm-btn-primary" href="' + esc(url) + '" target="_blank" rel="noopener">Visit ' + esc(host || 'website') + ' &#8599;</a>';
     if (d.contact && d.contact.email) h += '<a class="pm-btn pm-btn-ghost" href="mailto:' + esc(d.contact.email) + '?subject=' + encodeURIComponent('EO Houston member inquiry') + '">Email ' + esc(d.contact.name.split(' ')[0]) + '</a>';
     h += '</div>';
+    if (ORDER.length > 1) {
+      var i = ORDER.indexOf(current), prev = ORDER[(i - 1 + ORDER.length) % ORDER.length], next = ORDER[(i + 1) % ORDER.length];
+      h += '<div class="pm-nav">';
+      h += '<button type="button" class="pm-prev" data-key="' + esc(prev) + '" aria-label="Previous sponsor: ' + esc(DATA[prev].name) + '">&#8249; <span><small>Previous</small>' + esc(DATA[prev].name) + '</span></button>';
+      h += '<span class="pm-count">' + (i + 1) + ' of ' + ORDER.length + '</span>';
+      h += '<button type="button" class="pm-next" data-key="' + esc(next) + '" aria-label="Next sponsor: ' + esc(DATA[next].name) + '"><span><small>Next</small>' + esc(DATA[next].name) + '</span> &#8250;</button>';
+      h += '</div>';
+    }
     h += '<p class="pm-foot">Mention you are an EO Houston member when you reach out.</p>';
     h += '</div>';
     return h;
   }
 
+  function cardHtml(key) {
+    var a = ANCHOR[key], img = a.querySelector('img');
+    return render(DATA[key], img ? img.getAttribute('src') : '', a.href);
+  }
+  function bindCard(card) {
+    card.querySelector('.pm-close').addEventListener('click', close);
+    card.querySelectorAll('.pm-nav button').forEach(function (b) {
+      b.addEventListener('click', function () { show(b.getAttribute('data-key')); });
+    });
+  }
+  function show(key) {
+    if (!backdrop || !DATA[key]) return;
+    current = key;
+    var card = backdrop.querySelector('.pm-card');
+    card.innerHTML = cardHtml(key);
+    card.scrollTop = 0;
+    bindCard(card);
+    card.querySelector('.pm-close').focus();
+    track('partner_preview_open', { partner: DATA[key].name, page: document.body.dataset.page || location.pathname, via: 'nav' });
+  }
   function open(a) {
     var key = keyFor(a);
     var d = DATA[key];
-    var img = a.querySelector('img');
-    var logoSrc = img ? img.getAttribute('src') : '';
     if (!d) { window.open(a.href, '_blank', 'noopener'); return; }
     lastFocus = a;
+    current = key;
     backdrop = document.createElement('div');
     backdrop.className = 'pm-backdrop';
-    backdrop.innerHTML = '<div class="pm-card" role="dialog" aria-modal="true" aria-labelledby="pm-title">' + render(d, logoSrc, a.href) + '</div>';
+    backdrop.innerHTML = '<div class="pm-card" role="dialog" aria-modal="true" aria-labelledby="pm-title">' + cardHtml(key) + '</div>';
     backdrop.addEventListener('click', function (e) { if (e.target === backdrop) close(); });
-    backdrop.querySelector('.pm-close').addEventListener('click', close);
+    bindCard(backdrop.querySelector('.pm-card'));
     document.body.appendChild(backdrop);
     document.body.classList.add('pm-locked');
     document.addEventListener('keydown', onKey);
