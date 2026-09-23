@@ -88,15 +88,6 @@ window.EO_PARTNERS = {
       { name: 'Morgan Guggenheim', title: 'Events and Client Relationships', email: 'morgan.guggenheim@wealthdesigngroup.net' }
     ]
   },
-  bloom: {
-    name: 'Bloom Growth',
-    url: 'https://www.bloomgrowthcoach.com/coaches/isaiah-nolte/',
-    tagline: 'Operating system, coaching, and software to scale',
-    about: 'Bloom Growth gives you everything you need to scale fast: an operating system, expert coaching, and software designed to double your business. Members get clarity, structure, and expert support to accelerate growth.',
-    services: ['Business operating system', 'Leadership team alignment', 'Accountability meeting structure', 'Coach-led implementation', 'Goal and scorecard software'],
-    members: 'Implementation coaching for owners who want a proven operating system running their leadership team. Forums can request a workshop on quarterly planning, meeting rhythm, or getting the leadership team rowing in the same direction.',
-    contact: { name: 'Isaiah Nolte', title: 'Bloom Growth Coach', email: 'isaiah.n@bloomgrowth.com', link: 'https://www.bloomgrowthcoach.com/coaches/isaiah-nolte/' }
-  },
   culture: {
     name: 'Culture Index',
     url: 'https://www.cultureindex.com/',
