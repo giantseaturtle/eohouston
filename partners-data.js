@@ -132,5 +132,19 @@ window.EO_PARTNERS = {
     services: ['Fixed-rate business electricity', 'Time-of-use plans', 'Renewable and solar programs', 'Demand response', 'Custom commercial energy solutions'],
     members: 'Business electricity plans and energy management for Texas facilities, warehouses, and offices. Contact the EO Houston Chapter Director for an introduction.',
     contact: null
+  },
+  base: {
+    name: 'Base Power',
+    url: 'https://www.basepowercompany.com/eohouston',
+    tagline: 'Licensed Texas electricity provider with home backup batteries',
+    about: 'Base Power is a licensed Texas electricity provider that pairs reliable power with home backup batteries, so your lights stay on when the grid does not. Base partners with utilities to offer backup power at a lower cost, and handles maintenance for the life of the battery.',
+    services: ['Battery + energy plans', 'Energy-only plans', 'Whole-home backup, up to 72 hours', 'Backup in under 0.5 seconds', 'Commercial electricity at custom rates'],
+    members: 'Exclusive savings for EO Houston members, friends, and family, for your home and your business. Home: the Battery + Energy plan comes with one free month of power ($250) plus $250 toward early termination fees from your current provider; the Energy-only plan comes with $150 toward early termination fees. Business: upload your utility bill for a custom rate quote (20% savings on average), with early termination fee coverage where available. Offers must be redeemed through the EO Houston links below. Open in Texas (ERCOT) service areas; enrollment is subject to Base approval.',
+    links: [
+      { label: 'Residential savings', url: 'https://www.basepowercompany.com/eohouston' },
+      { label: 'Commercial savings', url: 'https://www.basepowercompany.com/eohoustonbusiness' }
+    ],
+    flyer: 'assets/partners/base-flyer.jpg',
+    contact: null
   }
 };

@@ -157,7 +157,12 @@
       }).join('') + '</ul>';
     }
     h += '<div class="pm-actions">';
-    h += '<a class="pm-btn pm-btn-primary" href="' + esc(url) + '" target="_blank" rel="noopener">Visit ' + esc(host || 'website') + ' &#8599;</a>';
+    if (d.links && d.links.length) {
+      h += d.links.map(function (l) { return '<a class="pm-btn pm-btn-primary" href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.label) + ' &#8599;</a>'; }).join('');
+    } else {
+      h += '<a class="pm-btn pm-btn-primary" href="' + esc(url) + '" target="_blank" rel="noopener">Visit ' + esc(host || 'website') + ' &#8599;</a>';
+    }
+    if (d.flyer) h += '<a class="pm-btn pm-btn-ghost" href="' + esc(d.flyer) + '" target="_blank" rel="noopener">View the flyer</a>';
     if (d.contact && d.contact.email) h += '<a class="pm-btn pm-btn-ghost" href="mailto:' + esc(d.contact.email) + '?subject=' + encodeURIComponent('EO Houston member inquiry') + '">Email ' + esc(d.contact.name.split(' ')[0]) + '</a>';
     h += '</div></div>';
     if (ORDER.length > 1) {
