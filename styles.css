@@ -363,7 +363,13 @@ body.lb-locked{overflow:hidden}
   background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.09) 0 2px,transparent 2px 24px),
                    repeating-linear-gradient(45deg,rgba(255,255,255,.05) 0 2px,transparent 2px 24px);
   box-shadow:20px 20px 0 var(--navy)}
-.video-frame video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px;background:#000}
+.video-frame video,.video-frame iframe,.yt-facade{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px;background:#000;border:0}
+.yt-facade{position:relative;padding:0;cursor:pointer;overflow:hidden}
+.yt-facade img{display:block;width:100%;height:100%;object-fit:cover;opacity:.9;transition:opacity .2s}
+.yt-facade:hover img{opacity:1}
+.yt-play{position:absolute;left:50%;top:50%;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;background:var(--navy);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.yt-play::after{content:"";position:absolute;left:34px;top:26px;border-style:solid;border-width:16px 0 16px 26px;border-color:transparent transparent transparent #fff}
+.yt-facade:focus-visible{outline:3px solid var(--navy);outline-offset:4px}
 @media(max-width:680px){.video-frame{padding:14px;border-radius:18px;box-shadow:10px 10px 0 var(--navy)}}
 
 @media(max-width:980px){
