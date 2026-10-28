@@ -63,10 +63,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="lede">A glimpse of our Chapter Retreat: the speakers, the sunrise workouts, the firewalk, and the friendships that make this community what it is. Press play.</p>
     </div>
     <div class="video-frame">
-      <video controls playsinline preload="metadata" poster="assets/photos/retreat-firewalk.jpg">
-        <source src="https://res.cloudinary.com/skyhighpartyrentals/video/upload/v1782674374/EO_HOUSTON_NEW_VER.2.mp4" type="video/mp4"/>
-        Your browser doesn’t support embedded video.
-      </video>
+      <!-- Chapter Retreat video lives on the EO Houston YouTube channel. Set data-yt to the video ID; the iframe only loads after the visitor presses play. -->
+      <button class="yt-facade" type="button" data-yt="VIDEO_ID" aria-label="Play the EO Houston Chapter Retreat video">
+        <img src="assets/photos/retreat-firewalk.jpg" alt="EO Houston members at the Chapter Retreat firewalk" loading="lazy"/>
+        <span class="yt-play" aria-hidden="true"></span>
+      </button>
     </div>
   </div>
 </section>
@@ -208,6 +209,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <div id="site-footer"></div>
+<script>
+document.querySelectorAll('.yt-facade').forEach(function(b){
+  b.addEventListener('click',function(){
+    var id=b.getAttribute('data-yt'); if(!id||id==='VIDEO_ID') return;
+    var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1';
+    f.title='EO Houston Chapter Retreat video'; f.allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share';
+    f.setAttribute('allowfullscreen',''); f.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
+    b.replaceWith(f);
+  });
+});
+</script>
 <script src="shared.js"></script>
 </body>
 </html>
