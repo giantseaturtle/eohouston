@@ -146,5 +146,18 @@ window.EO_PARTNERS = {
     ],
     flyer: 'assets/partners/base-flyer.jpg',
     contact: null
+  },
+  'craig-ceccanti': {
+    name: 'Craig Ceccanti, EOS Implementer',
+    url: 'https://implementer.eosworldwide.com/craig-ceccanti/',
+    tagline: 'Professional EOS Implementer in Houston and Sugar Land',
+    about: 'Craig Ceccanti is a Professional EOS Implementer who helps founder-led leadership teams break through the ceiling they are stuck under. He has sat in both the Visionary and Integrator seats: he helped grow Pinot\'s Palette from one Houston studio to more than 150 locations across North America and a successful exit, has run EOS inside five companies, and served as President and COO of a global consulting firm. As a Certified Exit Planning Advisor (CEPA), he connects how you run the company day to day with what it is worth the day you leave.',
+    services: ['Full EOS implementation', 'Visionary and Integrator alignment', 'Leadership team accountability', 'Exit planning (CEPA)', 'Keynotes and workshops'],
+    members: 'For founder-led teams past the scrappy stage, where what got you here has quietly stopped working. Book a free introductory call to talk through your business and see if EOS is the right fit, no pressure. Forums can request a keynote or workshop on the six key components of a great organization, getting the team on one clear vision, and building discipline and accountability. In person in Houston or virtual.',
+    links: [
+      { label: 'Book a free intro call', url: 'https://implementer.eosworldwide.com/craig-ceccanti/' },
+      { label: 'craigceccanti.com', url: 'https://www.craigceccanti.com/' }
+    ],
+    contact: { name: 'Craig Ceccanti', title: 'Professional EOS Implementer', email: 'craig.ceccanti@eosworldwide.com', phone: '(281) 229-5598', photo: 'assets/partners/craig-ceccanti-photo.jpg' }
   }
 };
