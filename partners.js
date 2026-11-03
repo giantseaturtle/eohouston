@@ -37,9 +37,11 @@
     '.pm-members p{margin:0;font-size:.93rem}',
     '.pm-contact{display:flex;align-items:center;gap:.8rem;margin-top:.2rem}',
     '.pm-avatar{flex:none;width:44px;height:44px;border-radius:50%;background:var(--pm-accent,var(--accent,var(--purple,#3d46f2)));color:#fff;display:flex;align-items:center;justify-content:center;font:700 .95rem Sora,Inter,sans-serif;letter-spacing:.02em}',
+    '.pm-avatar.pm-photo{width:64px;height:64px;background:var(--bg-soft,#f0f1fb);overflow:hidden}',
+    '.pm-avatar.pm-photo img{width:100%;height:100%;object-fit:cover;display:block}',
     '.pm-contact b{display:block;color:var(--ink,#16203a);font-size:.97rem}',
     '.pm-contact span{display:block;font-size:.85rem;color:var(--muted,#7c849c)}',
-    '.pm-contact a{font-size:.88rem;font-weight:600;color:var(--pm-accent,var(--accent,var(--purple,#3d46f2)));word-break:break-all}',
+    '.pm-contact a{display:block;font-size:.88rem;font-weight:600;color:var(--pm-accent,var(--accent,var(--purple,#3d46f2)));word-break:break-all}',
     '.pm-team{list-style:none;margin:.7rem 0 0;padding:0;display:grid;gap:.45rem}',
     '.pm-team li{display:flex;justify-content:space-between;gap:.6rem;align-items:baseline;font-size:.86rem;padding:.45rem .7rem;background:var(--bg-soft,#f0f1fb);border-radius:10px}',
     '.pm-team b{color:var(--ink,#16203a);font-weight:600}',
@@ -144,11 +146,12 @@
     h += '</div><div class="pm-aside">';
     if (d.contact && d.contact.name) {
       var c = d.contact;
-      h += '<h4>EO member point of contact</h4><div class="pm-contact"><div class="pm-avatar" aria-hidden="true">' + esc(initials(c.name)) + '</div><div>';
+      h += '<h4>EO member point of contact</h4><div class="pm-contact">' + (c.photo ? '<div class="pm-avatar pm-photo"><img src="' + esc(c.photo) + '" alt="' + esc(c.name) + '" loading="lazy"></div>' : '<div class="pm-avatar" aria-hidden="true">' + esc(initials(c.name)) + '</div>') + '<div>';
       h += '<b>' + esc(c.name) + '</b>';
       if (c.title) h += '<span>' + esc(c.title) + '</span>';
       if (c.email) h += '<a href="mailto:' + esc(c.email) + '">' + esc(c.email) + '</a>';
       else if (c.link) h += '<a href="' + esc(c.link) + '" target="_blank" rel="noopener">View profile</a>';
+      if (c.phone) h += '<a href="tel:' + esc(c.phone.replace(/[^\d+]/g, '')) + '">' + esc(c.phone) + '</a>';
       h += '</div></div>';
     }
     if (d.team && d.team.length) {
